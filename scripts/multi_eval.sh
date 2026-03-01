@@ -1,0 +1,1 @@
+python main.py --operator multi --impl llm_all --start 1 --end 2 --out_dir "./result/multi/" # --impl is not used for operator=multi; kept as a placeholder for CLI consistency

@@ -1,0 +1,6 @@
+{
+    "temperature": 0,
+    "max_token": 20480, 
+    "stream": "True",
+    "max_tries": 5
+}

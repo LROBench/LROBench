@@ -1,0 +1,1636 @@
+{
+    "benchmark_metadata": {
+        "description": "Multi-LROs query metadata in LROBench",
+        "statistics": {
+            "total_queries": 60,
+            "scoring_dimensions": {
+                "num_lros": {
+                    "2_ops": {
+                        "percentage": 0.87,
+                        "score": 1
+                    },
+                    "3_ops": {
+                        "percentage": 0.13,
+                        "score": 2
+                    }
+                },
+                "num_tables": {
+                    "1_table": {
+                        "percentage": 0.33,
+                        "score": 1
+                    },
+                    "2_3_tables": {
+                        "percentage": 0.52,
+                        "score": 2
+                    },
+                    "4plus_tables": {
+                        "percentage": 0.15,
+                        "score": 3
+                    }
+                },
+                "num_hops": {
+                    "1_4_hops": {
+                        "percentage": 0.35,
+                        "score": 1
+                    },
+                    "5_7_hops": {
+                        "percentage": 0.55,
+                        "score": 2
+                    },
+                    "8plus_hops": {
+                        "percentage": 0.1,
+                        "score": 3
+                    }
+                },
+                "knowledge": {
+                    "easy": {
+                        "percentage": 0.32,
+                        "score": 1
+                    },
+                    "medium": {
+                        "percentage": 0.47,
+                        "score": 2
+                    },
+                    "hard": {
+                        "percentage": 0.22,
+                        "score": 3
+                    }
+                }
+            },
+            "overall_score_distribution": {
+                "difficulty_bands": {
+                    "easy": {
+                        "percentage": 0.28,
+                        "score_range": [
+                            4,
+                            5
+                        ]
+                    },
+                    "medium": {
+                        "percentage": 0.56,
+                        "score_range": [
+                            5,
+                            8
+                        ]
+                    },
+                    "hard": {
+                        "percentage": 0.16,
+                        "score_range": [
+                            8,
+                            11
+                        ]
+                    }
+                },
+                "score_histogram": {
+                    "4": 3,
+                    "5": 14,
+                    "6": 11,
+                    "7": 14,
+                    "8": 8,
+                    "9": 7,
+                    "10": 2,
+                    "11": 1
+                }
+            }
+        }
+    },
+    "queries": [
+        {
+            "query_id": 1,
+            "db_used": "shipping",
+            "question": "How many shipments did northeast USA customers make before the opening ceremony of the 2016 Olympics?",
+            "ground_truth": "12",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_1"
+        },
+        {
+            "query_id": 2,
+            "db_used": "restaurants2",
+            "question": "Infer the country of origin of asian cuisines served at popular Yelp restaurants (votes > 3000) in the Northeastern city of the United States?",
+            "ground_truth": [
+                [
+                    "China"
+                ],
+                [
+                    "Japan"
+                ],
+                [
+                    "Japan"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_2"
+        },
+        {
+            "query_id": 3,
+            "db_used": "superhero",
+            "question": "List DC Comics superheroes that are taller than Michael Jordan, have red eyes, and possess a power related to agility?",
+            "ground_truth": [
+                "Amazo",
+                "Ares",
+                "Darkseid",
+                "Doomsday",
+                "Killer Croc",
+                "Martian Manhunter"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 5,
+                "#hops": 10,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_3"
+        },
+        {
+            "query_id": 4,
+            "db_used": "california_schools",
+            "question": "List all counties that have an Elementary school with an Percent (%) Eligible FRPM (K-12) less than 1%, and sort them by population in descending order.",
+            "ground_truth": [
+                "Los Angeles",
+                "Santa Clara",
+                "Alameda",
+                "Contra Costa",
+                "San Mateo",
+                "Marin"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 6,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_4"
+        },
+        {
+            "query_id": 5,
+            "db_used": "electronics",
+            "question": "Among Top 10 expensive electronic products sold on Amazon, how many of their brands originate outside of the USA and has a 8GB memory?",
+            "ground_truth": "4",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 6,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_5"
+        },
+        {
+            "query_id": 6,
+            "db_used": "books",
+            "question": "How many books are written in a language originates from an Asian country, and are bought by customers using a government affiliated email?",
+            "ground_truth": "3",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 5,
+                "#hops": 6,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_6"
+        },
+        {
+            "query_id": 7,
+            "db_used": "formula_1",
+            "question": "How many drivers born in Europe and after 1995 have been finished the race without any disqualification and damage, and with a gap of less than 2 Laps compared with the race winner.",
+            "ground_truth": "2",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 3,
+                "#hops": 5,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_7"
+        },
+        {
+            "query_id": 8,
+            "db_used": "formula_1",
+            "question": "Rank circuits locates in East Asia and rank them based on the population of the location country in descending order. Answer with circuitId.",
+            "ground_truth": "[17, 16, 22, 28, 35]",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 3,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_8"
+        },
+        {
+            "query_id": 9,
+            "db_used": "formula_1",
+            "question": "Among constructors Lewis Hamilton has been served or is serving for, which one won the most podiums in Formula 1 Grand Prix in the 20th century? Answer with constructor name.",
+            "ground_truth": "Ferrari",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 3,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_9"
+        },
+        {
+            "query_id": 10,
+            "db_used": "european_football_2",
+            "question": "Among Top 10 heaviest player, list players higher than basketball player Michale Jordan and has a Belgium originated name.",
+            "ground_truth": "Kristof van Hout",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 6,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_10"
+        },
+        {
+            "query_id": 11,
+            "db_used": "european_football_2",
+            "question": "Identify the leagues whose country is adjacent to France and is not an inland country. List the league with the longest name among them.",
+            "ground_truth": "Belgium Jupiler League",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 3,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_11"
+        },
+        {
+            "query_id": 12,
+            "db_used": "codebase_community",
+            "question": "Find all users in the codebase_community database whose display name starts with 'm' (case-insensitive), live in 'Vienna, Austria', and have a display name that sounds like a real human name. Return their display names.",
+            "ground_truth": [
+                "Maciej Pasternacki",
+                "Marcus Jones"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 5,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_12"
+        },
+        {
+            "query_id": 13,
+            "db_used": "codebase_community",
+            "question": "Among posts with top 5 highest-Viewcount, filter those that contain external links in their post body, and extract all external links from these posts.",
+            "ground_truth": "http://onlinestatbook.com/2/analysis_of_variance/one-way.html",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_13"
+        },
+        {
+            "query_id": 14,
+            "db_used": "santos",
+            "question": "Among state agencies in the 'state_expenditures' table with total payments exceeding 200,000 USD but less than 200,000 GBP (calculated using the peak exchange rate in 2015), list the agencies whose functions are similar to those of Canada's departments responsible for 'Agriculture and Agri-Food' as found in the 'rm-mr-2009-eng' table.",
+            "ground_truth": [
+                [
+                    "AGRICULTURE",
+                    "Agriculture and Agri-Food Department"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 6,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_14"
+        },
+        {
+            "query_id": 15,
+            "db_used": "santos",
+            "question": "Among the records in the 'dft-monthly-spend-201005' table where the British Transport Police's expenses on 28/05/2010 are greater than 10,000 USD, count how many have matching entries for software coding expenses on the same day in the transparency report from the 'V3.1_-_Final__csv__May_2013__25k_Transprncy_rpt' table.",
+            "ground_truth": 16,
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_15"
+        },
+        {
+            "query_id": 16,
+            "db_used": "santos",
+            "question": "List the officials in 'travel-exp-April-June-2018' table who share the same first name with senior officials from the 'home_office_senior_officials_travel_data_return' table, along with their destinations and the continents where these destinations are located.",
+            "ground_truth": [
+                [
+                    "Mark Bryson-Richardson",
+                    "Paris, France",
+                    "Europe"
+                ],
+                [
+                    "Richard Montgomery",
+                    "Kathmandu/ Yangon/Manilla",
+                    "Asia"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_16"
+        },
+        {
+            "query_id": 17,
+            "db_used": "santos",
+            "question": "From the 'pca-human-wildlife-coexistence-animals-involved-detailed-records' table, identify the 50 most recent wildlife incidents involving deers. For each incident, list the protected heritage area where it occurred, if that area is in a country included in the 'cihr_co-applicant_200607' table.",
+            "ground_truth": [
+                [
+                    "Elk Island National Park of Canada",
+                    "Canada"
+                ],
+                [
+                    "Gros Morne National Park of Canada",
+                    "Canada"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_17"
+        },
+        {
+            "query_id": 18,
+            "db_used": "santos",
+            "question": "List the matching addresses that represent the same street location in both the 'pubs' and 'community_centres' tables within the Barking and Dagenham borough, sorted by the latitude of the street location.",
+            "ground_truth": [
+                [
+                    "Billet Road / Rose Lane",
+                    "Rose Lane"
+                ],
+                [
+                    "109 Bastable Avenue / Charlton Crescent",
+                    "Bastable Avenue"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_18"
+        },
+        {
+            "query_id": 19,
+            "db_used": "santos",
+            "question": "List suppliers that appear in both the '01.Apr_2018' table and the '2015_05_expenditure' table that represent the same entity, and offer professional medical supplies.",
+            "ground_truth": [
+                [
+                    "Nhs Supply Chain",
+                    "NHS SUPPLY CHAIN"
+                ],
+                [
+                    "Novartis Pharmaceuticals Uk Ltd",
+                    "NOVARTIS PHARMACEUTICALS UK LTD"
+                ],
+                [
+                    "Philips Healthcare",
+                    "PHILIPS HEALTHCARE"
+                ],
+                [
+                    "Nhs Blood And Transplant",
+                    "NHS BLOOD & TRANSPLANT"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_19"
+        },
+        {
+            "query_id": 20,
+            "db_used": "mondial_geo",
+            "question": "For each Asian city with more than 8 million people, what is the closest sea?",
+            "ground_truth": [
+                [
+                    "Jakarta",
+                    "Sunda Sea"
+                ],
+                [
+                    "Karachi",
+                    "Arabian Sea"
+                ],
+                [
+                    "Mumbai",
+                    "Arabian Sea"
+                ],
+                [
+                    "Seoul",
+                    "Yellow Sea"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_20"
+        },
+        {
+            "query_id": 21,
+            "db_used": "mondial_geo",
+            "question": "List the continents that adjoin each of the world's three smallest seas.",
+            "ground_truth": [
+                [
+                    "Kattegat",
+                    "Europe"
+                ],
+                [
+                    "Skagerrak",
+                    "Europe"
+                ],
+                [
+                    "Sea of Azov",
+                    "Europe"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 3,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_21"
+        },
+        {
+            "query_id": 22,
+            "db_used": "disney",
+            "question": "Calculate the average total revenue for years in which musical movies were released after the Beijing Summer Olympics, by matching movie release dates with revenue data from the same year.",
+            "ground_truth": "48813.0",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 3,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_22"
+        },
+        {
+            "query_id": 23,
+            "db_used": "disney",
+            "question": "Calculate the average profit margin (total gross divided by inflation-adjusted gross) for musical movies that were released after the end of World War II.",
+            "ground_truth": "0.5299",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 5,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_23"
+        },
+        {
+            "query_id": 24,
+            "db_used": "disney",
+            "question": "List the directors of adventure movies with an MPAA rating of 'PG-13', released after the date of Barack Obama's second inauguration. Return the list of directors, sorted in ascending order by their birthdays.",
+            "ground_truth": [
+                [
+                    "Alan Taylor"
+                ],
+                [
+                    "J. J. Abrams"
+                ],
+                [
+                    "Scott Derrickson"
+                ],
+                [
+                    "James Gunn"
+                ],
+                [
+                    "Gareth Edwards"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_24"
+        },
+        {
+            "query_id": 25,
+            "db_used": "car_retails",
+            "question": "For all shipped orders with non-empty comments that requested DHL shipping, cluster the customer locations into two corresponding buckets by urbanization level. For each cluster label, count how many customers fall into that cluster.",
+            "ground_truth": [
+                [
+                    "Rural",
+                    1
+                ],
+                [
+                    "Urban",
+                    5
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 6,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_25"
+        },
+        {
+            "query_id": 26,
+            "db_used": "mondial_geo",
+            "question": "Among European countries with a population greater than one-thirtieth of China's population, group them by level of economic development and count the number of countries in each group.",
+            "ground_truth": [
+                [
+                    "Developed",
+                    4
+                ],
+                [
+                    "Developing",
+                    1
+                ],
+                [
+                    "Emerging",
+                    2
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_26"
+        },
+        {
+            "query_id": 27,
+            "db_used": "music",
+            "question": "For Eminem's songs released after 2000 in an edited version album, group them by decade and count the number of songs in each decade.",
+            "ground_truth": [
+                [
+                    "2000s",
+                    15
+                ],
+                [
+                    "2010s",
+                    19
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 5,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_27"
+        },
+        {
+            "query_id": 28,
+            "db_used": "formula_1",
+            "question": "Which circuits located in Europe are named after a constructor originating from Europe? Answer with the circuit name.",
+            "ground_truth": [
+                "Autodromo Enzo e Dino Ferrari",
+                "Red Bull Ring"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "hard",
+                "#lros": 3,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_28"
+        },
+        {
+            "query_id": 29,
+            "db_used": "beer_factory",
+            "question": "Among US brands that receive positive comments, cluster them by their locations into 'US-East', 'US-West', and 'US-Central', based on the geographical location of their origin with respect to the United States.",
+            "ground_truth": [
+                [
+                    "Captain Eli's",
+                    "US-East"
+                ],
+                [
+                    "Fitz's",
+                    "US-Central"
+                ],
+                [
+                    "Sprecher",
+                    "US-Central"
+                ],
+                [
+                    "Bulldog",
+                    "US-West"
+                ],
+                [
+                    "Sparky's Fresh Draft",
+                    "US-West"
+                ],
+                [
+                    "Gales",
+                    "US-Central"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 4,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_29"
+        },
+        {
+            "query_id": 30,
+            "db_used": "beer_factory",
+            "question": "Among root beer brands that began their first brew more than 50 years before the Beijing Summer Olympics, cluster them by their location's Köppen–Geiger climate types (Letter Code), then count how many brands belong to each climate cluster.",
+            "ground_truth": [
+                [
+                    "Cfa",
+                    3
+                ],
+                [
+                    "Csa",
+                    1
+                ],
+                [
+                    "Csb",
+                    2
+                ],
+                [
+                    "Dfa",
+                    5
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 2,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_30"
+        },
+        {
+            "query_id": 31,
+            "db_used": "beer_factory",
+            "question": "Identify all male customers with an Outlook email address who reside in California's capital city. Of these, select the five customers living furthest north and provide their first and last names.",
+            "ground_truth": [
+                [
+                    "Trevor",
+                    "Matich"
+                ],
+                [
+                    "Scott",
+                    "Boras"
+                ],
+                [
+                    "John",
+                    "Bowker"
+                ],
+                [
+                    "Thomas",
+                    "Kelly"
+                ],
+                [
+                    "Lance",
+                    "Briggs"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_31"
+        },
+        {
+            "query_id": 32,
+            "db_used": "menu",
+            "question": "Consider the spicy dishes that appear in menus from New York restaurants after 1970. Group these dishes by their countries of origin, and count how many dishes belong to each cluster.",
+            "ground_truth": [
+                [
+                    "Germany",
+                    1
+                ],
+                [
+                    "India",
+                    2
+                ],
+                [
+                    "USA",
+                    3
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "hard",
+                "#lros": 2,
+                "#tables": 4,
+                "#hops": 7,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_32"
+        },
+        {
+            "query_id": 33,
+            "db_used": "menu",
+            "question": "Find all expensive dishes (lowest price > $480) that appeared in hotel menus, then sort them by the time they first appeared from earliest to latest. Answer with the dish names.",
+            "ground_truth": [
+                [
+                    "Helados diversos"
+                ],
+                [
+                    "luso"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "hard",
+                "#lros": 2,
+                "#tables": 4,
+                "#hops": 6,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_33"
+        },
+        {
+            "query_id": 34,
+            "db_used": "menu",
+            "question": "Consider dishes that contain seafood ingredients and have a lowest price greater than 100 USD. Cluster them by their preparation methods into 'Baked', 'Grilled', 'Fried', 'Raw', 'Sautéed', 'Steamed' and 'Others'. Count how many dishes use each preparation method.",
+            "ground_truth": [
+                [
+                    "Baked",
+                    4
+                ],
+                [
+                    "Fried",
+                    2
+                ],
+                [
+                    "Grilled",
+                    2
+                ],
+                [
+                    "Others",
+                    10
+                ],
+                [
+                    "Raw",
+                    3
+                ],
+                [
+                    "Sautéed",
+                    3
+                ],
+                [
+                    "Steamed",
+                    4
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 3,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_34"
+        },
+        {
+            "query_id": 35,
+            "db_used": "olympics",
+            "question": "Filter Asian cities that have held the Olympic Games, group them by country, and count how many times each country has hosted the Olympic Games.",
+            "ground_truth": [
+                [
+                    "China",
+                    1
+                ],
+                [
+                    "Japan",
+                    3
+                ],
+                [
+                    "South Korea",
+                    1
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 3,
+                "#hops": 4,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_35"
+        },
+        {
+            "query_id": 36,
+            "db_used": "formula_1",
+            "question": "List all drivers who were born in Europe, participated in the 2017 Monaco Grand Prix, were born after January 1, 1991, and are younger than Alex Albon. Rank them by their debut year, from earliest to latest.",
+            "ground_truth": [
+                [
+                    "Max",
+                    "Verstappen"
+                ],
+                [
+                    "Esteban",
+                    "Ocon"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "hard",
+                "#lros": 3,
+                "#tables": 3,
+                "#hops": 9,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_36"
+        },
+        {
+            "query_id": 37,
+            "db_used": "formula_1",
+            "question": "List drivers who were born after 1980, have won a world championship, and have not competed in either GP2 or Formula 2.",
+            "ground_truth": [
+                [
+                    "Fernando",
+                    "Alonso"
+                ],
+                [
+                    "Sebastian",
+                    "Vettel"
+                ],
+                [
+                    "Max",
+                    "Verstappen"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_37"
+        },
+        {
+            "query_id": 38,
+            "db_used": "electronics",
+            "question": "In the Amazon table, find the IDs for Sony laptop chargers that originally cost more than £20, using the peak 2020 exchange rate.",
+            "ground_truth": [
+                "758",
+                "2543",
+                "3790"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_38"
+        },
+        {
+            "query_id": 39,
+            "db_used": "books",
+            "question": "Filter ids of books about natural science published between Jan 2000 and Feb 2000, and written in original British English.",
+            "ground_truth": [
+                "8036",
+                "9538"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_39"
+        },
+        {
+            "query_id": 40,
+            "db_used": "shipping",
+            "question": "How many customers received shipments in 2016 and after the 2016 Rio Summer Olympics from a state that is adjacent to their own home state?",
+            "ground_truth": "14",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 3,
+                "#hops": 7,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_40"
+        },
+        {
+            "query_id": 41,
+            "db_used": "car_retails",
+            "question": "Among orders that have been shipped and specified a preferred delivery company in the comments, how many days did it take to ship these orders on average?",
+            "ground_truth": "3.3",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_41"
+        },
+        {
+            "query_id": 42,
+            "db_used": "restaurants2",
+            "question": "Which Yelp restaurants (votes > 3000) are located in Northeastern cities of the United States and serve cuisines that originate from Asia?",
+            "ground_truth": [
+                [
+                    "Joeâs Shanghai"
+                ],
+                [
+                    "Totto Ramen"
+                ],
+                [
+                    "Ippudo NY"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_42"
+        },
+        {
+            "query_id": 43,
+            "db_used": "california_schools",
+            "question": "Filter schools with the top 30 FRPM counts that have school names that are more likely to be a human's full name, and rank them geographically from south to north by county. Answer with the school name.",
+            "ground_truth": [
+                "Hector G. Godinez",
+                "James A. Garfield Senior High",
+                "John H. Francis Polytechnic"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_43"
+        },
+        {
+            "query_id": 44,
+            "db_used": "mondial_geo",
+            "question": "List lakes with a altitude larger than 500 and whose areas are larger than the area of Shanghai, and rank them based on their absolute distance to London (United Kingdom) in ascending order. Answer with the lake name.",
+            "ground_truth": [
+                [
+                    "Lake Victoria"
+                ],
+                [
+                    "Lake Tanganjika"
+                ],
+                [
+                    "Lake Bangweulu"
+                ],
+                [
+                    "Lake Titicaca"
+                ],
+                [
+                    "Salar de Uyuni"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_44"
+        },
+        {
+            "query_id": 45,
+            "db_used": "disney",
+            "question": "List Disney movies released in the 21st Century that have a male villain and whose total gross is more than 95% of their inflation-adjusted gross. Answer with the movie name.",
+            "ground_truth": [
+                [
+                    "Frozen"
+                ],
+                [
+                    "Big Hero 6"
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 3,
+                "#tables": 3,
+                "#hops": 6,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_45"
+        },
+        {
+            "query_id": 46,
+            "db_used": "formula_1",
+            "question": "Group and count Formula 1 circuits by continent, but only include those built after the end year of the Vietnam War and that have hosted races for modern (21st-century) constructors.",
+            "ground_truth": [
+                [
+                    "Asia",
+                    10
+                ],
+                [
+                    "Europe",
+                    7
+                ],
+                [
+                    "North America",
+                    6
+                ],
+                [
+                    "Oceania",
+                    1
+                ],
+                [
+                    "South America",
+                    1
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "hard",
+                "#lros": 3,
+                "#tables": 4,
+                "#hops": 8,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_46"
+        },
+        {
+            "query_id": 47,
+            "db_used": "student_club",
+            "question": "Calculate the average proportion of the remaining money to the budget amount for those monthly speaking events held before the day COVID-19 was declared a pandemic by the World Health Organization.",
+            "ground_truth": 0.535,
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "hard",
+                "#lros": 3,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_47"
+        },
+        {
+            "query_id": 48,
+            "db_used": "disney",
+            "question": "List the characters released in the year with highest ratio of Studio Entertainment revenue to total revenue.",
+            "ground_truth": "Pocahontas",
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_48"
+        },
+        {
+            "query_id": 49,
+            "db_used": "nextiaJD",
+            "question": "How many Theatre/Performance cultural spaces with over 200 seats are located within a 20-minute walking distance of a nearby community center, where both the cultural spaces and community centers are situated at a latitude higher than Vancouver City Hall?",
+            "ground_truth": "17",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "hard",
+                "#lros": 3,
+                "#tables": 2,
+                "#hops": 5,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_49"
+        },
+        {
+            "query_id": 50,
+            "db_used": "music",
+            "question": "List the Top 1 most-played Taylor Swift songs about love, from Taylor Swift's full-length studio albums in the iTunes table.",
+            "ground_truth": "Blank Space",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "hard",
+                "#lros": 3,
+                "#tables": 1,
+                "#hops": 5,
+                "knowledge_level": 3
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_50"
+        },
+        {
+            "query_id": 51,
+            "db_used": "movies",
+            "question": "Among movies with rating more than 7.5 in the 'rotten_tomatoes' table, how many of them are released in the same year as Christopher Nolan's Inception, were directed by female directors?",
+            "ground_truth": "2",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "easy",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 4,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_51"
+        },
+        {
+            "query_id": 52,
+            "db_used": "movie_3",
+            "question": "Consider English Action movies rated NC-17 with a 'Reflection' theme. Group them into 'Comedy', 'Thriller', 'Tragedy' and 'Others'. Count the movies within each group.",
+            "ground_truth": [
+                [
+                    "Comedy",
+                    2
+                ],
+                [
+                    "Thriller",
+                    4
+                ]
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_CLUSTER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "hard",
+                "#lros": 2,
+                "#tables": 4,
+                "#hops": 8,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_52"
+        },
+        {
+            "query_id": 53,
+            "db_used": "mondial_geo",
+            "question": "List the top 3 European Union countries with the highest population growth that have a republican government.",
+            "ground_truth": [
+                "Reunion",
+                "Luxembourg",
+                "Cyprus"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 3,
+                "#hops": 7,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_53"
+        },
+        {
+            "query_id": 54,
+            "db_used": "mondial_geo",
+            "question": "Among European countries with more than 200,000 GDP, which one has the lowest Population Density?",
+            "ground_truth": "Russia",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 2,
+                "#hops": 6,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_54"
+        },
+        {
+            "query_id": 55,
+            "db_used": "hockey",
+            "question": "Calculate the average age (as of 2025) of coaches who are still alive, whose bmi (based on the 'height' in inches and the 'weight' in pounds in the 'Matser' Table) is higher than 28 who have been a player.",
+            "ground_truth": "74.29",
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 1,
+                "#hops": 6,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_55"
+        },
+        {
+            "query_id": 56,
+            "db_used": "hockey",
+            "question": "Among the coaches who have served a team named with a city, how many of them are born in Northeastern States in USA?",
+            "ground_truth": "16",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 3,
+                "#hops": 9,
+                "knowledge_level": 1
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_56"
+        },
+        {
+            "query_id": 57,
+            "db_used": "formula_1",
+            "question": "Among the drivers who raced in Europe in 2015, how many of them have at least a circuit in their hometown country?",
+            "ground_truth": "17",
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_MATCH"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 4,
+                "#hops": 7,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_57"
+        },
+        {
+            "query_id": 58,
+            "db_used": "formula_1",
+            "question": "Identify the countries of the top 2 drivers with the highest total points. Rank the racing circuits in these countries by their first year to host a Formula 1 Grand Prix, from the earliest to the latest.",
+            "ground_truth": [
+                "Silverstone Circuit",
+                "Nürburgring",
+                "Aintree",
+                "AVUS",
+                "Brands Hatch",
+                "Hockenheimring",
+                "Donington Park"
+            ],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH",
+                    "LLM_ORDER"
+                ],
+                "expected_output_type": "table",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 3,
+                "#hops": 7,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_58"
+        },
+        {
+            "query_id": 59,
+            "db_used": "formula_1",
+            "question": "Identify the countries represented by constructors in the 2015 Formula 1 World Championship. Among these countries, list the country that hosted the highest-altitude Grand Prix that year.",
+            "ground_truth": "Austria",
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH",
+                    "LLM_IMPUTE"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "hard",
+                "#lros": 2,
+                "#tables": 4,
+                "#hops": 10,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_59"
+        },
+        {
+            "query_id": 60,
+            "db_used": "beer_factory",
+            "question": "Among male customers in Sacramento using Microsoft email services, count how many distinct beer brands they have purchased, limiting to brands first brewed after World War II.",
+            "ground_truth": 13,
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT",
+                    "LLM_SELECT"
+                ],
+                "expected_output_type": "scalar",
+                "difficulty": "medium",
+                "#lros": 2,
+                "#tables": 4,
+                "#hops": 7,
+                "knowledge_level": 2
+            },
+            "query_plan_reference": "eval/e2e_eval.py:pipeline_60"
+        }
+    ]
+}
