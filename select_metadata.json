@@ -1,0 +1,889 @@
+{
+    "benchmark_metadata": {
+        "description": "Select-LROs query metadata in LROBench",
+        "statistics": {
+            "total_queries": 60,
+            "scoring_dimensions": {
+                "difficulty": {
+                    "medium": {
+                        "percentage": 0.97,
+                        "score": 2
+                    },
+                    "easy": {
+                        "percentage": 0.03,
+                        "score": 1
+                    }
+                },
+                "operand_type": {
+                    "column": {
+                        "percentage": 0.25,
+                        "score": 1
+                    },
+                    "row": {
+                        "percentage": 0.5,
+                        "score": 2
+                    },
+                    "table": {
+                        "percentage": 0.25,
+                        "score": 3
+                    }
+                }
+            },
+            "overall_score_distribution": {
+                "difficulty_bands": {
+                    "easy": {
+                        "percentage": 0.03
+                    },
+                    "medium": {
+                        "percentage": 0.97
+                    },
+                    "hard": {
+                        "percentage": 0.0
+                    }
+                }
+            }
+        }
+    },
+    "queries": [
+        {
+            "query_id": "select100",
+            "db_used": "formula_1",
+            "question": "List all Formula 1 drivers born after 1990-01-20 who are younger than Alex Albon.",
+            "ground_truth": [["Esteban", "Ocon"], ["Max", "Verstappen"], ["Lance", "Stroll"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select100"
+        },
+        {
+            "query_id": "select101",
+            "db_used": "codebase_community",
+            "question": "Among the top 10 most popular tags, which ones are related to statistics?",
+            "ground_truth": [["regression"], ["time-series"], ["probability"], ["hypothesis-testing"], ["distributions"], ["correlation"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select101"
+        },
+        {
+            "query_id": "select102",
+            "db_used": "california_schools",
+            "question": "List all counties in the San Francisco Bay Area.",
+            "ground_truth": [["Alameda"], ["Contra Costa"], ["Marin"], ["Napa"], ["San Francisco"], ["San Mateo"], ["Santa Clara"], ["Solano"], ["Sonoma"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select102"
+        },
+        {
+            "query_id": "select103",
+            "db_used": "formula_1",
+            "question": "List the Formula 1 drivers who were born after 1980 and have won the world championship.",
+            "ground_truth": [["Lewis", "Hamilton"], ["Nico", "Rosberg"], ["Fernando", "Alonso"], ["Sebastian", "Vettel"], ["Max", "Verstappen"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select103"
+        },
+        {
+            "query_id": "select104",
+            "db_used": "codebase_community",
+            "question": "Among the Top 10 most popular posts, select the IDs for posts whose body contains website links.",
+            "ground_truth": [["6"], ["423"], ["138"], ["20523"], ["13314"], ["16921"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select104"
+        },
+        {
+            "query_id": "select105",
+            "db_used": "formula_1",
+            "question": "List all Formula 1 circuits located in East Asia.",
+            "ground_truth": [["Fuji Speedway"], ["Shanghai International Circuit"], ["Suzuka Circuit"], ["Okayama International Circuit"], ["Korean International Circuit"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select105"
+        },
+        {
+            "query_id": "select106",
+            "db_used": "electronics",
+            "question": "List the IDs of Sony laptop charger products sold on Amazon.",
+            "ground_truth": [["758"], ["2280"], ["2543"], ["3253"], ["3790"], ["3846"], ["3872"], ["4020"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select106"
+        },
+        {
+            "query_id": "select107",
+            "db_used": "books",
+            "question": "List the IDs of books about natural science published between January 2000 and February 2000.",
+            "ground_truth": [["960"], ["8036"], ["9538"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select107"
+        },
+        {
+            "query_id": "select108",
+            "db_used": "music",
+            "question": "List the IDs of songs by The Chainsmokers that are about love.",
+            "ground_truth": [["2586"], ["2589"], ["2593"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select108"
+        },
+        {
+            "query_id": "select109",
+            "db_used": "european_football_2",
+            "question": "Among the top 10 tallest football players, select the player ids of those who are European.",
+            "ground_truth": [["148325"], ["96465"], ["150209"], ["27372"], ["103428"], ["38567"], ["543021"], ["41129"], ["26585"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select109"
+        },
+        {
+            "query_id": "select110",
+            "db_used": "shipping",
+            "question": "Which customers have shipments in June 2016 where the customer's state is geographically adjacent to the shipment's state?",
+            "ground_truth": [["Eppies Discount Tire & Auto Centers"], ["Kenner Welding Inc"], ["Sunguard Window Tinting & Truck Accessories"], ["R V City"], ["Great Dane Trailers Inc"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select110"
+        },
+        {
+            "query_id": "select111",
+            "db_used": "restaurants2",
+            "question": "Which Yelp restaurants with more than 3000 votes are located in a northeastern city of the United States?",
+            "ground_truth": [["Joe’s Shanghai"], ["The Halal Guys"], ["Totto Ramen"], ["Eataly NYC"], ["Katz’s Delicatessen"], ["Lombardi’s Pizza"], ["Peter Luger Steak House"], ["Ippudo NY"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select111"
+        },
+        {
+            "query_id": "select112",
+            "db_used": "california_schools",
+            "question": "Among the top 30 schools with the highest FRPM(K-12) counts, which ones have a human-sounding name?",
+            "ground_truth": [["John H. Francis Polytechnic"], ["Hector G. Godinez"], ["James A. Garfield Senior High"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select112"
+        },
+        {
+            "query_id": "select113",
+            "db_used": "car_retails",
+            "question": "List the order numbers of shipped orders whose comments request a specific delivery company.",
+            "ground_truth": [[10109], [10215], [10254], [10308], [10313], [10319], [10336], [10340], [10358], [10400], [10413]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select113"
+        },
+        {
+            "query_id": "select114",
+            "db_used": "movie_3",
+            "question": "List the titles of NC-17 rated Action movies which are described as 'Reflection'.",
+            "ground_truth": [["DANCES NONE"], ["DARKO DORADO"], ["DRAGON SQUAD"], ["MONTEZUMA COMMAND"], ["REAR TRADING"], ["UPRISING UPTOWN"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select114"
+        },
+        {
+            "query_id": "select115",
+            "db_used": "mondial_geo",
+            "question": "List the seas whose depth is greater than the height of the highest peak of the Alps.",
+            "ground_truth": [["Arabian Sea"], ["Arctic Ocean"], ["Atlantic Ocean"], ["Caribbean Sea"], ["Gulf of Aden"], ["Indian Ocean"], ["Mediterranean Sea"], ["Pacific Ocean"], ["South China Sea"], ["Sulawesi Sea"], ["Sunda Sea"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select115"
+        },
+        {
+            "query_id": "select116",
+            "db_used": "mondial_geo",
+            "question": "List the lakes with an altitude greater than 500 and an area larger than that of Shanghai.",
+            "ground_truth": [["Lake Bangweulu"], ["Lake Tanganjika"], ["Lake Titicaca"], ["Lake Victoria"], ["Salar de Uyuni"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select116"
+        },
+        {
+            "query_id": "select117",
+            "db_used": "shipping",
+            "question": "List the IDs of customers located in the northeastern United States.",
+            "ground_truth": [[600], [660], [3073], [4421], [3660], [4561]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select117"
+        },
+        {
+            "query_id": "select118",
+            "db_used": "california_schools",
+            "question": "Among the most recently updated schools, select the CDSCode for those within a 3-hour drive from San Francisco.",
+            "ground_truth": [[44698490000000], [44698490126920], [44698496066542], [4615490000000]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select118"
+        },
+        {
+            "query_id": "select119",
+            "db_used": "debit_card_specializing",
+            "question": "Among the 50 most recent transactions paid in CZK, list the IDs of those with a price greater than 40 US dollars.",
+            "ground_truth": [[988], [947], [978]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select119"
+        },
+        {
+            "query_id": "select120",
+            "db_used": "chicago_crime",
+            "question": "List the ward numbers of Chicago wards whose alderman is a Democrat.",
+            "ground_truth": [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [39], [40], [42], [43], [44], [45], [46], [47], [48], [49], [50]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select120"
+        },
+        {
+            "query_id": "select121",
+            "db_used": "chicago_crime",
+            "question": "List the code numbers of FBI agents who are responsible for investigating sexual crimes.",
+            "ground_truth": [["2"], ["16"], ["17"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select121"
+        },
+        {
+            "query_id": "select122",
+            "db_used": "codebase_community",
+            "question": "Among the 50 most recently created users with a non-empty AboutMe, list the IDs of those whose AboutMe contains an external link.",
+            "ground_truth": [[55675], [55645], [55642], [55635], [55578], [55566], [55558]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select122"
+        },
+        {
+            "query_id": "select123",
+            "db_used": "books",
+            "question": "List all languages that originate from an Asian country.",
+            "ground_truth": [["Japanese"], ["Arabic"], ["Chinese"], ["Malaysian"], ["Turkish"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select123"
+        },
+        {
+            "query_id": "select124",
+            "db_used": "books",
+            "question": "List all the languages that are English or a variation of English.",
+            "ground_truth": [["English"], ["United States English"], ["British English"], ["Middle English"], ["Canadian English"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select124"
+        },
+        {
+            "query_id": "select125",
+            "db_used": "nextiaJD",
+            "question": "Among the 50 least recently added animals, list the breeds of those with no less than three fur colors.",
+            "ground_truth": [["Terrier"], ["Cat - DMH Tortie/Tabby"], ["Cat - DLH Tabby"], ["Shepherd X"], ["Eng. Bulldog"], ["Cat - DSH Abyssinian"], ["Cat - DSH Tabby"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select125"
+        },
+        {
+            "query_id": "select126",
+            "db_used": "movie_3",
+            "question": "Among the 50 least recently updated movies, list the titles of those with a longer runtime than 'The Silence of the Lambs'.",
+            "ground_truth": [["PAST SUICIDES"], ["PATTON INTERVIEW"], ["PAYCHECK WAIT"], ["PEACH INNOCENT"], ["PHILADELPHIA WIFE"], ["PIANIST OUTFIELD"], ["PITTSBURGH HUNCHBACK"], ["PIZZA JUMANJI"], ["PLATOON INSTINCT"], ["PARIS WEEKEND"], ["PAPI NECKLACE"], ["NORTHWEST POLISH"], ["NOTORIOUS REUNION"], ["NUTS TIES"], ["OLEANDER CLUE"], ["OPEN AFRICAN"], ["OPERATION OPERATION"], ["ORDER BETRAYED"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select126"
+        },
+        {
+            "query_id": "select127",
+            "db_used": "european_football_2",
+            "question": "Among players born in 1998, select ids of those whose height is taller than Barack Obama's.",
+            "ground_truth": [[4143], [4754], [4819], [5917], [8840], [10334]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select127"
+        },
+        {
+            "query_id": "select128",
+            "db_used": "disney",
+            "question": "Filter Disney characters where the movie title contains the hero's name, and output the movie titles.",
+            "ground_truth": [["Snow White and the Seven Dwarfs"], ["Pinocchio"], ["Dumbo"], ["Bambi"], ["The Adventures of Ichabod and Mr. Toad"], ["Cinderella"], ["Alice in Wonderland"], ["Peter Pan"], ["Lady and the Tramp"], ["Robin Hood"], ["The Many Adventures of Winnie the Pooh"], ["Oliver & Company"], ["Aladdin"], ["Pocahontas"], ["Hercules"], ["Mulan"], ["Tarzan"], ["Lilo & Stitch"], ["Bolt"], ["Winnie the Pooh"], ["Wreck-It Ralph"], ["Big Hero 6"], ["Moana"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select128"
+        },
+        {
+            "query_id": "select129",
+            "db_used": "disney",
+            "question": "Filter Disney movies where the country in which the movie was filmed is different from the director's country of birth, and output the movie titles.",
+            "ground_truth": [["Saludos Amigos"], ["Melody Time"], ["Alice in Wonderland"], ["Sleeping Beauty"], ["101 Dalmatians"], ["The Sword in the Stone"], ["The Jungle Book"], ["The Aristocats"], ["Robin Hood"], ["The Many Adventures of Winnie the Pooh"], ["The Rescuers"], ["Oliver & Company"], ["The Rescuers Down Under"], ["Aladdin"], ["Mulan"], ["Dinosaur"], ["Brother Bear"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select129"
+        },
+        {
+            "query_id": "select200",
+            "db_used": "california_schools",
+            "question": "Select all the columns related to the SAT test in the 'satscores' table.",
+            "ground_truth": ["NumTstTakr", "AvgScrRead", "AvgScrWrite", "AvgScrMath", "NumGE1500"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select200"
+        },
+        {
+            "query_id": "select201",
+            "db_used": "european_football_2",
+            "question": "Which team attribute columns can be used for performance classification?",
+            "ground_truth": ["buildUpPlaySpeedClass", "buildUpPlayDribblingClass", "buildUpPlayPassingClass", "buildUpPlayPositioningClass", "chanceCreationPassingClass", "chanceCreationCrossingClass", "chanceCreationShootingClass", "chanceCreationPositioningClass", "defencePressureClass", "defenceAggressionClass", "defenceTeamWidthClass", "defenceDefenderLineClass"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select201"
+        },
+        {
+            "query_id": "select202",
+            "db_used": "superhero",
+            "question": "When querying for a superhero's name or appearance, which columns are relevant in the 'superhero' table?",
+            "ground_truth": ["superhero_name", "full_name", "eye_colour_id", "hair_colour_id", "skin_colour_id"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select202"
+        },
+        {
+            "query_id": "select203",
+            "db_used": "debit_card_specializing",
+            "question": "Which columns are related to money in the 'transactions_1k' table?",
+            "ground_truth": ["Amount", "Price"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select203"
+        },
+        {
+            "query_id": "select204",
+            "db_used": "codebase_community",
+            "question": "Which columns are relevant when querying for date attributes in the 'posts' table?",
+            "ground_truth": ["CreaionDate", "LasActivityDate", "LastEditDate", "CommunityOwnedDate", "ClosedDate"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select204"
+        },
+        {
+            "query_id": "select205",
+            "db_used": "music",
+            "question": "List all columns that represent temporal references in the 'amazon_music' table.",
+            "ground_truth": ["Time", "Released", "Copyright"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select205"
+        },
+        {
+            "query_id": "select206",
+            "db_used": "mondial_geo",
+            "question": "List the columns in the 'city' table that are relevant to administrative division attributes or concepts.",
+            "ground_truth": ["Name", "Country", "Province", "Population"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select206"
+        },
+        {
+            "query_id": "select207",
+            "db_used": "electronics",
+            "question": "Which columns are related to device configuration in the 'amazon' table?",
+            "ground_truth": ["Name", "Features"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select207"
+        },
+        {
+            "query_id": "select208",
+            "db_used": "chicago_crime",
+            "question": "Which columns are related to contact information in the 'ward' table?",
+            "ground_truth": ["ward_office_address", "ward_office_zip", "ward_email", "ward_office_phone", "ward_office_fax", "city_hall_office_phone", "city_hall_office_fax"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select208"
+        },
+        {
+            "query_id": "select209",
+            "db_used": "restaurants2",
+            "question": "List the columns related to restaurant popularity in the 'zomato' table.",
+            "ground_truth": ["votes", "rating", "reviewcount"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select209"
+        },
+        {
+            "query_id": "select210",
+            "db_used": "hockey",
+            "question": "List all columns related to player names in the 'Master' table.",
+            "ground_truth": ["firstName", "lastName", "nameNote", "nameGiven", "nameNick"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select210"
+        },
+        {
+            "query_id": "select211",
+            "db_used": "hockey",
+            "question": "List all columns related to shooting in the 'Scoring' table.",
+            "ground_truth": ["G", "PPG", "SHG", "GWG", "GTG", "SOG", "PostG", "PostPPG", "PostSHG", "PostGWG", "PostSOG"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select211"
+        },
+        {
+            "query_id": "select212",
+            "db_used": "santos",
+            "question": "List all columns related to financial value in the 'Contracts-2019-2020-q1' table.",
+            "ground_truth": ["Estimated value", "Estimated annual value", "VAT not recovered"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select212"
+        },
+        {
+            "query_id": "select213",
+            "db_used": "santos",
+            "question": "List all columns related to contract terms in the 'Contracts-2019-2020-q1' table.",
+            "ground_truth": ["Initial contract period (months)", "Total option to extend (months)", "Total contract period (months)", "Available No. of Ext.", "Available extension details", "Taken No. of Ext.", "Taken Extension details"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select213"
+        },
+        {
+            "query_id": "select214",
+            "db_used": "santos",
+            "question": "Which columns should I refer to in order to understand the business activity of locations in the 'Copy2520of2520Monthly2520Data2520Feed-June25202016' table?",
+            "ground_truth": ["BRCYear", "BRCQuarter", "BRCMonthName", "BRCWeek", "BusinessInCount", "BusinessOutCount", "BusinessTotalCount"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select214"
+        },
+        {
+            "query_id": "select300",
+            "db_used": null,
+            "question": "List all tables related to driver information.",
+            "ground_truth": ["driverStandings", "drivers", "lapTimes", "pitStops", "qualifying", "results"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select300"
+        },
+        {
+            "query_id": "select301",
+            "db_used": null,
+            "question": "List all tables related to book attributes and information.",
+            "ground_truth": ["book", "book_author", "author", "book_language", "publisher"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select301"
+        },
+        {
+            "query_id": "select302",
+            "db_used": null,
+            "question": "List all tables related to geographic locations where crimes occur.",
+            "ground_truth": ["Community_Area", "Crime", "District", "Neighborhood", "Ward"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select302"
+        },
+        {
+            "query_id": "select303",
+            "db_used": null,
+            "question": "List all tables related to comments.",
+            "ground_truth": ["comments", "posts", "users"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select303"
+        },
+        {
+            "query_id": "select304",
+            "db_used": null,
+            "question": "List all tables related to a superhero's appearance.",
+            "ground_truth": ["colour", "gender", "race", "superhero"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select304"
+        },
+        {
+            "query_id": "select305",
+            "db_used": null,
+            "question": "List all tables related to football leagues.",
+            "ground_truth": ["Country", "League", "Match"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select305"
+        },
+        {
+            "query_id": "select306",
+            "db_used": null,
+            "question": "Which tables are needed to retrieve Lewis Hamilton's average lap time in the 2016 Singapore Grand Prix?",
+            "ground_truth": ["drivers", "lapTimes", "races"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select306"
+        },
+        {
+            "query_id": "select307",
+            "db_used": null,
+            "question": "Which tables are needed to retrieve the matches that FC Barcelona participated in?",
+            "ground_truth": ["Match", "Team"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select307"
+        },
+        {
+            "query_id": "select308",
+            "db_used": null,
+            "question": "List the tables relevant to geographic concepts.",
+            "ground_truth": ["address", "city", "country"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select308"
+        },
+        {
+            "query_id": "select309",
+            "db_used": null,
+            "question": "Select all tables that are not related to terrain.",
+            "ground_truth": ["borders", "city", "continent", "country", "economy", "encompasses", "ethnicGroup", "isMember", "language", "organization", "politics", "population", "province", "religion", "target"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select309"
+        },
+        {
+            "query_id": "select310",
+            "db_used": null,
+            "question": "Select all tables related to the water system.",
+            "ground_truth": ["geo_estuary", "geo_lake", "geo_river", "geo_sea", "geo_source", "lake", "located", "river", "sea", "islandIn", "mergesWith"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select310"
+        },
+        {
+            "query_id": "select311",
+            "db_used": null,
+            "question": "Select all tables containing information about coaches.",
+            "ground_truth": ["Coaches", "Master", "AwardsCoaches"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select311"
+        },
+        {
+            "query_id": "select312",
+            "db_used": null,
+            "question": "If I want to know the revenue generated by a specific author, which tables should I refer to?",
+            "ground_truth": ["author", "book_author", "order_line"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select312"
+        },
+        {
+            "query_id": "select313",
+            "db_used": null,
+            "question": "If I want to identify the customer who spends the most money buying books, which tables should I refer to?",
+            "ground_truth": ["cust_order", "order_line", "customer"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select313"
+        },
+        {
+            "query_id": "select314",
+            "db_used": null,
+            "question": "If I want to find all players who have won awards both as a goalie and as a coach, which tables should I refer to?",
+            "ground_truth": ["Coaches", "AwardsPlayers", "AwardsCoaches", "Master"],
+            "attributes": {
+                "operators used": [
+                    "LLM_SELECT"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/select_eval.py:pipeline_select314"
+        }
+    ]
+}

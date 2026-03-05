@@ -1,0 +1,1177 @@
+{
+    "benchmark_metadata": {
+        "description": "Impute-LROs query metadata in LROBench",
+        "statistics": {
+            "total_queries": 80,
+            "scoring_dimensions": {
+                "difficulty": {
+                    "medium": {
+                        "percentage": 0.71,
+                        "score": 2
+                    },
+                    "hard": {
+                        "percentage": 0.12,
+                        "score": 3
+                    },
+                    "easy": {
+                        "percentage": 0.16,
+                        "score": 1
+                    }
+                },
+                "operand_type": {
+                    "cell": {
+                        "percentage": 0.38,
+                        "score": 1
+                    },
+                    "column": {
+                        "percentage": 0.28,
+                        "score": 2
+                    },
+                    "row": {
+                        "percentage": 0.29,
+                        "score": 3
+                    },
+                    "table": {
+                        "percentage": 0.06,
+                        "score": 4
+                    }
+                }
+            },
+            "overall_score_distribution": {
+                "difficulty_bands": {
+                    "easy": {
+                        "percentage": 0.16
+                    },
+                    "medium": {
+                        "percentage": 0.71
+                    },
+                    "hard": {
+                        "percentage": 0.12
+                    }
+                }
+            }
+        }
+    },
+    "queries": [
+        {
+            "query_id": "impute100",
+            "db_used": "books",
+            "question": "For books published in 2010, impute the missing language name and publisher name based on the book title.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute100"
+        },
+        {
+            "query_id": "impute101",
+            "db_used": "disney",
+            "question": "Impute the missing director information of the Disney movies.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute101"
+        },
+        {
+            "query_id": "impute102",
+            "db_used": "disney",
+            "question": "Impute the missing release date, hero, villain, and song information of the characters of Disney movies.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute102"
+        },
+        {
+            "query_id": "impute103",
+            "db_used": "car_retails",
+            "question": "Impute the missing city and state of the customer information based on their address.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute103"
+        },
+        {
+            "query_id": "impute104",
+            "db_used": "music",
+            "question": "For songs in the album '1989', impute the missing album name, price, label, and copyright information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute104"
+        },
+        {
+            "query_id": "impute105",
+            "db_used": "anime",
+            "question": "For animations with 'Conan' in the title, impute the missing producers, type, and year information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute105"
+        },
+        {
+            "query_id": "impute106",
+            "db_used": "california_schools",
+            "question": "For schools with more than 500 students scoring above 1500, impute the missing average SAT score calculated from reading, math, and writing scores.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute106"
+        },
+        {
+            "query_id": "impute107",
+            "db_used": "debit_card_specializing",
+            "question": "For transactions with a price greater than 1000, impute the missing unit price based on the total price and amount.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute107"
+        },
+        {
+            "query_id": "impute108",
+            "db_used": "formula_1",
+            "question": "Impute the missing ages of Formula 1 drivers as of January 1, 2025, based on their date of birth.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute108"
+        },
+        {
+            "query_id": "impute109",
+            "db_used": "shipping",
+            "question": "Impute the missing address and phone number of the driver information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute109"
+        },
+        {
+            "query_id": "impute110",
+            "db_used": "movies",
+            "question": "For movies directed by Clint Eastwood, impute the missing year and duration information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute110"
+        },
+        {
+            "query_id": "impute111",
+            "db_used": "movies",
+            "question": "For movies directed by Christopher Nolan, impute the missing year and duration information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute111"
+        },
+        {
+            "query_id": "impute112",
+            "db_used": "mondial_geo",
+            "question": "For countries with a population greater than 50 million, impute the missing capital city information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute112"
+        },
+        {
+            "query_id": "impute113",
+            "db_used": "shipping",
+            "question": "For cities with a population greater than 500,000, impute the missing state information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute113"
+        },
+        {
+            "query_id": "impute114",
+            "db_used": "shipping",
+            "question": "For cities with a population greater than 500,000, impute the missing population density (rounded to 2 decimal places) based on population and area.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute114"
+        },
+        {
+            "query_id": "impute115",
+            "db_used": "books",
+            "question": "Impute the missing full book language name.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute115"
+        },
+        {
+            "query_id": "impute116",
+            "db_used": "disney",
+            "question": "Impute the missing total revenue of Disney movies.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute116"
+        },
+        {
+            "query_id": "impute117",
+            "db_used": "electronics",
+            "question": "For Apple brand electronics, impute the missing discount (rounded to 2 decimal places) based on the original price and Amazon price.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute117"
+        },
+        {
+            "query_id": "impute118",
+            "db_used": "electronics",
+            "question": "For Dell brand electronics, impute the missing original prices (rounded to 2 decimal places) based on the Amazon price and discount.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute118"
+        },
+        {
+            "query_id": "impute119",
+            "db_used": "electronics",
+            "question": "For Lenovo brand electronics, impute the missing Amazon prices (rounded to 2 decimal places) based on the original price and discount.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute119"
+        },
+        {
+            "query_id": "impute120",
+            "db_used": "anime",
+            "question": "For animations with 'One Piece' in the title, impute the missing episodes and type information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute120"
+        },
+        {
+            "query_id": "impute121",
+            "db_used": "anime",
+            "question": "For animations with 'Naruto' in the title, impute the missing episodes and type information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute121"
+        },
+        {
+            "query_id": "impute122",
+            "db_used": "music",
+            "question": "For songs in the album 'Born This Way', impute the missing release date and duration information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute122"
+        },
+        {
+            "query_id": "impute123",
+            "db_used": "music",
+            "question": "For songs in the album '+', impute the missing release date and duration information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute123"
+        },
+        {
+            "query_id": "impute124",
+            "db_used": "superhero",
+            "question": "For superheroes whose names start with 'T', impute the missing gender information.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute124"
+        },
+        {
+            "query_id": "impute125",
+            "db_used": "european_football_2",
+            "question": "For football players born in 1998, impute the missing BMI values based on their height and weight.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute125"
+        },
+        {
+            "query_id": "impute126",
+            "db_used": "european_football_2",
+            "question": "For football players born in 1998, impute the missing weight values based on their height and BMI.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute126"
+        },
+        {
+            "query_id": "impute127",
+            "db_used": "european_football_2",
+            "question": "For football players born in 1999, impute the missing height values based on their weight and BMI.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute127"
+        },
+        {
+            "query_id": "impute128",
+            "db_used": "car_retails",
+            "question": "Impute the missing last name and first name of the car retail employees.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute128"
+        },
+        {
+            "query_id": "impute129",
+            "db_used": "car_retails",
+            "question": "Impute the missing city and phone number of the car retail offices.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute129"
+        },
+        {
+            "query_id": "impute200",
+            "db_used": "disney",
+            "question": "Impute the gender of the hero for each Disney character.",
+            "ground_truth": ["female", "male", "male", "male", "male", "female", "female", "male", "mixed", "female", "male", "male", "male", "mixed", "male", "mixed", "male", "male", "male", "female", "mixed", "female", "male", "male", "female", "male", "male", "female", "male", "male", "male", "male", "male", "male", "male", "female", "female", "male", "female", "male"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute200"
+        },
+        {
+            "query_id": "impute201",
+            "db_used": "disney",
+            "question": "Impute the birth year of each Disney director who does not have full credits.",
+            "ground_truth": [1900, 1895, 1895, 1900, 1909, 1902, 1909, 1909, 1901, 1909, 1906, 1901, 1903, 1903, 1901, 1909, 1909, 1909, 1909, 1909, 1909, 1909, 1915, 1920, 1953, 1952, 1953, 1954, 1960, 1953, 1949, 1954, 1960, 1953, 1958, 1960, 1963, 1960, 1960, 1962, 1953, 1968, 1958, 1960, 1970, 1968, 1953, 1975, 1970, 1963, 1960, 1969, 1968, 1953],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute201"
+        },
+        {
+            "query_id": "impute202",
+            "db_used": "books",
+            "question": "Impute the country of each city in the first 100 rows of the address table.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute202"
+        },
+        {
+            "query_id": "impute203",
+            "db_used": "superhero",
+            "question": "Impute the publishing company of each superhero based on their name in the first 100 rows of the superhero table.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute203"
+        },
+        {
+            "query_id": "impute204",
+            "db_used": "movie_3",
+            "question": "Assign each movie to one of the following categories based on its title and description: Action, Animation, Children, Classics, Comedy, Documentary, Drama, Family, Foreign, Games, Horror, Music, New, Sci-Fi, Sports, or Travel, in the first 50 rows of the film table.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute204"
+        },
+        {
+            "query_id": "impute205",
+            "db_used": "european_football_2",
+            "question": "Calculate the BMI of each football player born in 1997 based on their height in cm and weight in lb.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute205"
+        },
+        {
+            "query_id": "impute206",
+            "db_used": "car_retails",
+            "question": "For each order in the first 50 rows of the orders table, calculate the number of days between the shipped date and the order date.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute206"
+        },
+        {
+            "query_id": "impute207",
+            "db_used": "debit_card_specializing",
+            "question": "For transactions with a price greater than 1000, calculate the unit price based on the total price and amount.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute207"
+        },
+        {
+            "query_id": "impute208",
+            "db_used": "california_schools",
+            "question": "For each school in the first 50 rows of the frpm table, calculate the Percent (%) Eligible Free (K-12) based on the enrollment and free meal count.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute208"
+        },
+        {
+            "query_id": "impute209",
+            "db_used": "california_schools",
+            "question": "For each school in the first 50 rows of the satscores table, calculate the excellent rate (between 0 and 1) based on the number of test takers and the number of students scoring above 1500.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute209"
+        },
+        {
+            "query_id": "impute210",
+            "db_used": "debit_card_specializing",
+            "question": "Impute the year attribute (Leap Year or Common Year) for each date in the 'yearmonth' table.",
+            "ground_truth": ["Leap Year", "Common Year", "Common Year", "Common Year", "Leap Year", "Leap Year", "Common Year", "Common Year", "Common Year", "Common Year", "Common Year", "Common Year", "Common Year", "Leap Year", "Leap Year", "Leap Year", "Leap Year", "Leap Year", "Leap Year", "Common Year", "Common Year"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute210"
+        },
+        {
+            "query_id": "impute211",
+            "db_used": "disney",
+            "question": "Impute the Chinese Zodiac sign for each year in the Disney revenue data.",
+            "ground_truth": ["Goat", "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute211"
+        },
+        {
+            "query_id": "impute212",
+            "db_used": "electronics",
+            "question": "Impute the discount of Apple product with the Top 30 highest original prices based on the original price and Amazon price.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute212"
+        },
+        {
+            "query_id": "impute213",
+            "db_used": "shipping",
+            "question": "Impute the population density of each city with a population greater than 500,000 based on population and area.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute213"
+        },
+        {
+            "query_id": "impute214",
+            "db_used": "formula_1",
+            "question": "Impute the altitude of Formula 1 circuits located at latitudes above 50 based on the circuit name and location.",
+            "ground_truth": [153, 401, 620, 90, 60, 2, 50, 140, 13, 12, 34],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute214"
+        },
+        {
+            "query_id": "impute215",
+            "db_used": "shipping",
+            "question": "For the 30 most populous cities, what are the abbreviated state codes?",
+            "ground_truth": ["NY", "CA", "IL", "TX", "PA", "AZ", "CA", "TX", "TX", "MI", "CA", "IN", "CA", "FL", "OH", "TX", "MD", "TN", "WI", "MA", "DC", "TX", "WA", "CO", "TN", "NC", "TX", "OR", "OK", "AZ"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute215"
+        },
+        {
+            "query_id": "impute216",
+            "db_used": "car_retails",
+            "question": "For each office location, who was the country's top leader in 2023?",
+            "ground_truth": ["Joe Biden", "Joe Biden", "Joe Biden", "Emmanuel Macron", "Fumio Kishida", "Anthony Albanese", "Rishi Sunak"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute216"
+        },
+        {
+            "query_id": "impute217",
+            "db_used": "books",
+            "question": "For customers whose first name starts with 'V', what is the institution (domain) of their email address?",
+            "ground_truth": ["e-recht24.de", "usnews.com", "archive.org", "Mailchimp", "upenn.edu", "networksolutions.com", "blinklist.com", "shinystat.com", "comsenz.com", "cmu.edu", "i2i.jp", "patch.com", "livejournal.com", "flickr.com", "seesaa.net", "elegantthemes.com", "slideshare.net", "bigcartel.com", "feedburner.com", "prweb.com", "lycos.com", "Google", "blogger.com", "nationalgeographic.com", "xrea.com", "zimbio.com", "vk.com", "posterous.com", "hp.com", "elegantthemes.com", "guardian.co.uk", "ucla.edu", "cbslocal.com", "NetEase", "oracle.com", "epa.gov", "bbb.org"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute217"
+        },
+        {
+            "query_id": "impute218",
+            "db_used": "beer_factory",
+            "question": "For customers whose first name starts with 'A', reformat their first purchase date into mm/dd/yyyy format.",
+            "ground_truth": ["10/26/2012", "12/06/2012", "01/13/2013", "08/01/2013", "07/09/2012", "03/23/2013", "11/03/2012", "07/27/2013", "01/14/2013", "01/08/2013", "09/05/2012", "01/12/2013", "08/29/2012", "03/07/2013", "12/08/2012", "06/07/2013", "02/19/2013", "10/21/2012", "11/28/2012", "04/03/2013", "04/25/2013", "10/27/2012", "01/22/2013", "08/29/2013", "08/24/2012", "07/19/2012", "04/13/2013", "10/08/2012", "03/09/2013", "07/22/2013", "04/22/2013", "08/21/2013", "08/13/2012", "05/31/2013", "04/17/2013", "08/20/2012", "06/01/2013", "05/22/2013", "07/09/2012", "03/10/2013", "02/23/2013", "04/21/2013"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute218"
+        },
+        {
+            "query_id": "impute219",
+            "db_used": "olympics",
+            "question": "For each Olympic host city, what country does the city belong to?",
+            "ground_truth": ["Spain", "United Kingdom", "Belgium", "France", "Canada", "France", "Norway", "United States", "United States", "Finland", "United States", "Australia", "United States", "Sweden", "Russia", "Japan", "Italy", "China", "Brazil", "Greece", "United States", "Austria", "Bosnia and Herzegovina", "Mexico", "Germany", "South Korea", "Germany", "Norway", "Italy", "Australia", "Italy", "Netherlands", "Canada", "Russia", "Japan", "Canada", "France", "Japan", "France", "United States", "Switzerland", "Germany"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute219"
+        },
+        {
+            "query_id": "impute220",
+            "db_used": "olympics",
+            "question": "For each Olympic sport, what was the first year it was included in the Olympics?",
+            "ground_truth": [null, 1936, 1924, 1900, 1912, 1896, 1992, 1992, 1936, 1900, 1996, 1960, 1924, 1904, 1936, 1900, 1900, 1924, 1998, 1896, 1904, 1900, 1896, 1908, 1900, 1992, 1900, 1896, 1936, 1908, 1920, 1908, 1964, 1904, 1964, 1924, 1912, 1908, 1924, 1900, 1908, 1984, 1904, 1900, 1900, 2016, 1900, 1896, 1992, 1928, 1924, 1998, 1996, 1924, 1896, 1984, 1988, 2000, 1896, 2000, 2000, 1900, 1964, 1900, 1896, 1896],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute220"
+        },
+        {
+            "query_id": "impute221",
+            "db_used": "olympics",
+            "question": "For each region, what is the abbreviated currency code used in that region?",
+            "ground_truth": ["AFN", "ANG", "ALL", "DZD", "EUR", "AOA", "XCD", "AUD", "ARS", "AMD", "AWG", "USD", "AUD", "EUR", "AZN", "BSD", "BDT", "BBD", "BIF", "EUR", "XOF", "BMD", "BTN", "BAM", "BZD", "BYN", "CZK", "BOB", "BWP", "BRL", "BHD", "BND", "BGN", "XOF", "XAF", "KHR", "CAD", "KYD", "XAF", "XAF", "CLP", "CNY", "XOF", "XAF", "CDF", "NZD", "COP", "KMF", "CVE", "CRC", "EUR", "EUR", "CUP", "EUR", "CZK", "DKK", "DJF", "XCD", "DOP", "USD", "EGP", "ERN", "USD", "EUR", "EUR", "ETB", "SUR", "FJD", "EUR", "EUR", "DEM", "USD", "XAF", "GMD", "GBP", "XOF", "M", "GEL", "XAF", "EUR", "GHS", "EUR", "XCD", "GTQ", "GNF", "USD", "GYD", "HTG", "HKD", "HNL", "HUF", "IDR", "INR", "N/A", "IRR", "EUR", "IQD", "ISK", "ILS", "USD", "EUR", "USD", "JMD", "JOD", "JPY", "KZT", "KES", "KGS", "AUD", "KRW", "EUR", "SAR", "KWD", "LAK", "EUR", "LYD", "LRD", "XCD", "LSL", "LBP", "CHF", "EUR", "EUR", "MGA", "MYR", "MAD", "MYR", "MWK", "MDL", "MVR", "MXN", "MNT", "USD", "MKD", "XOF", "EUR", "EUR", "EUR", "MZN", "MUR", "MRU", "MMK", "NAD", "MYR", "NIO", "EUR", "NPR", "CAD", "NGN", "XOF", "NOK", "AUD", "NZD", "OMR", "PKR", "PAB", "PYG", "PEN", "PHP", "ILS", "USD", "PGK", "PLN", "EUR", "KPW", "USD", "QAR", "RHD", "USD", "RON", "ZAR", "RUB", "RWF", "EUR", "WST", "YUM", "XOF", "SCR", "SGD", "USD", "SLL", "EUR", "EUR", "SBD", "SOS", "RSD", "LKR", "SSP", "STN", "SDG", "CHF", "SRD", "EUR", "SEK", "SZL", "SYP", "TZS", "CSK", "TOP", "THB", "TJS", "TMT", "USD", "XOF", "TWD", "TTD", "TND", "TRY", "AUD", "AED", "EGP", "UGX", "UAH", "XXX", "RUB", "UYU", "USD", "UZS", "VUV", "VES", "VND", "XCD", "P", "XCD", "YER", "YER", "YDD", "YUD", "ZMW", "ZWL", "SGD"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute221"
+        },
+        {
+            "query_id": "impute222",
+            "db_used": "disney",
+            "question": "For each record in the Disney revenue table, what is the ratio of Studio Entertainment revenue to total revenue?",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute222"
+        },
+        {
+            "query_id": "impute223",
+            "db_used": "student_club",
+            "question": "For each budget entry, what proportion of the allocated amount has already been spent?",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute223"
+        },
+        {
+            "query_id": "impute224",
+            "db_used": "student_club",
+            "question": "For each student club event, what season does the event take place in?",
+            "ground_truth": ["winter", "winter", "autumn", "spring", "Fall", "spring", "autumn", "spring", "autumn", "fall", "winter", "fall", "autumn", "autumn", "spring", "autumn", "Spring", "spring", "autumn", "Spring", "spring", "winter", "winter", "autumn", "spring", "winter", "autumn", "autumn", "fall", "autumn", "Winter", "fall", "Spring", "winter", "autumn", "Spring", "winter", "autumn", "spring", "spring", "fall", "autumn"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute224"
+        },
+        {
+            "query_id": "impute225",
+            "db_used": "beer_factory",
+            "question": "For each root beer brand, what is the UTC time zone of the city where it is located?",
+            "ground_truth": ["UTC-8", "UTC-5", "UTC-5", "UTC-6", "UTC-8", "UTC-8", "UTC+10:00", "UTC-8", "UTC-6", "UTC-6", "UTC-5", "UTC-6", "UTC-8", "UTC-6", "UTC-8", "UTC-6", "UTC-8", "UTC-8", "UTC-5", "UTC-8", "UTC-5", "UTC-8", "UTC-5", "UTC-6"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute225"
+        },
+        {
+            "query_id": "impute226",
+            "db_used": "menu",
+            "question": "For the dishes with the Top 30 highest prices, what is the time span between when the dish first appeared and last appeared?",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute226"
+        },
+        {
+            "query_id": "impute227",
+            "db_used": "mondial_geo",
+            "question": "For each desert, which continent is the main part of the desert located in?",
+            "ground_truth": ["Asia", "South America", "Africa", "North America", "North America", "North America", "Africa", "Asia", "Asia", "Asia", "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", "Australia", "Asia", "Africa", "Africa", "North America", "North America", "Australia", "Australia", "Asia", "Africa", "Africa", "Africa", "Asia", "Asia", "Asia", "Africa", "North America", "Asia", "Africa", "Asia", "Asia", "Africa", "Australia", "Asia", "North America", "Asia", "Australia", "Asia", "Asia", "Asia", "Africa", "Australia", "North America", "Australia", "Asia", "Asia", "Africa", "Australia", "Africa", "Africa", "Asia", "Africa", "Asia"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute227"
+        },
+        {
+            "query_id": "impute228",
+            "db_used": "mondial_geo",
+            "question": "For each sea, what is its area (in square kilometers)?",
+            "ground_truth": [797700.0, 3862000.0, 14000000.0, 106460000.0, 377000.0, 1424000.0, 2172000.0, 2000000.0, 436000.0, 2754000.0, 1249000.0, 220000.0, 2172000.0, 1550000.0, 181000.0, 70560000.0, 46000.0, 22000.0, 65000.0, 2500000.0, 570000.0, 1383000.0, 168723000.0, 251000.0, 438000.0, 39000.0, 978000.0, 1583000.0, 987000.0, 32000.0, 3500000.0, 280000.0, 290000.0, 75000.0, 380000.0],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute228"
+        },
+        {
+            "query_id": "impute229",
+            "db_used": "debit_card_specializing",
+            "question": "For the 30 most recent transactions, what is the price converted to US dollars?",
+            "ground_truth": ["5.90", "5.78", "3.69", "1.78", "27.58", "12.99", "9.80", "12.02", "33.96", "22.41", "21.03", "13.76", "25.18", "28.58", "8.57", "30.40", "31.69", "19.12", "1.27", "3.21", "12.62", "49.10", "6.94", "4.61", "0.20", "5.89", "18.79", "34.83", "31.34", "14.04"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute229"
+        },
+        {
+            "query_id": "impute300",
+            "db_used": "disney",
+            "question": "Insert a row for the Disney movie 'Coco' into the characters table.",
+            "ground_truth": ["Coco", "22-Nov-17", "Miguel", "Ernesto de la Cruz", "Remember Me"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute300"
+        },
+        {
+            "query_id": "impute301",
+            "db_used": "disney",
+            "question": "Insert a row for the Disney movie 'Inside Out' into the characters table.",
+            "ground_truth": ["Inside Out", "19-Jun-15", "Joy", "Sadness", "Bundle of Joy"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute301"
+        },
+        {
+            "query_id": "impute302",
+            "db_used": "music",
+            "question": "Insert a row for the song 'Anti-Hero' by Taylor Swift into the itunes table.",
+            "ground_truth": [6908, "Midnights", "Taylor Swift", "℗ 2022 Republic Records", "Pop", "21-Oct-22", "Anti-Hero", "3:20"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute302"
+        },
+        {
+            "query_id": "impute303",
+            "db_used": "music",
+            "question": "Insert a row for the song 'Levitating' by Dua Lipa into the itunes table.",
+            "ground_truth": [6908, "Future Nostalgia", "Dua Lipa", "℗ 2020 Warner Records", "Pop,Disco", "27-Mar-20", "Levitating", "3:23"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute303"
+        },
+        {
+            "query_id": "impute304",
+            "db_used": "superhero",
+            "question": "Insert a row for the superhero 'Luffy' into the merged table of the superhero, colour, and publisher.",
+            "ground_truth": [757, "Luffy", "Black", "Black", "Yellow", "Shueisha"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute304"
+        },
+        {
+            "query_id": "impute305",
+            "db_used": "superhero",
+            "question": "Insert a row for the superhero 'Shang-Chi' into the merged table of the superhero, colour, and publisher.",
+            "ground_truth": [757, "Shang-Chi", "Brown", "Black", "Yellow", "Marvel Comics"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute305"
+        },
+        {
+            "query_id": "impute306",
+            "db_used": "disney",
+            "question": "Insert a row for the Disney movie 'Elemental' into the characters table.",
+            "ground_truth": ["Elemental", "16-Jun-23", "Ember Lumen", "Water Element", "Steal the Show"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute306"
+        },
+        {
+            "query_id": "impute307",
+            "db_used": "music",
+            "question": "Insert a row for the song 'Anti-Hero' by Taylor Swift into the itunes table.",
+            "ground_truth": [6908, "Midnights", "Taylor Swift", "ãÑ 2022 Republic Records", "Pop,Music", "21-Oct-22", "Anti-hero", "3:20"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute307"
+        },
+        {
+            "query_id": "impute308",
+            "db_used": "music",
+            "question": "Insert a row for the song 'Lavender Haze' by Taylor Swift into the itunes table.",
+            "ground_truth": [6908, "Midnights", "Taylor Swift", "ãÑ 2022 Republic Records", "Pop,Music", "21-Oct-22", "Lavender Haze", "3:22"],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute308"
+        },
+        {
+            "query_id": "impute309",
+            "db_used": "mondial_geo",
+            "question": "Insert a row for the lake 'West Lake' located in China into the lake table.",
+            "ground_truth": ["West Lake", 6.5, 2.8, 7.0, "freshwater", "Qiantang River", 120.1536, 30.2414],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute309"
+        },
+        {
+            "query_id": "impute310",
+            "db_used": "mondial_geo",
+            "question": "Insert a row for the lake 'Tai Lake' located in China into the lake table.",
+            "ground_truth": ["Tai Lake", 2338, 4.8, 3.3, "freshwater", "Tiao River and Jing River", 120.2167, 31.1667],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute310"
+        },
+        {
+            "query_id": "impute311",
+            "db_used": "olympics",
+            "question": "Insert a row for the Chinese athlete 'Zheng Qinwen' into the person table.",
+            "ground_truth": [135572, "Zheng Qinwen", "F", 178, 70],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute311"
+        },
+        {
+            "query_id": "impute312",
+            "db_used": "olympics",
+            "question": "Insert a row for the Chinese athlete 'Wang Chuqin' into the person table.",
+            "ground_truth": [135572, "Wang Chuqin", "M", 182, 67],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute312"
+        },
+        {
+            "query_id": "impute313",
+            "db_used": "shipping",
+            "question": "Insert a row for the city of Vancouver in Canada into the city table.",
+            "ground_truth": [701, "Vancouver", "British Columbia", 662248, 123.63],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute313"
+        },
+        {
+            "query_id": "impute314",
+            "db_used": "shipping",
+            "question": "Insert a row for the city of Toronto in Canada into the city table.",
+            "ground_truth": [701, "Toronto", "Ontario", 2794356, 631.1],
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute314"
+        },
+        {
+            "query_id": "impute400",
+            "db_used": null,
+            "question": "Create a Disney movie table with columns for movie name, year, and protagonist, containing movies released after 2020.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute400"
+        },
+        {
+            "query_id": "impute401",
+            "db_used": null,
+            "question": "Create a superhero table with columns for id, superhero name, eye colour, hair colour, and skin colour, containing Marvel Comics superheroes introduced after 2020.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute401"
+        },
+        {
+            "query_id": "impute402",
+            "db_used": null,
+            "question": "Create an animation table with columns for id, title, episodes, year, and protagonist, containing animations produced by Sunrise and released after 2020.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute402"
+        },
+        {
+            "query_id": "impute403",
+            "db_used": null,
+            "question": "Create a song table with columns for id, song name, album name, and singer, containing Taylor Swift's songs released after 2020.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute403"
+        },
+        {
+            "query_id": "impute404",
+            "db_used": null,
+            "question": "Create a song table with columns for id, song name, album name, and singer, containing Dua Lipa's songs released after 2020.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_IMPUTE"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute404"
+        }
+    ]
+}

@@ -2,8 +2,8 @@
 
 ## LROBench
 
+### Benchmark Introduction
 LROBench is a benchmark targeting a novel class of operator-like components: **LLM-Enhanced Relational Operators (LROs)**. These operators share a common pattern: (i) operate over relational data, (ii) take a natural-language requirement (i.e., instruction or condition), (iii) invoke an LLM to make semantic decisions during execution, and (iv) produce relational outputs.
-
 
 With the development of LLMs, numerous studies integrate LLMs through such operator-like components to enhance relational data processing tasks, e.g., filters with semantic predicates, prompt-based table imputation**, reasoning-driven entity matching, and more challenging*semantic query processing. Unfortunately, from an operator perspective, existing LROs suffer from fragmented definition, various implementation strategies, and inadequate evaluation benchmarks.
 
@@ -15,7 +15,17 @@ To bridge these gaps, LROBench is designed around three core questions:
 
 LROBench introduces diversity across **operator logics**, **operand granularities**, and **implementation variants**. It establishes a unified taxonomy that categorizes LROs into five mutually exclusive logics—**Select, Match, Impute, Cluster, and Order**—and covers operand granularities including cell, row, column, and table, along with multiple implementation variants (e.g., LLM-ALL, LLM-ONE).
 
-Currently, LROBench features **290 single-LRO queries** in *single-metadata.json* and **60 multi-LRO queries** in *multi_metadata.json*, spanning 27 real-world databases across more than 10 domains. The single-LRO workload provides full coverage of operating logics and operand granularities for fine-grained operator-level evaluation, while the multi-LRO workload provides challenging composed queries stratified by query complexity for end-to-end system evaluation.
+### Benchmark Overview
+
+**LROBench** features a comprehensive suite of queries spanning **27 real-world databases** across more than **10 domains**. The benchmark is structured into two primary workloads:
+
+* **Single-LRO Workload (290 Queries):** Designed for fine-grained, operator-level evaluation. It provides full coverage of operating logics and operand granularities across five LROs:
+    * `Select` (*select_metadata.json*)
+    * `Match` (*match_metadata.json*)
+    * `Impute` (*impute_metadata.json*)
+    * `Cluster` (*cluster_metadata.json*)
+    * `Order` (*order_metadata.json*)
+* **Multi-LRO Workload (60 Queries):** Located in *multi_metadata.json*, this workload features challenging composed queries stratified by complexity, ideal for robust end-to-end system evaluation.
 
 
 ## Setup Guide

@@ -1,0 +1,465 @@
+{
+    "benchmark_metadata": {
+        "description": "Order-LROs query metadata in LROBench",
+        "statistics": {
+            "total_queries": 30,
+            "scoring_dimensions": {
+                "difficulty": {
+                    "medium": {
+                        "percentage": 0.93,
+                        "score": 2
+                    },
+                    "hard": {
+                        "percentage": 0.03,
+                        "score": 3
+                    },
+                    "easy": {
+                        "percentage": 0.03,
+                        "score": 1
+                    }
+                },
+                "operand_type": {
+                    "row": {
+                        "percentage": 1.0,
+                        "score": 1
+                    }
+                }
+            },
+            "overall_score_distribution": {
+                "difficulty_bands": {
+                    "easy": {
+                        "percentage": 0.03
+                    },
+                    "medium": {
+                        "percentage": 0.93
+                    },
+                    "hard": {
+                        "percentage": 0.03
+                    }
+                }
+            }
+        }
+    },
+    "queries": [
+        {
+            "query_id": 1,
+            "db_used": "european_football_2",
+            "question": "List the countries with the Top 5 largest land area.",
+            "ground_truth": ["France", "Spain", "Germany", "Poland", "Italy"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order0"
+        },
+        {
+            "query_id": 2,
+            "db_used": "european_football_2",
+            "question": "List the countries with the Top 5 largest population.",
+            "ground_truth": ["Germany", "France", "Italy", "England", "Spain"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order1"
+        },
+        {
+            "query_id": 3,
+            "db_used": "car_retails",
+            "question": "List the offices located in the cities with the Top 5 largest latitude.",
+            "ground_truth": ["London", "Paris", "Boston", "NYC", "San Francisco"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order2"
+        },
+        {
+            "query_id": 4,
+            "db_used": "car_retails",
+            "question": "Which 3 offices are located in the cities closest to Los Angeles?.",
+            "ground_truth": ["San Francisco", "NYC", "Boston"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order3"
+        },
+        {
+            "query_id": 5,
+            "db_used": "disney",
+            "question": "Rank the movies directed by Ron Clements by their duration from longest to shortest, and return the top 4.",
+            "ground_truth": ["Moana", "The Princess and the Frog", "Treasure Planet", "Hercules"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order4"
+        },
+        {
+            "query_id": 6,
+            "db_used": "disney",
+            "question": "Rank the movies directed by Wolfgang Reitherman by their release year from earliest to latest, and return the top 4.",
+            "ground_truth": ["101 Dalmatians", "The Sword in the Stone", "The Jungle Book", "The Aristocats"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order5"
+        },
+        {
+            "query_id": 7,
+            "db_used": "car_retails",
+            "question": "Among customers with a credit limit greater than 120,000, list the first four customers alphabetically sorted in ascending order by last name.",
+            "ground_truth": ["Ashworth", "Freyre", "Hernandez", "Holz"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order6"
+        },
+        {
+            "query_id": 8,
+            "db_used": "car_retails",
+            "question": "Among customers with a credit limit less than 3000, rank the top 4 customers by the length of their last name from longest to shortest.",
+            "ground_truth": ["Piestrzeniewicz", "Altagar,G M", "Rodriguez", "de Castro"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order7"
+        },
+        {
+            "query_id": 9,
+            "db_used": "formula_1",
+            "question": "Among Formula 1 drivers born after 1990, rank the top 5 youngest drivers by their age from youngest to oldest.",
+            "ground_truth": ["1998-10-29", "1997-09-30", "1996-09-17", "1994-10-18", "1994-09-01"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order8"
+        },
+        {
+            "query_id": 10,
+            "db_used": "anime",
+            "question": "Among the top 10 highest-rated anime, rank the top 5 titles by their similarity to 'Gintama' from most similar to least similar.",
+            "ground_truth": ["Gintama", "Gintama", "Gintama'", "Gintama': Enchousen", "Gintama Movie: Kanketsu-hen - Yorozuya yo Eien Nare"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order9"
+        },
+        {
+            "query_id": 11,
+            "db_used": "movies",
+            "question": "Rank Top 5 highest rated movies in IMDb by their box office from highest to lowest, and return their ID accordingly.",
+            "ground_truth": ["a-1493", "a-701", "a-362", "a-2007", "a-2148"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order10"
+        },
+        {
+            "query_id": 12,
+            "db_used": "mondial_geo",
+            "question": "Rank the top 5 largest seas/oceans by their area from largest to smallest.",
+            "ground_truth": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Arctic Ocean"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order11"
+        },
+        {
+            "query_id": 13,
+            "db_used": "music",
+            "question": "Among Taylor Swift's songs in the album '1989', rank the top 3 songs by their highest Billboard chart rank and duration on the chart.",
+            "ground_truth": ["Blank Space", "Shake It Off", "Bad Blood"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order12"
+        },
+        {
+            "query_id": 14,
+            "db_used": "music",
+            "question": "Among Lady Gaga's songs in the album 'ARTPOP', rank the top 3 songs by their highest Billboard chart rank and duration on the chart.",
+            "ground_truth": ["Applause", "Do What U Want", "G.U.Y."],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order13"
+        },
+        {
+            "query_id": 15,
+            "db_used": "car_retails",
+            "question": "Rank all product lines in the car retails database by their vehicle volume from largest to smallest.",
+            "ground_truth": ["Ships", "Planes", "Trains", "Trucks and Buses", "Vintage Cars", "Classic Cars", "Motorcycles"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order14"
+        },
+        {
+            "query_id": 16,
+            "db_used": "car_retails",
+            "question": "Rank all product lines in the car retails database by the maximum speed of the vehicles from highest to lowest.",
+            "ground_truth": ["Planes", "Trains", "Motorcycles", "Classic Cars", "Vintage Cars", "Trucks and Buses", "Ships"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order15"
+        },
+        {
+            "query_id": 17,
+            "db_used": "movie_3",
+            "question": "Rank all languages in the movie database by the number of their speakers from most to least.",
+            "ground_truth": ["English", "Mandarin", "French", "Japanese", "German", "Italian"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order16"
+        },
+        {
+            "query_id": 18,
+            "db_used": "electronics",
+            "question": "Among the electronic products with the Top 30 highest original prices on Amazon, rank the brands by their market value from highest to lowest.",
+            "ground_truth": ["Microsoft", "Dell", "HP", "Lenovo", "Toshiba", "Asus", "Micro-Star International"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order17"
+        },
+        {
+            "query_id": 19,
+            "db_used": "movies",
+            "question": "Among the directors of IMDb movies rated above 8.5, rank them by their wealth from richest to poorest.",
+            "ground_truth": ["Peter Jackson", "Christopher Nolan", "Janek Ambros", "John Cook"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order18"
+        },
+        {
+            "query_id": 20,
+            "db_used": "mondial_geo",
+            "question": "Among countries with a population greater than 100 million, rank them by the length of their coastline from longest to shortest.",
+            "ground_truth": ["Indonesia", "Russia", "Japan", "United States", "China", "Brazil", "India", "Pakistan", "Nigeria", "Bangladesh"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order19"
+        },
+        {
+            "query_id": 21,
+            "db_used": "mondial_geo",
+            "question": "Among countries with a population greater than 100 million, rank them by their 2020 GDP from highest to lowest.",
+            "ground_truth": ["United States", "China", "Japan", "India", "Russia", "Brazil", "Indonesia", "Nigeria", "Pakistan", "Bangladesh"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order20"
+        },
+        {
+            "query_id": 22,
+            "db_used": "electronics",
+            "question": "Among the electronic products with the Top 30 highest original prices on Amazon, rank the brands by their founding time from earliest to latest.",
+            "ground_truth": ["Toshiba", "HP", "Microsoft", "Lenovo", "Dell", "Micro-Star International", "Asus"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order21"
+        },
+        {
+            "query_id": 23,
+            "db_used": "movie_3",
+            "question": "Rank all languages in the movie database by their general difficulty of learning from hardest to easiest.",
+            "ground_truth": ["Mandarin", "Japanese", "German", "French", "Italian", "English"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order22"
+        },
+        {
+            "query_id": 24,
+            "db_used": "mondial_geo",
+            "question": "List the Top 3 seas/oceans with the highest species diversity.",
+            "ground_truth": ["Pacific Ocean", "Indian Ocean", "Caribbean Sea"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order23"
+        },
+        {
+            "query_id": 25,
+            "db_used": "movies",
+            "question": "Among the directors of IMDb movies rated above 8.5, rank them by their influence from most to least influential.",
+            "ground_truth": ["Christopher Nolan", "Peter Jackson", "Janek Ambros", "John Cook"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order24"
+        },
+        {
+            "query_id": 26,
+            "db_used": "music",
+            "question": "Among the songs in the album 'Born This Way', list the Top 3 most popular songs.",
+            "ground_truth": ["Born This Way", "The Edge of Glory", "Judas"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order25"
+        },
+        {
+            "query_id": 27,
+            "db_used": "mondial_geo",
+            "question": "Among lakes with an area greater than 50000, rank them by their international tourism popularity from most to least popular.",
+            "ground_truth": ["Lake Michigan", "Lake Superior", "Lake Huron", "Caspian Sea", "Lake Victoria"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order26"
+        },
+        {
+            "query_id": 28,
+            "db_used": "codebase_community",
+            "question": "Among tags with a count greater than 1000, list the Top 6 longest tags.",
+            "ground_truth": ["statistical-significance", "normal-distribution", "hypothesis-testing", "machine-learning", "classification", "distributions"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order27"
+        },
+        {
+            "query_id": 29,
+            "db_used": "codebase_community",
+            "question": "Among tags with a count greater than 1000, list the Top 3 tags most relevant to K-Means.",
+            "ground_truth": ["clustering", "classification", "machine-learning"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order28"
+        },
+        {
+            "query_id": 30,
+            "db_used": "codebase_community",
+            "question": "Among tags with a count greater than 1000, list the Top 3 tags most relevant to time series forecasting.",
+            "ground_truth": ["time-series", "regression", "machine-learning"],
+            "attributes": {
+                "operators used": [
+                    "LLM_ORDER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/order_eval.py:pipeline_order29"
+        }
+    ]
+}

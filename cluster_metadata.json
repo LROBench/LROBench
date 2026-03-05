@@ -1,0 +1,893 @@
+{
+    "benchmark_metadata": {
+        "description": "Cluster-LROs query metadata in LROBench",
+        "statistics": {
+            "total_queries": 60,
+            "scoring_dimensions": {
+                "difficulty": {
+                    "medium": {
+                        "percentage": 0.68,
+                        "score": 2
+                    },
+                    "easy": {
+                        "percentage": 0.15,
+                        "score": 1
+                    },
+                    "hard": {
+                        "percentage": 0.17,
+                        "score": 3
+                    }
+                },
+                "operand_type": {
+                    "column": {
+                        "percentage": 0.25,
+                        "score": 1
+                    },
+                    "row": {
+                        "percentage": 0.5,
+                        "score": 2
+                    },
+                    "table": {
+                        "percentage": 0.25,
+                        "score": 3
+                    }
+                }
+            },
+            "overall_score_distribution": {
+                "difficulty_bands": {
+                    "easy": {
+                        "percentage": 0.15
+                    },
+                    "medium": {
+                        "percentage": 0.68
+                    },
+                    "hard": {
+                        "percentage": 0.17
+                    }
+                }
+            }
+        }
+    },
+    "queries": [
+        {
+            "query_id": "cluster100",
+            "db_used": "movies",
+            "question": "Cluster the movies with a rating higher than 8.3 by the continent of nationality of their directors.",
+            "ground_truth": [1, 2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 3, 1, 2, 2, 1, 4, 1, 5],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster100"
+        },
+        {
+            "query_id": "cluster101",
+            "db_used": "formula_1",
+            "question": "Cluster the Formula 1 circuits by the continent they are located in.",
+            "ground_truth": [0, 0, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 3, 2, 1, 1, 0, 1, 0, 3, 1, 1, 0, 4, 5, 1, 2, 2, 1, 0, 3, 2, 1, 1, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 5, 1, 1, 1, 2, 1, 1, 2, 5, 1, 1, 1, 0, 2, 1, 1, 2, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster101"
+        },
+        {
+            "query_id": "cluster102",
+            "db_used": "formula_1",
+            "question": "Cluster the Formula 1 drivers born after 1980 by the continent of their nationality.",
+            "ground_truth": [0, 0, 0, 1, 0, 0, 0, 2, 0, 1, 3, 4, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 3, 0, 0, 2, 0, 0, 3, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster102"
+        },
+        {
+            "query_id": "cluster103",
+            "db_used": "electronics",
+            "question": "Cluster the Amazon electronics products into 'Asus', 'Lenovo', 'HP', 'Dell', 'Acer', 'Toshiba', 'Apple' and 'Other' by their brands.",
+            "ground_truth": [0, 1, 2, 3, 2, 4, 5, 5, 5, 0, 1, 0, 5, 1, 1, 1, 3, 6, 7, 0, 3, 5, 0, 6, 5, 5, 6, 3, 3, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster103"
+        },
+        {
+            "query_id": "cluster104",
+            "db_used": "codebase_community",
+            "question": "Cluster the top 20 most viewed posts into 'statistics' and 'programming & software' by their body content.",
+            "ground_truth": [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster104"
+        },
+        {
+            "query_id": "cluster105",
+            "db_used": "codebase_community",
+            "question": "Cluster the top 20 most answered posts into 'statistics' and 'programming & software' by the theme of their body content.",
+            "ground_truth": [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster105"
+        },
+        {
+            "query_id": "cluster106",
+            "db_used": "codebase_community",
+            "question": "Cluster the top 20 most favorited posts into 'statistics', 'programming & software' and 'machine learning' by the theme of their body content.",
+            "ground_truth": [0, 1, 1, 0, 2, 2, 0, 0, 2, 2, 2, 2, 1, 2, 2, 0, 1, 2, 1, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster106"
+        },
+        {
+            "query_id": "cluster107",
+            "db_used": "car_retails",
+            "question": "Cluster the employees by the first letter of their first name.",
+            "ground_truth": [1, 2, 3, 4, 5, 6, 7, 7, 3, 8, 9, 5, 7, 5, 10, 7, 11, 6, 10, 12, 2, 13, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster107"
+        },
+        {
+            "query_id": "cluster108",
+            "db_used": "car_retails",
+            "question": "For the first 50 entries in the products table, cluster the products by the decade of their production year.",
+            "ground_truth": [1, 0, 4, 5, 2, 1, 1, 5, 0, 5, 1, 1, 1, 2, 0, 1, 0, 4, 0, 0, 1, 3, 0, 0, 4, 4, 0, 1, 0, 0, 0, 0, 0, 4, 0, 0, 4, 0, 0, 4, 3, 0, 1, 0, 2, 0, 0, 0, 2, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster108"
+        },
+        {
+            "query_id": "cluster109",
+            "db_used": "chicago_crime",
+            "question": "Cluster the ward members into 2 clusters by the suffix of their email address.",
+            "ground_truth": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster109"
+        },
+        {
+            "query_id": "cluster110",
+            "db_used": "car_retails",
+            "question": "Cluster the Vintage Cars by the country of their manufacturer into 'USA', 'Europe', and 'Others'.",
+            "ground_truth": [1, 2, 1, 1, 1, 2, 1, 1, 3, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster110"
+        },
+        {
+            "query_id": "cluster111",
+            "db_used": "disney",
+            "question": "Cluster the Disney movies' MPAA ratings into 'suitable for children' and 'not suitable for children'.",
+            "ground_truth": [1, 2, 1, 2, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster111"
+        },
+        {
+            "query_id": "cluster112",
+            "db_used": "mondial_geo",
+            "question": "Cluster the countries with a population greater than 50 million by their economic development level (developed or developing).",
+            "ground_truth": [1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster112"
+        },
+        {
+            "query_id": "cluster113",
+            "db_used": "beer_factory",
+            "question": "Cluster the root beer brands by the climate type of the city they are located in.",
+            "ground_truth": [1, 2, 3, 3, 4, 1, 3, 2, 2, 2, 2, 2, 1, 2, 4, 2, 1, 1, 2, 2, 4, 2, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster113"
+        },
+        {
+            "query_id": "cluster114",
+            "db_used": "menu",
+            "question": "Cluster the top 30 highest-priced dishes by their cuisine origin country.",
+            "ground_truth": [1, 2, 3, 1, 4, 1, 2, 1, 2, 5, 1, 1, 6, 3, 1, 1, 1, 3, 1, 2, 1, 3, 3, 3, 1, 3, 1, 1, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster114"
+        },
+        {
+            "query_id": "cluster115",
+            "db_used": "beer_factory",
+            "question": "Cluster the earliest 30 customers by their email server.",
+            "ground_truth": [1, 2, 3, 4, 5, 3, 3, 4, 6, 4, 7, 8, 3, 3, 9, 3, 5, 3, 1, 2, 5, 1, 2, 2, 7, 5, 4, 4, 5, 8],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster115"
+        },
+        {
+            "query_id": "cluster116",
+            "db_used": "disney",
+            "question": "Cluster the Disney revenue records' years by decade.",
+            "ground_truth": [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster116"
+        },
+        {
+            "query_id": "cluster117",
+            "db_used": "olympics",
+            "question": "Cluster the Olympic host cities by their climate type.",
+            "ground_truth": [1, 2, 2, 2, 3, 3, 3, 1, 3, 3, 3, 4, 4, 3, 3, 3, 3, 3, 5, 1, 3, 3, 3, 5, 3, 3, 3, 3, 3, 1, 1, 2, 3, 3, 4, 2, 3, 3, 3, 3, 3, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster117"
+        },
+        {
+            "query_id": "cluster118",
+            "db_used": "olympics",
+            "question": "Cluster the Olympic host cities by the continent they are located in.",
+            "ground_truth": [1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 3, 2, 1, 1, 4, 1, 4, 5, 1, 2, 1, 1, 2, 1, 4, 1, 1, 1, 3, 1, 1, 2, 1, 4, 2, 1, 4, 1, 2, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster118"
+        },
+        {
+            "query_id": "cluster119",
+            "db_used": "olympics",
+            "question": "Cluster the Olympic sports starting with 'B' by their country of origin.",
+            "ground_truth": [1, 2, 2, 3, 2, 4, 5, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster119"
+        },
+        {
+            "query_id": "cluster120",
+            "db_used": "olympics",
+            "question": "Cluster the Olympic sports starting with 'T' by their country of origin.",
+            "ground_truth": [1, 2, 3, 4, 3, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster120"
+        },
+        {
+            "query_id": "cluster121",
+            "db_used": "olympics",
+            "question": "Cluster the NOC regions starting with 'C' by their economic development level (Developing or Developed).",
+            "ground_truth": [1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster121"
+        },
+        {
+            "query_id": "cluster122",
+            "db_used": "movie_3",
+            "question": "Cluster the most recently updated 30 films by their genre type (drama, story, etc.).",
+            "ground_truth": [0, 1, 2, 3, 4, 5, 2, 6, 5, 7, 0, 7, 1, 5, 8, 6, 9, 7, 5, 1, 8, 5, 7, 7, 0, 2, 10, 6, 10, 7],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster122"
+        },
+        {
+            "query_id": "cluster123",
+            "db_used": "olympics",
+            "question": "Cluster the Olympic host cities into 'Coastal' and 'Inland'.",
+            "ground_truth": [1, 1, 1, 2, 2, 2, 1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 2, 2, 2, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster123"
+        },
+        {
+            "query_id": "cluster124",
+            "db_used": "mondial_geo",
+            "question": "Cluster the lakes with latitude greater than 50 by their salinity level.",
+            "ground_truth": [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster124"
+        },
+        {
+            "query_id": "cluster125",
+            "db_used": "mondial_geo",
+            "question": "Cluster the lakes with latitude greater than 50 into 'Endorheic' and 'Exorheic'.",
+            "ground_truth": [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster125"
+        },
+        {
+            "query_id": "cluster126",
+            "db_used": "electronics",
+            "question": "Cluster Amazon electronics products with the top 20 highest original prices by their CPU configuration.",
+            "ground_truth": [1, 2, 3, 3, 4, 5, 6, 6, 6, 3, 6, 1, 5, 5, 1, 7, 1, 1, 6, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster126"
+        },
+        {
+            "query_id": "cluster127",
+            "db_used": "electronics",
+            "question": "Cluster Amazon electronics products with the top 20 highest original prices by their memory configuration.",
+            "ground_truth": [1, 2, 1, 1, 1, 3, 1, 1, 3, 4, 1, 1, 1, 1, 1, 5, 1, 3, 1, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster127"
+        },
+        {
+            "query_id": "cluster128",
+            "db_used": "student_club",
+            "question": "Cluster the student club members by their major into 'Engineering', 'Science', 'Business', 'Language', 'Art', 'Society' and 'Others'.",
+            "ground_truth": [2, 0, 0, 1, 4, 0, 2, 5, 5, 5, 1, 6, 6, 1, 6, 5, 6, 4, 5, 0, 0, 2, 5, 3, 5, 5, 3, 6, 5, 5, 0, 6],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster128"
+        },
+        {
+            "query_id": "cluster129",
+            "db_used": "mondial_geo",
+            "question": "Cluster the seas by their closure type (marginal, inland, etc.).",
+            "ground_truth": [1, 1, 2, 2, 3, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 3, 1, 1, 2, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster129"
+        },
+        {
+            "query_id": "cluster200",
+            "db_used": "formula_1",
+            "question": "Cluster all the columns in the merged table between the races and circuits tables into time_info, geographical_info and other_info",
+            "ground_truth": [3, 1, 3, 3, 3, 1, 1, 3, 3, 3, 2, 2, 2, 2, 2, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster200"
+        },
+        {
+            "query_id": "cluster201",
+            "db_used": "california_schools",
+            "question": "Cluster all the columns of the schools table into 'id_info', 'location_info', 'contact_info', 'educational_info' and 'other_info'.",
+            "ground_truth": [0, 0, 0, 4, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 4, 4, 0, 0, 4, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 4, 4, 1, 1, 4, 4, 2, 4, 4, 2, 4, 4, 2, 4],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster201"
+        },
+        {
+            "query_id": "cluster202",
+            "db_used": "chicago_crime",
+            "question": "Cluster all the columns of the Chicago crime table into 'basic_info', 'location_info' and 'detail_info'.",
+            "ground_truth": [0, 0, 0, 1, 2, 1, 2, 2, 2, 1, 1, 1, 2, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster202"
+        },
+        {
+            "query_id": "cluster203",
+            "db_used": "debit_card_specializing",
+            "question": "Cluster all the columns of the transactions table into 'order_info', 'user_info' and 'product_info'.",
+            "ground_truth": [0, 0, 0, 1, 1, 2, 2, 2, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster203"
+        },
+        {
+            "query_id": "cluster204",
+            "db_used": "hockey",
+            "question": "Cluster all the columns of the hockey Master table into 'identification_info', 'physical_info', 'career_info', 'birth_info' and 'death_info'.",
+            "ground_truth": [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster204"
+        },
+        {
+            "query_id": "cluster205",
+            "db_used": "beer_factory",
+            "question": "Cluster all the columns of the customers table into 'basic_info', 'contact_info' and 'consuming_info'.",
+            "ground_truth": [0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster205"
+        },
+        {
+            "query_id": "cluster206",
+            "db_used": "beer_factory",
+            "question": "Cluster all the columns of the root beer brand table into 'basic_info', 'contact_info', and 'product_info'.",
+            "ground_truth": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster206"
+        },
+        {
+            "query_id": "cluster207",
+            "db_used": "california_schools",
+            "question": "Cluster all the columns of the FRPM table into 'basic_info', 'geo_info', 'edu_info', 'time_info', and 'economic_info'.",
+            "ground_truth": [0, 1, 2, 2, 0, 2, 2, 0, 3, 0, 3, 4, 0, 0, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 4, 4, 4, 4, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster207"
+        },
+        {
+            "query_id": "cluster208",
+            "db_used": "california_schools",
+            "question": "Cluster all the columns of the SAT scores table into 'id_info', 'name_info', and 'edu_info'.",
+            "ground_truth": [0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster208"
+        },
+        {
+            "query_id": "cluster209",
+            "db_used": "nextiaJD",
+            "question": "Cluster all the columns of the 'community-gardens-and-food-trees' table into 'geo_info', 'tree_info', 'contact_info', 'admin_info', and 'other_info'.",
+            "ground_truth": [3, 3, 3, 0, 0, 0, 0, 0, 1, 1, 4, 1, 1, 3, 3, 2, 2, 0, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster209"
+        },
+        {
+            "query_id": "cluster210",
+            "db_used": "chicago_crime",
+            "question": "Cluster all the columns of the Ward table into 'basic_info', 'contact_info', and 'other_info'.",
+            "ground_truth": [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster210"
+        },
+        {
+            "query_id": "cluster211",
+            "db_used": "codebase_community",
+            "question": "Cluster all the columns of the posts table into 'id_info', 'time_info', 'content_info', 'traffic_info', and 'other_info'.",
+            "ground_truth": [0, 0, 0, 1, 3, 3, 2, 0, 1, 2, 2, 3, 3, 3, 0, 1, 1, 0, 1, 4, 4],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster211"
+        },
+        {
+            "query_id": "cluster212",
+            "db_used": "european_football_2",
+            "question": "Cluster all the columns of the Match table into 'player_info', 'score_info', 'team_info', 'id_info', 'bet_info', and 'other_info'.",
+            "ground_truth": [1, 1, 1, 6, 6, 6, 1, 3, 3, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster212"
+        },
+        {
+            "query_id": "cluster213",
+            "db_used": "movie_3",
+            "question": "Cluster all the columns of the film table into 'content_info', 'time_info', 'rental_info', and 'other_info'.",
+            "ground_truth": [4, 1, 1, 2, 1, 1, 3, 3, 1, 3, 1, 1, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster213"
+        },
+        {
+            "query_id": "cluster214",
+            "db_used": "nextiaJD",
+            "question": "Cluster all the columns of the 'eo_pr' table into 'basic_info', 'location_info', 'organization_info', 'finance_info', 'time_info', and 'other_info'.",
+            "ground_truth": [0, 0, 5, 1, 1, 1, 1, 2, 2, 2, 2, 4, 5, 5, 5, 2, 2, 4, 3, 3, 5, 5, 4, 3, 3, 3, 2, 0],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster214"
+        },
+        {
+            "query_id": "cluster300",
+            "db_used": null,
+            "question": "Cluster all the tables in the mondial_geo database into water-related information, land-related information, and other information.",
+            "ground_truth": [2, 2, 1, 2, 1, 2, 1, 2, 1, 3, 1, 3, 1, 3, 3, 3, 2, 1, 1, 3, 2, 3, 1, 1, 3, 1, 2, 2, 2, 2, 2, 3, 3, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster300"
+        },
+        {
+            "query_id": "cluster301",
+            "db_used": null,
+            "question": "Cluster all the tables in the books database into book information, author information, customer information, order information, and other information.",
+            "ground_truth": [4, 4, 1, 0, 0, 4, 0, 2, 2, 2, 3, 3, 3, 4, 4],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster301"
+        },
+        {
+            "query_id": "cluster302",
+            "db_used": null,
+            "question": "Cluster all the tables in the hockey database into player info, coach info, team info, and other info.",
+            "ground_truth": [1, 4, 2, 1, 4, 2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 3, 3, 3, 3, 3, 3, 4],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster302"
+        },
+        {
+            "query_id": "cluster303",
+            "db_used": null,
+            "question": "Cluster all the tables in the movie_3 database into location info, film info, person-related info, and other info.",
+            "ground_truth": [1, 2, 3, 2, 1, 3, 2, 3, 3, 3, 3, 4, 4, 4, 2, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster303"
+        },
+        {
+            "query_id": "cluster304",
+            "db_used": null,
+            "question": "Cluster all the tables in the formula_1 database into location info, person-related info, race-related info, and other info.",
+            "ground_truth": [1, 2, 2, 3, 2, 3, 2, 2, 2, 2, 2, 4, 4, 4],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster304"
+        },
+        {
+            "query_id": "cluster305",
+            "db_used": null,
+            "question": "Cluster all the tables in the car retails database into people information, order information, and product information.",
+            "ground_truth": [1, 1, 2, 2, 1, 2, 3, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster305"
+        },
+        {
+            "query_id": "cluster306",
+            "db_used": null,
+            "question": "Cluster all the tables in the beer factory database into people info, beer info, order info, and other info.",
+            "ground_truth": [1, 4, 4, 2, 2, 1, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster306"
+        },
+        {
+            "query_id": "cluster307",
+            "db_used": null,
+            "question": "Cluster all the tables in the European football database into people info, organization info, and other info.",
+            "ground_truth": [1, 1, 3, 2, 2, 3, 3, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster307"
+        },
+        {
+            "query_id": "cluster308",
+            "db_used": null,
+            "question": "Cluster all the tables in the codebase community database into post info, user info, and other info.",
+            "ground_truth": [1, 2, 2, 2, 2, 3, 1, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster308"
+        },
+        {
+            "query_id": "cluster309",
+            "db_used": null,
+            "question": "Cluster all the tables in the Chicago crime database into location info and case info.",
+            "ground_truth": [1, 2, 1, 2, 2, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster309"
+        },
+        {
+            "query_id": "cluster310",
+            "db_used": null,
+            "question": "Cluster all the tables in the Chicago crime database into location info and case info.",
+            "ground_truth": [1, 2, 1, 2, 2, 1, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "easy",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster310"
+        },
+        {
+            "query_id": "cluster311",
+            "db_used": null,
+            "question": "Cluster all the tables in the movie_3 database into location tables, film tables, people tables, tables for joining, and other tables.",
+            "ground_truth": [1, 2, 3, 2, 1, 4, 2, 3, 3, 4, 3, 5, 5, 5, 5, 1],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster311"
+        },
+        {
+            "query_id": "cluster312",
+            "db_used": null,
+            "question": "Cluster all the tables in the olympics database into location tables, game tables, tables for joining, and other tables.",
+            "ground_truth": [1, 3, 2, 2, 3, 3, 4, 1, 4, 3, 2],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster312"
+        },
+        {
+            "query_id": "cluster313",
+            "db_used": null,
+            "question": "Cluster all the tables in the professional basketball database into award tables, people tables, match tables, and other tables.",
+            "ground_truth": [1, 1, 2, 2, 2, 2, 3, 3, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "hard",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster313"
+        },
+        {
+            "query_id": "cluster314",
+            "db_used": null,
+            "question": "Cluster all the tables in the student club database into financial tables, people tables, event tables, and other tables.",
+            "ground_truth": [3, 0, 2, 0, 0, 1, 1, 3],
+            "attributes": {
+                "operators used": [
+                    "LLM_CLUSTER"
+                ],
+                "difficulty": "medium",
+                "operand_type": "table"
+            },
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster314"
+        }
+    ]
+}

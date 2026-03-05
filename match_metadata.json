@@ -1,0 +1,893 @@
+{
+    "benchmark_metadata": {
+        "description": "Match-LROs query metadata in LROBench",
+        "statistics": {
+            "total_queries": 60,
+            "scoring_dimensions": {
+                "difficulty": {
+                    "medium": {
+                        "percentage": 0.67,
+                        "score": 2
+                    },
+                    "easy": {
+                        "percentage": 0.15,
+                        "score": 1
+                    },
+                    "hard": {
+                        "percentage": 0.18,
+                        "score": 3
+                    }
+                },
+                "operand_type": {
+                    "cell": {
+                        "percentage": 0.5,
+                        "score": 1
+                    },
+                    "column": {
+                        "percentage": 0.25,
+                        "score": 2
+                    },
+                    "row": {
+                        "percentage": 0.25,
+                        "score": 3
+                    }
+                }
+            },
+            "overall_score_distribution": {
+                "difficulty_bands": {
+                    "easy": {
+                        "percentage": 0.15
+                    },
+                    "medium": {
+                        "percentage": 0.67
+                    },
+                    "hard": {
+                        "percentage": 0.18
+                    }
+                }
+            }
+        }
+    },
+    "queries": [
+        {
+            "query_id": "match100",
+            "db_used": "formula_1",
+            "question": "Match 2009 races to circuits with latitude no less than 50, under the condition that the race is held in the circuit country.",
+            "ground_truth": [[8, 9], [8, 31], [8, 38], [8, 58], [9, 20], [9, 61], [12, 13], [12, 40], [12, 50]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match100"
+        },
+        {
+            "query_id": "match101",
+            "db_used": "disney",
+            "question": "Match the last 10 Disney characters' release dates to the corresponding revenue years.",
+            "ground_truth": [["30-Mar-07", 2007], ["21-Nov-08", 2008], ["11-Dec-09", 2009], ["24-Nov-10", 2010], ["15-Jul-11", 2011], ["2-Nov-12", 2012], ["27-Nov-13", 2013], ["7-Nov-14", 2014], ["4-Mar-16", 2016], ["23-Nov-16", 2016]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match101"
+        },
+        {
+            "query_id": "match102",
+            "db_used": "car_retails",
+            "question": "Match customers with a credit limit greater than 100,000 to the offices' territories where their cities are located.",
+            "ground_truth": [[114, "APAC"], [119, "EMEA"], [141, "EMEA"], [146, "EMEA"], [148, "APAC"], [157, "NA"], [187, "EMEA"], [227, "EMEA"], [249, "EMEA"], [259, "EMEA"], [276, "APAC"], [278, "EMEA"], [286, "NA"], [298, "EMEA"], [319, "NA"], [363, "NA"], [386, "EMEA"], [448, "EMEA"], [458, "EMEA"], [496, "APAC"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match102"
+        },
+        {
+            "query_id": "match103",
+            "db_used": "movie_3",
+            "question": "Match films whose titles start with 'U' to the categories based on their descriptions.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match103"
+        },
+        {
+            "query_id": "match104",
+            "db_used": "codebase_community",
+            "question": "Match the first 10 comments to the top 10 most popular tags based on the relevance of the comment content to the tag name.",
+            "ground_truth": [[2, 41], [4, 9], [9, 41], [11, 41]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match104"
+        },
+        {
+            "query_id": "match105",
+            "db_used": "shipping",
+            "question": "Match wholesaler customers to states with cities having a population greater than 600,000, by matching their abbreviated state codes to the full state names.",
+            "ground_truth": [[381, "Florida"], [615, "Florida"], [618, "Florida"], [1575, "California"], [1685, "California"], [1769, "Texas"], [2001, "California"], [2799, "Texas"], [3288, "Texas"], [3660, "Maryland"], [4353, "Texas"], [4869, "Arizona"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match105"
+        },
+        {
+            "query_id": "match106",
+            "db_used": "shipping",
+            "question": "Match customers with annual revenue greater than 45,000,000 to states with cities having a population greater than 600,000, by matching their abbreviated state codes to the full state names.",
+            "ground_truth": [[721, "Florida"], [1724, "Ohio"], [2001, "California"], [2434, "Ohio"], [2799, "Texas"], [3320, "California"], [3447, "California"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match106"
+        },
+        {
+            "query_id": "match107",
+            "db_used": "european_football_2",
+            "question": "Match football teams whose names start with 'P' to the countries they belong to.",
+            "ground_truth": [[3476, 1729], [9548, 4769], [20532, 10257], [21292, 10257], [23523, 10257], [26556, 13274], [29000, 13274], [31444, 15722], [31445, 15722], [31448, 15722], [31457, 15722], [32891, 15722], [33377, 15722], [36248, 17642], [41673, 19694]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match107"
+        },
+        {
+            "query_id": "match108",
+            "db_used": "superhero",
+            "question": "Match superheroes with a height greater than 300 cm to their publishers.",
+            "ground_truth": null,
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match108"
+        },
+        {
+            "query_id": "match109",
+            "db_used": "shipping",
+            "question": "Match customers with annual revenue greater than 45,000,000 to states with cities having a population greater than 600,000, where the customer's state is adjacent to the city's state.",
+            "ground_truth": [[314, "Illinois"], [931, "California"], [954, "Texas"], [954, "Arizona"], [1290, "Arizona"], [1592, "Texas"], [1592, "Tennessee"], [1669, "Maryland"], [1669, "Ohio"], [1669, "Illinois"], [1669, "Tennessee"], [1669, "Indiana"], [1724, "Pennsylvania"], [1724, "Michigan"], [1724, "Indiana"], [2001, "Arizona"], [2421, "Michigan"], [2421, "Illinois"], [2434, "Pennsylvania"], [2434, "Michigan"], [2434, "Indiana"], [2496, "California"], [3320, "Arizona"], [3447, "Arizona"], [4415, "California"], [4426, "Texas"], [4426, "Arizona"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match109"
+        },
+        {
+            "query_id": "match110",
+            "db_used": "santos",
+            "question": "Match state expenditure agencies with payments total greater than 1,500 to Finance-related departments in the rm-mr-2009-eng dataset that share the same function.",
+            "ground_truth": [["COMMERCE AND INSURANCE", "Financial Consumer Agency of Canada"], ["COMMERCE AND INSURANCE", "Office of the Superintendent of Financial Institutions"], ["REVENUE", "Finance Department"], ["OFFICE OF STATE AUDITOR", "Auditor General"], ["OFFICE OF STATE TREASURER", "Finance Department"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match110"
+        },
+        {
+            "query_id": "match111",
+            "db_used": "santos",
+            "question": "Match state expenditure agencies with payments total greater than 1,800 to Natural Resources departments in the rm-mr-2009-eng dataset that share the same function.",
+            "ground_truth": [["NATURAL RESOURCES", "Natural Resources Department"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match111"
+        },
+        {
+            "query_id": "match112",
+            "db_used": "santos",
+            "question": "Match transactions from the British Transport Police on 28/05/2010 in the DfT monthly spend dataset to Software coding transactions in the transparency report that share the same day of the month.",
+            "ground_truth": [["208445", 5100014873], ["208445", 5100014873], ["208445", 5100014873], ["208445", 5100014873], ["208445", 5100014873], ["212133", 5100014873], ["212133", 5100014873], ["212076", 5100014873], ["212077", 5100014873], ["208155", 5100014873], ["208155", 5100014873], ["208079", 5100014873], ["212164", 5100014873], ["211062", 5100014873], ["211062", 5100014873], ["211062", 5100014873], ["212355", 5100014873], ["210874", 5100014873], ["212283", 5100014873], ["211598", 5100014873], ["211598", 5100014873], ["212340", 5100014873], ["212340", 5100014873]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match112"
+        },
+        {
+            "query_id": "match113",
+            "db_used": "santos",
+            "question": "List the senior officials from the Home Office travel data return who share the same first name with officials in the April-June 2018 travel expenses report.",
+            "ground_truth": [["Mark Sedwill ", "Mark Bryson-Richardson"], ["Richard Clarke", "Richard Montgomery"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match113"
+        },
+        {
+            "query_id": "match114",
+            "db_used": "santos",
+            "question": "Match pubs to community centres in the Barking and Dagenham borough that are located on the same street.",
+            "ground_truth": [["109 Bastable Avenue / Charlton Crescent", "Bastable Avenue"], ["109 Bastable Avenue / Charlton Crescent", "Bastable Avenue"], ["Billet Road / Rose Lane", "Rose Lane"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match114"
+        },
+        {
+            "query_id": "match115",
+            "db_used": "mondial_geo",
+            "question": "Match each desert to the continent where its main part is located.",
+            "ground_truth": [["Arabian Desert", "Asia"], ["Atacama", "America"], ["Azaouad", "Africa"], ["Baja California Desert", "America"], ["Chihuahua", "America"], ["Colorado Plateau", "America"], ["Darfur", "Africa"], ["Dascht-e-Kavir", "Asia"], ["Dascht-e-Lut", "Asia"], ["Dascht-e-Margoh", "Asia"], ["Djourab", "Africa"], ["Erdi Ennedi", "Africa"], ["Erg Chech", "Africa"], ["Erg Igidi", "Africa"], ["Erg Isaouane", "Africa"], ["Erg Maqteir", "Africa"], ["Erg Ouarane", "Africa"], ["Erg Rebiana", "Africa"], ["Ferlo", "Africa"], ["Fesan", "Africa"], ["Gibson Desert", "Australia/Oceania"], ["Gobi", "Asia"], ["Grand Erg Est", "Africa"], ["Grand Erg Ouest", "Africa"], ["Great Basin", "America"], ["Great Salt Lake Desert", "America"], ["Great Sandy Desert", "Australia/Oceania"], ["Great Victoria Desert", "Australia/Oceania"], ["Gurbantunggut", "Asia"], ["Hamada al-Hamra", "Africa"], ["Hamada du Draa", "Africa"], ["Kalahari", "Africa"], ["Karakum", "Asia"], ["Kum Tagh", "Asia"], ["Kysylkum", "Asia"], ["Libyan Desert", "Africa"], ["Mojave", "America"], ["Mujunkum", "Asia"], ["Namib", "Africa"], ["Nefud", "Asia"], ["Negev", "Asia"], ["Nubian Desert", "Africa"], ["Nullarbor Plain", "Australia/Oceania"], ["Ordos", "Asia"], ["Owyhee", "America"], ["Qaidam", "Asia"], ["Red Centre", "Australia/Oceania"], ["Rigestan", "Asia"], ["Rub Al Chali", "Asia"], ["Ryn", "Asia"], ["Saguia el-Hamra", "Africa"], ["Simpson Desert", "Australia/Oceania"], ["Sonora", "America"], ["Sturt Desert", "Australia/Oceania"], ["Syrian Desert", "Asia"], ["TaklaMakan", "Asia"], ["Talak", "Africa"], ["Tanami", "Australia/Oceania"], ["Tanezrouft", "Africa"], ["Tenere", "Africa"], ["Thar", "Asia"], ["Trarza", "Africa"], ["Ust Urt", "Asia"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match115"
+        },
+        {
+            "query_id": "match116",
+            "db_used": "mondial_geo",
+            "question": "Match islands with a province value greater than 50,000 to the continents where their main part is located.",
+            "ground_truth": [["Baffin Island", "America"], ["Banks Island", "America"], ["Borneo", "Asia"], ["Cuba", "America"], ["Cuba", "Australia/Oceania"], ["Ellesmere Island", "America"], ["Great Britain", "Australia/Oceania"], ["Great Britain", "Europe"], ["Hispaniola", "America"], ["Hokkaido", "Asia"], ["Honshu", "Asia"], ["Ireland", "Europe"], ["Java", "America"], ["Java", "Asia"], ["Luzon", "Asia"], ["Mindanao", "Asia"], ["Sulawesi", "Asia"], ["Sumatra", "Asia"], ["Te Ika-a-Maui (North Island)", "Australia/Oceania"], ["Te Waka-a-Maui (South Island)", "Australia/Oceania"], ["Victoria Island", "Africa"], ["Victoria Island", "America"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match116"
+        },
+        {
+            "query_id": "match117",
+            "db_used": "mondial_geo",
+            "question": "Match each sea to the continents it adjoins.",
+            "ground_truth": [["Andaman Sea", "Asia"], ["Arabian Sea", "Asia"], ["Arctic Ocean", "America"], ["Arctic Ocean", "Asia"], ["Arctic Ocean", "Europe"], ["Atlantic Ocean", "Africa"], ["Atlantic Ocean", "America"], ["Atlantic Ocean", "Europe"], ["Baltic Sea", "Europe"], ["Barents Sea", "Asia"], ["Barents Sea", "Europe"], ["Bay of Bengal", "Asia"], ["Bering Sea", "America"], ["Bering Sea", "Asia"], ["Black Sea", "Asia"], ["Black Sea", "Europe"], ["Caribbean Sea", "America"], ["East China Sea", "Asia"], ["Gulf of Aden", "Africa"], ["Gulf of Aden", "Asia"], ["Gulf of Mexico", "America"], ["Gulf of Oman", "Asia"], ["Indian Ocean", "Africa"], ["Indian Ocean", "Asia"], ["Indian Ocean", "Australia/Oceania"], ["Irish Sea", "Europe"], ["Kattegat", "Europe"], ["Malakka Strait", "Asia"], ["Mediterranean Sea", "Africa"], ["Mediterranean Sea", "Asia"], ["Mediterranean Sea", "Europe"], ["North Sea", "Europe"], ["Norwegian Sea", "Europe"], ["Pacific Ocean", "America"], ["Pacific Ocean", "Asia"], ["Pacific Ocean", "Australia/Oceania"], ["Persian Gulf", "Asia"], ["Red Sea", "Africa"], ["Red Sea", "Asia"], ["Sea of Azov", "Asia"], ["Sea of Azov", "Europe"], ["Sea of Japan", "Asia"], ["Sea of Okhotsk", "Asia"], ["Sibirian Sea", "Asia"], ["Skagerrak", "Europe"], ["South China Sea", "Asia"], ["Sulawesi Sea", "Asia"], ["Sunda Sea", "Asia"], ["The Channel", "Europe"], ["Yellow Sea", "Asia"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match117"
+        },
+        {
+            "query_id": "match118",
+            "db_used": "santos",
+            "question": "Match protected heritage areas where most recent 50 incidents happened in the wildlife coexistence dataset to the countries they are located in.",
+            "ground_truth": [["Jasper National Park of Canada", "Canada"], ["Elk Island National Park of Canada", "Canada"], ["Riding Mountain National Park of Canada", "Canada"], ["Banff National Park of Canada", "Canada"], ["Glacier National Park of Canada", "Canada"], ["Kootenay National Park of Canada", "Canada"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match118"
+        },
+        {
+            "query_id": "match119",
+            "db_used": "nextiaJD",
+            "question": "Match cultural spaces with more than 1,000 seats to university-owned public art within a 15-minute walk.",
+            "ground_truth": [["Queen Elizabeth Theatre", 113], ["UBC Thunderbird Arena", 127], ["UBC Thunderbird Arena", 132], ["UBC Thunderbird Arena", 133], ["Chan Centre for The Performing Art - Concert Hall", 127], ["Chan Centre for The Performing Art - Concert Hall", 132], ["Chan Centre for The Performing Art - Concert Hall", 133], ["Orpheum Theatre", 113], ["St Andrews-Wesley United Church", 113], ["Vogue Theatre", 113], ["Rogers Arena", 113], ["St. Andrews-Wesley United Church", 113], ["Chan Centre for The Performing Art, The- Concert Hall", 127], ["Chan Centre for The Performing Art, The- Concert Hall", 132], ["Chan Centre for The Performing Art, The- Concert Hall", 133]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match119"
+        },
+        {
+            "query_id": "match120",
+            "db_used": "nextiaJD",
+            "question": "Match community centres to cultural spaces with more than 1,000 seats that are within a 5-minute walk.",
+            "ground_truth": [["Hastings", "PNE Forum"], ["Hastings", "PNE Amphitheatre"], ["Gathering Place Community Centre", "Orpheum Theatre"], ["Gathering Place Community Centre", "Vogue Theatre"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match120"
+        },
+        {
+            "query_id": "match121",
+            "db_used": "santos",
+            "question": "Match suppliers from the April 2018 expenditure dataset to the same suppliers in the May 2015 expenditure dataset.",
+            "ground_truth": [["Nhs Supply Chain", "NHS SUPPLY CHAIN"], ["Novartis Pharmaceuticals Uk Ltd", "NOVARTIS PHARMACEUTICALS UK LTD"], ["Roche Diagnostics Limited", "ROCHE PRODUCTS LTD"], ["Csc", "CSC COMPUTER SCIENCES LTD"], ["Philips Healthcare", "PHILIPS HEALTHCARE"], ["Nhs Blood And Transplant", "NHS BLOOD & TRANSPLANT"], ["NHS Litigation Authority", "NHS LITIGATION AUTHORITY"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match121"
+        },
+        {
+            "query_id": "match122",
+            "db_used": "nextiaJD",
+            "question": "Find pairs of staff members in the SCS Staff Salaries dataset who share the same first name but are different people.",
+            "ground_truth": [["David Ashbourne", "David Pimm"], ["David Pimm", "David Ashbourne"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match122"
+        },  
+        {
+            "query_id": "match123",
+            "db_used": "car_retails",
+            "question": "Match US customers to offices located in the same state as the customer's city.",
+            "ground_truth": [[124, 1], [129, 1], [131, 3], [151, 3], [161, 1], [173, 2], [175, 2], [181, 3], [205, 1], [219, 1], [239, 1], [286, 2], [319, 3], [320, 2], [321, 1], [347, 1], [362, 2], [424, 3], [447, 1], [450, 1], [456, 3], [462, 2], [475, 1], [495, 2]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match123"
+        },
+        {
+            "query_id": "match124",
+            "db_used": "car_retails",
+            "question": "Match non-US customers with a credit limit greater than 100,000 to non-US offices located in cities with the same climate type.",
+            "ground_truth": [[114, 4], [114, 7], [119, 4], [119, 7], [141, 4], [146, 4], [187, 4], [187, 7], [227, 4], [227, 7], [249, 5], [249, 6], [259, 4], [259, 7], [276, 5], [276, 6], [278, 5], [278, 6], [298, 4], [298, 7], [386, 5], [386, 6], [458, 4], [496, 4]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match124"
+        },
+        {
+            "query_id": "match125",
+            "db_used": "santos",
+            "question": "Match procurement merchant categories from the purchasing card spend dataset to highly similar categories in the rm-mr-2009-eng dataset.",
+            "ground_truth": [["Human Resources  ", "Human Resources and Skills Development"], ["Environmental Services  ", "Environment"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match125"
+        },
+        {
+            "query_id": "match126",
+            "db_used": "santos",
+            "question": "Match expense types from the IPO payments dataset to highly similar procurement merchant categories in the purchasing card spend dataset.",
+            "ground_truth": [["Books Newspapers & Publications", "Education Library Books "], ["Computer Capital", "Information Communication Technology  "], ["Courier service", "Mail ServicesÃÂ   "], ["Furniture & Fittings", "Furniture & Soft Furnishings  "], ["Law Reporting", "Legal Services  "], ["Minor Building Works & Maintenance", "Works - Construction, Repair & Maintenance  "], ["Other Stationery & General Supplies", "Stationery    "], ["Postage", "Mail ServicesÃÂ   "], ["Seminars and Conferences", "Human Resources Training & Conferences "], ["Training", "Human Resources Training & Conferences "], ["Travel and subsistence Overseas", "Human Resources Travel & Subsistence "], ["Travel and subsistence UK", "Human Resources Travel & Subsistence "], ["Payroll Costs", "Human Resources  "], ["Recruitment Advertising", "Human Resources  "], ["Van Delivery Service", "Mail ServicesÃÂ   "], ["BIS Solicitors", "Legal Services  "], ["Books  Newspapers & Publications", "Education Library Books "], ["Fuel &Utilities", "Vehicle Management Fuel "], ["Office Cleaning", "Facilities & Management Services  "], ["Security Guards", "Facilities & Management Services  "], ["Treasury Solicitors", "Legal Services  "]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match126"
+        },
+        {
+            "query_id": "match127",
+            "db_used": "santos",
+            "question": "Match cinemas to arts centres located in adjacent wards in the UK.",
+            "ground_truth": [["Cineworld Wandsworth", "Southbank Centre "], ["Picturehouse Central", "Battersea Arts Centre "], ["Picturehouse Central", "Southbank Centre "], ["Picturehouse Central", "The Tabernacle"], ["Deptford Cinema", "Dugdale  "], ["Deptford Cinema", "The Albany "], ["Vue Action", "Irish Cultural Centre "], ["Vue Action", "Riverside Studios "], ["Curzon Chelsea", "The Tabernacle"], ["Curzon Chelsea", "The Landmark Arts Centre "], ["The Castle Cinema", "Dugdale  "], ["The Castle Cinema", "Rich Mix "], ["The Castle Cinema", "Poplar Union "], ["The Castle Cinema", "Fairfield Halls "], ["Vue Shepherd's Bush\r\n\r\n\r\n\r\n", "Irish Cultural Centre "], ["Vue Shepherd's Bush\r\n\r\n\r\n\r\n", "Riverside Studios "], ["Vue Piccadilly", "Battersea Arts Centre "], ["Vue Piccadilly", "Southbank Centre "], ["Vue Piccadilly", "The Tabernacle"], ["Cineworld Wood Green", "ICA"], ["Curzon Victoria", "Battersea Arts Centre "], ["Curzon Victoria", "Southbank Centre "], ["Curzon Victoria", "The Tabernacle"], ["Cineworld Fulham Road", "The Tabernacle"], ["Curzon Goldsmiths", "Dugdale  "], ["Curzon Goldsmiths", "The Albany "], ["Everyman Hampstead", "Dugdale  "], ["Everyman Hampstead", "Jacksons Lane "], ["Everyman Hampstead", "JW3"], ["Odeon Swiss Cottage", "Dugdale  "], ["Odeon Swiss Cottage", "JW3"], ["Odeon Beckenham", "Dugdale  "], ["Odeon Beckenham", "Redbridge Drama Centre "], ["Imperial College Union Cinema", "ICA"], ["David Lean Cinema", "Redbridge Drama Centre "], ["David Lean Cinema", "The Albany "], ["David Lean Cinema", "The Landmark Arts Centre "], ["David Lean Cinema", "Stratford Circus Arts Centre "], ["Odeon Streatham", "Battersea Arts Centre "], ["Odeon Streatham", "Dugdale  "], ["Odeon Streatham", "Southbank Centre "], ["Odeon Streatham", "Streatham Space Project "], ["Odeon Tottenham Court Road", "ICA"], ["Covent Garden Hotel", "Battersea Arts Centre "], ["Covent Garden Hotel", "ICA"], ["Vue North Finchley", "Arts Depot "], ["Curzon Bloomsbury", "ICA"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match127"
+        },
+        {
+            "query_id": "match128",
+            "db_used": "santos",
+            "question": "Match arts centres to community centres in Islington whose website addresses have an edit distance of no more than 10.",
+            "ground_truth": [["Jacksons Lane ", "Hilldrop Community Centre"], ["JW3", "Hilldrop Community Centre"], ["The Albany ", "Hilldrop Community Centre"], ["The Barbican ", "Hilldrop Community Centre"], ["Watermans Arts Centre", "Hilldrop Community Centre"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match128"
+        },
+        {
+            "query_id": "match129",
+            "db_used": "mondial_geo",
+            "question": "Match cities with a population greater than 5,000,000 to their closest sea.",
+            "ground_truth": [["Bangkok", "Bay of Bengal"], ["Beijing", "Yellow Sea"], ["Bogota", "Caribbean Sea"], ["Cairo", "Mediterranean Sea"], ["Hong Kong", "South China Sea"], ["Istanbul", "Black Sea"], ["Jakarta", "Sunda Sea"], ["Karachi", "Arabian Sea"], ["Lagos", "Atlantic Ocean"], ["Lahore", "Arabian Sea"], ["Lima", "Pacific Ocean"], ["London", "North Sea"], ["Mexico City", "Gulf of Mexico"], ["Moscow", "Baltic Sea"], ["Mumbai", "Arabian Sea"], ["New Delhi", "Arabian Sea"], ["New York", "Atlantic Ocean"], ["Rio de Janeiro", "Atlantic Ocean"], ["Sao Paulo", "Atlantic Ocean"], ["Seoul", "Yellow Sea"], ["Shanghai", "East China Sea"], ["Tehran", "Persian Gulf"], ["Tianjin", "Yellow Sea"], ["Tokyo", "Pacific Ocean"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "cell"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match129"
+        },
+        {
+            "query_id": "match200",
+            "db_used": "restaurants2",
+            "question": "Match restaurants in zip code 60642 between the Yelp and Zomato datasets that refer to the same restaurant.",
+            "ground_truth": [[2, 844], [72, 1020], [90, 744], [111, 564], [198, 1022], [275, 272], [333, 134], [418, 590]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match200"
+        },
+        {
+            "query_id": "match201",
+            "db_used": "restaurants2",
+            "question": "Match restaurants in zip code 60616 between the Yelp and Zomato datasets that refer to the same restaurant.",
+            "ground_truth": [[36, 1109], [86, 763], [546, 929], [589, 1272], [404, 1303], [650, 163]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match201"
+        },
+        {
+            "query_id": "match202",
+            "db_used": "movies",
+            "question": "Match highly-rated movies (IMDb rating > 8.3 and Rotten Tomatoes rating > 8.5) between the IMDb and Rotten Tomatoes datasets that refer to the same movie.",
+            "ground_truth": [["a-456", "b-434"], ["a-569", "b-534"], ["a-701", "b-653"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match202"
+        },
+        {
+            "query_id": "match203",
+            "db_used": "movies",
+            "question": "Match poorly-rated movies (rating < 2.3) between the IMDb and Rotten Tomatoes datasets that refer to the same movie.",
+            "ground_truth": [["a-708", "b-662"], ["a-1775", "b-1553"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match203"
+        },
+        {
+            "query_id": "match204",
+            "db_used": "electronics",
+            "question": "Match electronics products originally priced over $2,800 between the Amazon and Best Buy datasets that refer to the same product.",
+            "ground_truth": [[3367, 102], [1514, 798], [3150, 1011]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match204"
+        },
+        {
+            "query_id": "match205",
+            "db_used": "electronics",
+            "question": "Match Dell electronics products priced over $1,500 between the Amazon and Best Buy datasets that have the same configurations.",
+            "ground_truth": [[3420, 1095], [2755, 108], [2755, 682]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match205"
+        },
+        {
+            "query_id": "match206",
+            "db_used": "music",
+            "question": "Match songs from the 'Fearless Platinum Edition' album on Amazon Music to the corresponding karaoke versions on iTunes that refer to the same song.",
+            "ground_truth": [[6675, 17064], [6676, 17065], [6677, 17066], [6678, 17067], [6679, 17068], [6680, 17069], [6681, 17070], [6682, 17071], [6683, 17072], [6684, 17073], [6685, 17074], [6686, 17075], [6687, 17076]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match206"
+        },
+        {
+            "query_id": "match207",
+            "db_used": "music",
+            "question": "Match songs from Taylor Swift's self-titled album on Amazon Music to the corresponding karaoke versions on iTunes that refer to the same song.",
+            "ground_truth": [[6601, 44114], [6602, 44115], [6603, 44128], [6604, 44117], [6605, 44118], [6606, 44119], [6607, 44120], [6608, 44121], [6609, 44122], [6610, 44123], [6611, 44124], [6612, 44125], [6613, 44126], [6614, 44127]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match207"
+        },
+        {
+            "query_id": "match208",
+            "db_used": "anime",
+            "question": "Match the top 15 highest-rated anime between the Anime Planet and MyAnimeList datasets that refer to the same animation.",
+            "ground_truth": [[98, 300], [97, 300], [100, 306], [99, 306], [101, 301], [102, 303], [103, 303], [104, 308], [105, 309], [107, 317], [108, 307], [106, 304], [113, 305]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match208"
+        },
+        {
+            "query_id": "match209",
+            "db_used": "anime",
+            "question": "Match the top 10 highest-rated 'Conan' anime between the Anime Planet and MyAnimeList datasets that refer to the same animation.",
+            "ground_truth": [[349, 57], [350, 57], [153, 219], [155, 219], [541, 253], [543, 253]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match209"
+        },
+        {
+            "query_id": "match210",
+            "db_used": "anime",
+            "question": "Match 'Clannad' anime between the Anime Planet and MyAnimeList datasets that refer to the same animation.",
+            "ground_truth": [[105, 309], [212, 258], [535, 14], [1860, 2105]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match210"
+        },
+        {
+            "query_id": "match211",
+            "db_used": "anime",
+            "question": "Match the Naruto-related animations from Anime Planet to those from My Anime List that refer to the same animation.",
+            "ground_truth": [[49, 448], [471, 520], [476, 661], [682, 666], [683, 666], [997, 1102], [1477, 853], [1532, 1390], [1533, 1390], [1575, 1353], [1576, 1353], [1798, 1125], [1864, 1651], [3050, 2154], [3129, 1609], [3130, 1609], [3465, 2641], [3607, 2155], [3633, 3372], [3712, 3345]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match211"
+        },
+        {
+            "query_id": "match212",
+            "db_used": "anime",
+            "question": "Match the Fate-related animations from Anime Planet to those from My Anime List that refer to the same animation.",
+            "ground_truth": [[59, 140], [59, 150], [73, 150], [93, 225], [124, 122], [124, 328], [253, 122], [253, 2228], [616, 1093], [617, 1093], [868, 1153], [1650, 2129], [1679, 2176], [2120, 2931], [3079, 1423], [3079, 2182], [3132, 1423], [3132, 2129], [3132, 3841], [3655, 2962], [3981, 2129]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match212"
+        },
+        {
+            "query_id": "match213",
+            "db_used": "movies",
+            "question": "Match the Christopher Nolan movies from IMDb to those from Rotten Tomatoes that refer to the same movie.",
+            "ground_truth": [["a-101", "b-101"], ["a-362", "b-347"], ["a-701", "b-653"], ["a-1279", "b-1103"], ["a-1820", "b-1596"], ["a-2318", "b-2042"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match213"
+        },
+        {
+            "query_id": "match214",
+            "db_used": "movies",
+            "question": "Match the Clint Eastwood movies from IMDb to those from Rotten Tomatoes that refer to the same movie.",
+            "ground_truth": [["a-350", "b-338"], ["a-571", "b-536"], ["a-692", "b-645"], ["a-735", "b-687"], ["a-970", "b-904"], ["a-1340", "b-1161"], ["a-1711", "b-1495"], ["a-2161", "b-1906"], ["a-2248", "b-1982"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "row"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match214"
+        },
+        {
+            "query_id": "match300",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of cultural spaces dataset to the columns of street intersections dataset that refer to the same feature.",
+            "ground_truth": [["Geo Local Area", "LOCAL_AREA"], ["Geom", "Geom"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match300"
+        },
+        {
+            "query_id": "match301",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of community centres dataset to the columns of community gardens and food trees dataset that refer to the same feature.",
+            "ground_truth": [["NAME", "STREET_NAME"], ["ADDRESS", "MERGED_ADDRESS"], ["URLLINK", "WEBSITE"], ["Geom", "Geom"], ["Geo Local Area", "Geo Local Area"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match301"
+        },
+        {
+            "query_id": "match302",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of libraries dataset to the columns of public art dataset that refer to the same feature.",
+            "ground_truth": [["ADDRESS", "SiteAddress"], ["URLLINK", "URL"], ["Geom", "Geom"], ["Geo Local Area", "GeoLocalArea"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match302"
+        },
+        {
+            "query_id": "match303",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of Botswana 2011 population census dataset to the columns of population by governorate, citizenship and gender dataset that refer to the same feature.",
+            "ground_truth": [["DATE", "Year"], ["SEX_NAME", "Gender"], ["VALUE", "Population"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match303"
+        },
+        {
+            "query_id": "match304",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of cultural spaces dataset to the columns of public art dataset that refer to the same feature.",
+            "ground_truth": [["YEAR", "YearOfInstallation"], ["CULTURAL_SPACE_NAME", "SiteName"], ["WEBSITE", "URL"], ["ADDRESS", "SiteAddress"], ["LOCAL_AREA", "GeoLocalArea"], ["OWNERSHIP", "Ownership"], ["Geom", "Geom"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match304"
+        },
+        {
+            "query_id": "match305",
+            "db_used": "california_schools",
+            "question": "Match the columns of the FRPM dataset to the columns of the schools dataset that refer to the same feature.",
+            "ground_truth": [["CDSCode", "CDSCode"], ["County Code", "County"], ["District Code", "NCESDist"], ["District Name", "District"], ["School Name", "School"], ["District Type ", "DOCType"], ["School Type", "SOCType"], ["Educational Option Type", "EdOpsName"], ["Charter School (Y/N)", "Charter"], ["Charter School Number", "CharterNum"], ["Charter Funding Type", "FundingType"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "hard",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match305"
+        },
+        {
+            "query_id": "match306",
+            "db_used": "electronics",
+            "question": "Match the columns of the Amazon electronics dataset to the columns of the Best Buy dataset that refer to the same feature.",
+            "ground_truth": [["ID", "ID"], ["Brand", "Brand"], ["Amazon_Price", "Price"], ["Original_Price", "Price"], ["Features", "Features"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match306"
+        },
+        {
+            "query_id": "match307",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of the schools dataset to the columns of the EO4 dataset that refer to the similar type of information.",
+            "ground_truth": [["ADDRESS", "STREET"], ["SCHOOL_NAME", "NAME"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match307"
+        },
+        {
+            "query_id": "match308",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of the authors dataset to the columns of the public art artists dataset that refer to the similar type of information.",
+            "ground_truth": [["Author_ID", "ArtistID"], ["NAME", "FirstName"], ["NAME", "LastName"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "easy",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match308"
+        },
+        {
+            "query_id": "match309",
+            "db_used": "nextiaJD",
+            "question": "Match the columns of the community gardens and food trees dataset to the columns of the rental standards current issues dataset that refer to the similar feature.",
+            "ground_truth": [["NAME", "BUSINESSOPERATOR"], ["WEBSITE", "DetailURL"], ["STREET_NAME", "StreetNumber"], ["STREET_NUMBER", "Street"], ["Geo Local Area", "Geo Local Area"], ["Geom", "Geom"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match309"
+        },
+        {
+            "query_id": "match310",
+            "db_used": "santos",
+            "question": "Match the columns of the state expenditures dataset to the columns of the RM-MR 2009 dataset that refer to the similar feature.",
+            "ground_truth": [["Fiscal Year", "ÃÂ¯ÃÂ»ÃÂ¿FSCL_YR"], ["Agency Name", "DEPT_EN_DESC"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match310"
+        },
+        {
+            "query_id": "match311",
+            "db_used": "santos",
+            "question": "Match the columns of the May 2018 spending dataset to the columns of the April 2018 spending dataset that refer to the similar feature.",
+            "ground_truth": [["ORGANISATION NAME", "Department Family"], ["EFFECTIVE DATE", "Date"], ["DATE PAID", "Date"], ["SUPPLIER NAME", "Supplier"], ["TRANSACTION NO.", "Transaction Number"], ["AMOUNT (ÃÂ£)", "Amount"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match311"
+        },
+        {
+            "query_id": "match312",
+            "db_used": "santos",
+            "question": "Match the columns of the state expenditures dataset to the columns of the AMO-AME 2007 dataset that refer to the similar feature.",
+            "ground_truth": [["Fiscal Year", "ÃÂ¯ÃÂ»ÃÂ¿FSCL_YR"], ["Agency Name", "DEPT_EN_DESC"], ["Payments Total", "AGRG_PYMT_AMT"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match312"
+        },
+        {
+            "query_id": "match313",
+            "db_used": "santos",
+            "question": "Match the columns of the home office senior officials travel dataset to the columns of the travel expenses April-June 2018 dataset that refer to the similar feature.",
+            "ground_truth": [["Name of Official", "Senior Officials Name"], ["Mode of travel", "Mode of transport"], ["Destination", "Destination"], ["Class of travel", "Class of travel"], [" Base Sales including tax ", "Total cost, including all visas, accommodation, travel, meals etc. (Â£)"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match313"
+        },
+        {
+            "query_id": "match314",
+            "db_used": "santos",
+            "question": "Match the columns of the CIHR co-applicant dataset to the columns of the cabinet office senior officials dataset that refer to the similar feature.",
+            "ground_truth": [["CoAppNm", "Name"], ["CoAppOrgNm", "Organisation"], ["ProvinceEN", "Unit"]],
+            "attributes": {
+                "operators used": [
+                    "LLM_MATCH"
+                ],
+                "difficulty": "medium",
+                "operand_type": "column"
+            },
+            "query_plan_reference": "eval/match_eval.py:pipeline_match314"
+        }
+    ]
+}
