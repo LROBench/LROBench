@@ -3,6 +3,7 @@
         "description": "Cluster-LROs query metadata in LROBench",
         "statistics": {
             "total_queries": 60,
+            "input_table_size_aggregate": {"nrows": {"max": 72, "mean": 28.2333, "count": 30}, "ncols": {"max": 300, "mean": 35.65, "count": 60}},
             "scoring_dimensions": {
                 "difficulty": {
                     "medium": {
@@ -61,7 +62,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster100"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster100",
+            "input_table_size": {"nrows": 24, "ncols": 2}
         },
         {
             "query_id": "cluster101",
@@ -75,7 +77,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster101"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster101",
+            "input_table_size": {"nrows": 72, "ncols": 4}
         },
         {
             "query_id": "cluster102",
@@ -89,7 +92,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster102"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster102",
+            "input_table_size": {"nrows": 34, "ncols": 9}
         },
         {
             "query_id": "cluster103",
@@ -103,7 +107,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster103"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster103",
+            "input_table_size": {"nrows": 30, "ncols": 5}
         },
         {
             "query_id": "cluster104",
@@ -117,7 +122,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster104"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster104",
+            "input_table_size": {"nrows": 20, "ncols": 21}
         },
         {
             "query_id": "cluster105",
@@ -131,7 +137,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster105"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster105",
+            "input_table_size": {"nrows": 20, "ncols": 21}
         },
         {
             "query_id": "cluster106",
@@ -145,7 +152,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster106"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster106",
+            "input_table_size": {"nrows": 20, "ncols": 21}
         },
         {
             "query_id": "cluster107",
@@ -159,7 +167,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster107"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster107",
+            "input_table_size": {"nrows": 23, "ncols": 8}
         },
         {
             "query_id": "cluster108",
@@ -173,7 +182,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster108"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster108",
+            "input_table_size": {"nrows": 50, "ncols": 9}
         },
         {
             "query_id": "cluster109",
@@ -187,7 +197,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster109"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster109",
+            "input_table_size": {"nrows": 45, "ncols": 13}
         },
         {
             "query_id": "cluster110",
@@ -201,7 +212,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster110"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster110",
+            "input_table_size": {"nrows": 24, "ncols": 1}
         },
         {
             "query_id": "cluster111",
@@ -215,7 +227,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster111"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster111",
+            "input_table_size": {"nrows": 5, "ncols": 1}
         },
         {
             "query_id": "cluster112",
@@ -229,7 +242,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster112"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster112",
+            "input_table_size": {"nrows": 23, "ncols": 6}
         },
         {
             "query_id": "cluster113",
@@ -243,7 +257,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster113"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster113",
+            "input_table_size": {"nrows": 23, "ncols": 22}
         },
         {
             "query_id": "cluster114",
@@ -257,7 +272,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster114"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster114",
+            "input_table_size": {"nrows": 30, "ncols": 9}
         },
         {
             "query_id": "cluster115",
@@ -271,7 +287,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster115"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster115",
+            "input_table_size": {"nrows": 30, "ncols": 12}
         },
         {
             "query_id": "cluster116",
@@ -285,7 +302,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster116"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster116",
+            "input_table_size": {"nrows": 26, "ncols": 7}
         },
         {
             "query_id": "cluster117",
@@ -299,7 +317,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster117"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster117",
+            "input_table_size": {"nrows": 42, "ncols": 2}
         },
         {
             "query_id": "cluster118",
@@ -313,7 +332,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster118"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster118",
+            "input_table_size": {"nrows": 42, "ncols": 2}
         },
         {
             "query_id": "cluster119",
@@ -327,7 +347,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster119"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster119",
+            "input_table_size": {"nrows": 8, "ncols": 2}
         },
         {
             "query_id": "cluster120",
@@ -341,7 +362,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster120"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster120",
+            "input_table_size": {"nrows": 6, "ncols": 2}
         },
         {
             "query_id": "cluster121",
@@ -355,7 +377,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster121"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster121",
+            "input_table_size": {"nrows": 19, "ncols": 3}
         },
         {
             "query_id": "cluster122",
@@ -369,7 +392,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster122"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster122",
+            "input_table_size": {"nrows": 30, "ncols": 13}
         },
         {
             "query_id": "cluster123",
@@ -383,7 +407,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster123"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster123",
+            "input_table_size": {"nrows": 42, "ncols": 2}
         },
         {
             "query_id": "cluster124",
@@ -397,7 +422,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster124"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster124",
+            "input_table_size": {"nrows": 26, "ncols": 8}
         },
         {
             "query_id": "cluster125",
@@ -411,7 +437,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster125"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster125",
+            "input_table_size": {"nrows": 26, "ncols": 8}
         },
         {
             "query_id": "cluster126",
@@ -425,7 +452,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster126"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster126",
+            "input_table_size": {"nrows": 20, "ncols": 6}
         },
         {
             "query_id": "cluster127",
@@ -439,7 +467,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster127"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster127",
+            "input_table_size": {"nrows": 20, "ncols": 6}
         },
         {
             "query_id": "cluster128",
@@ -453,7 +482,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster128"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster128",
+            "input_table_size": {"nrows": 32, "ncols": 13}
         },
         {
             "query_id": "cluster129",
@@ -467,7 +497,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster129"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster129",
+            "input_table_size": {"nrows": 35, "ncols": 2}
         },
         {
             "query_id": "cluster200",
@@ -481,7 +512,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster200"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster200",
+            "input_table_size": {"nrows": 3, "ncols": 16}
         },
         {
             "query_id": "cluster201",
@@ -495,7 +527,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster201"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster201",
+            "input_table_size": {"nrows": 3, "ncols": 49}
         },
         {
             "query_id": "cluster202",
@@ -509,7 +542,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster202"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster202",
+            "input_table_size": {"nrows": 3, "ncols": 15}
         },
         {
             "query_id": "cluster203",
@@ -523,7 +557,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster203"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster203",
+            "input_table_size": {"nrows": 3, "ncols": 9}
         },
         {
             "query_id": "cluster204",
@@ -537,7 +572,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster204"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster204",
+            "input_table_size": {"nrows": 3, "ncols": 31}
         },
         {
             "query_id": "cluster205",
@@ -551,7 +587,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster205"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster205",
+            "input_table_size": {"nrows": 3, "ncols": 12}
         },
         {
             "query_id": "cluster206",
@@ -565,7 +602,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster206"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster206",
+            "input_table_size": {"nrows": 3, "ncols": 22}
         },
         {
             "query_id": "cluster207",
@@ -579,7 +617,8 @@
                 "difficulty": "hard",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster207"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster207",
+            "input_table_size": {"nrows": 3, "ncols": 29}
         },
         {
             "query_id": "cluster208",
@@ -593,7 +632,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster208"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster208",
+            "input_table_size": {"nrows": 3, "ncols": 11}
         },
         {
             "query_id": "cluster209",
@@ -607,7 +647,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster209"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster209",
+            "input_table_size": {"nrows": 3, "ncols": 19}
         },
         {
             "query_id": "cluster210",
@@ -621,7 +662,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster210"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster210",
+            "input_table_size": {"nrows": 3, "ncols": 13}
         },
         {
             "query_id": "cluster211",
@@ -635,7 +677,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster211"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster211",
+            "input_table_size": {"nrows": 3, "ncols": 21}
         },
         {
             "query_id": "cluster212",
@@ -649,7 +692,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster212"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster212",
+            "input_table_size": {"nrows": 3, "ncols": 115}
         },
         {
             "query_id": "cluster213",
@@ -663,7 +707,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster213"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster213",
+            "input_table_size": {"nrows": 3, "ncols": 13}
         },
         {
             "query_id": "cluster214",
@@ -677,7 +722,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster214"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster214",
+            "input_table_size": {"nrows": 3, "ncols": 28}
         },
         {
             "query_id": "cluster300",
@@ -691,7 +737,8 @@
                 "difficulty": "hard",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster300"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster300",
+            "input_table_size": {"nrows": 102, "ncols": 139}
         },
         {
             "query_id": "cluster301",
@@ -705,7 +752,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster301"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster301",
+            "input_table_size": {"nrows": 45, "ncols": 50}
         },
         {
             "query_id": "cluster302",
@@ -719,7 +767,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster302"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster302",
+            "input_table_size": {"nrows": 66, "ncols": 300}
         },
         {
             "query_id": "cluster303",
@@ -733,7 +782,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster303"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster303",
+            "input_table_size": {"nrows": 48, "ncols": 89}
         },
         {
             "query_id": "cluster304",
@@ -747,7 +797,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster304"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster304",
+            "input_table_size": {"nrows": 42, "ncols": 96}
         },
         {
             "query_id": "cluster305",
@@ -761,7 +812,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster305"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster305",
+            "input_table_size": {"nrows": 24, "ncols": 59}
         },
         {
             "query_id": "cluster306",
@@ -775,7 +827,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster306"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster306",
+            "input_table_size": {"nrows": 21, "ncols": 61}
         },
         {
             "query_id": "cluster307",
@@ -789,7 +842,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster307"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster307",
+            "input_table_size": {"nrows": 24, "ncols": 201}
         },
         {
             "query_id": "cluster308",
@@ -803,7 +857,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster308"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster308",
+            "input_table_size": {"nrows": 24, "ncols": 71}
         },
         {
             "query_id": "cluster309",
@@ -817,7 +872,8 @@
                 "difficulty": "easy",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster309"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster309",
+            "input_table_size": {"nrows": 21, "ncols": 52}
         },
         {
             "query_id": "cluster310",
@@ -831,7 +887,8 @@
                 "difficulty": "easy",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster310"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster310",
+            "input_table_size": {"nrows": 21, "ncols": 52}
         },
         {
             "query_id": "cluster311",
@@ -845,7 +902,8 @@
                 "difficulty": "hard",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster311"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster311",
+            "input_table_size": {"nrows": 48, "ncols": 89}
         },
         {
             "query_id": "cluster312",
@@ -859,7 +917,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster312"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster312",
+            "input_table_size": {"nrows": 33, "ncols": 32}
         },
         {
             "query_id": "cluster313",
@@ -873,7 +932,8 @@
                 "difficulty": "hard",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster313"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster313",
+            "input_table_size": {"nrows": 27, "ncols": 157}
         },
         {
             "query_id": "cluster314",
@@ -887,7 +947,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster314"
+            "query_plan_reference": "eval/cluster_eval.py:pipeline_cluster314",
+            "input_table_size": {"nrows": 24, "ncols": 48}
         }
     ]
 }

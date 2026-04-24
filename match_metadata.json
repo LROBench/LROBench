@@ -3,6 +3,7 @@
         "description": "Match-LROs query metadata in LROBench",
         "statistics": {
             "total_queries": 60,
+            "input_table_size_aggregate": {"nrows": {"max": 77, "mean": 35.0667, "count": 45}, "ncols": {"max": 78, "mean": 15.2333, "count": 60}},
             "scoring_dimensions": {
                 "difficulty": {
                     "medium": {
@@ -61,7 +62,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match100"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match100",
+            "input_table_size": {"nrows": 28, "ncols": 17}
         },
         {
             "query_id": "match101",
@@ -75,7 +77,8 @@
                 "difficulty": "easy",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match101"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match101",
+            "input_table_size": {"nrows": 36, "ncols": 12}
         },
         {
             "query_id": "match102",
@@ -89,7 +92,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match102"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match102",
+            "input_table_size": {"nrows": 29, "ncols": 14}
         },
         {
             "query_id": "match103",
@@ -103,7 +107,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match103"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match103",
+            "input_table_size": {"nrows": 26, "ncols": 6}
         },
         {
             "query_id": "match104",
@@ -117,7 +122,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match104"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match104",
+            "input_table_size": {"nrows": 20, "ncols": 8}
         },
         {
             "query_id": "match105",
@@ -131,7 +137,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match105"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match105",
+            "input_table_size": {"nrows": 34, "ncols": 4}
         },
         {
             "query_id": "match106",
@@ -145,7 +152,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match106"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match106",
+            "input_table_size": {"nrows": 30, "ncols": 4}
         },
         {
             "query_id": "match107",
@@ -159,7 +167,8 @@
                 "difficulty": "easy",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match107"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match107",
+            "input_table_size": {"nrows": 26, "ncols": 4}
         },
         {
             "query_id": "match108",
@@ -173,7 +182,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match108"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match108",
+            "input_table_size": {"nrows": 38, "ncols": 14}
         },
         {
             "query_id": "match109",
@@ -187,7 +197,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match109"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match109",
+            "input_table_size": {"nrows": 30, "ncols": 4}
         },
         {
             "query_id": "match110",
@@ -201,7 +212,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match110"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match110",
+            "input_table_size": {"nrows": 30, "ncols": 2}
         },
         {
             "query_id": "match111",
@@ -215,7 +227,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match111"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match111",
+            "input_table_size": {"nrows": 28, "ncols": 2}
         },
         {
             "query_id": "match112",
@@ -229,7 +242,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match112"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match112",
+            "input_table_size": {"nrows": 43, "ncols": 4}
         },
         {
             "query_id": "match113",
@@ -243,7 +257,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match113"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match113",
+            "input_table_size": {"nrows": 35, "ncols": 3}
         },
         {
             "query_id": "match114",
@@ -257,7 +272,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match114"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match114",
+            "input_table_size": {"nrows": 23, "ncols": 16}
         },
         {
             "query_id": "match115",
@@ -271,7 +287,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match115"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match115",
+            "input_table_size": {"nrows": 68, "ncols": 6}
         },
         {
             "query_id": "match116",
@@ -285,7 +302,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match116"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match116",
+            "input_table_size": {"nrows": 23, "ncols": 5}
         },
         {
             "query_id": "match117",
@@ -299,7 +317,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match117"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match117",
+            "input_table_size": {"nrows": 40, "ncols": 4}
         },
         {
             "query_id": "match118",
@@ -313,7 +332,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match118"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match118",
+            "input_table_size": {"nrows": 49, "ncols": 2}
         },
         {
             "query_id": "match119",
@@ -327,7 +347,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match119"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match119",
+            "input_table_size": {"nrows": 18, "ncols": 21}
         },
         {
             "query_id": "match120",
@@ -341,7 +362,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match120"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match120",
+            "input_table_size": {"nrows": 41, "ncols": 7}
         },
         {
             "query_id": "match121",
@@ -355,7 +377,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match121"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match121",
+            "input_table_size": {"nrows": 77, "ncols": 2}
         },
         {
             "query_id": "match122",
@@ -369,7 +392,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match122"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match122",
+            "input_table_size": {"nrows": 40, "ncols": 20}
         },  
         {
             "query_id": "match123",
@@ -383,7 +407,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match123"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match123",
+            "input_table_size": {"nrows": 43, "ncols": 22}
         },
         {
             "query_id": "match124",
@@ -397,7 +422,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match124"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match124",
+            "input_table_size": {"nrows": 20, "ncols": 22}
         },
         {
             "query_id": "match125",
@@ -411,7 +437,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match125"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match125",
+            "input_table_size": {"nrows": 48, "ncols": 2}
         },
         {
             "query_id": "match126",
@@ -425,7 +452,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match126"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match126",
+            "input_table_size": {"nrows": 70, "ncols": 2}
         },
         {
             "query_id": "match127",
@@ -439,7 +467,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match127"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match127",
+            "input_table_size": {"nrows": 51, "ncols": 21}
         },
         {
             "query_id": "match128",
@@ -453,7 +482,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match128"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match128",
+            "input_table_size": {"nrows": 30, "ncols": 23}
         },
         {
             "query_id": "match129",
@@ -467,7 +497,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match129"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match129",
+            "input_table_size": {"nrows": 59, "ncols": 8}
         },
         {
             "query_id": "match200",
@@ -481,7 +512,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match200"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match200",
+            "input_table_size": {"nrows": 37, "ncols": 17}
         },
         {
             "query_id": "match201",
@@ -495,7 +527,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match201"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match201",
+            "input_table_size": {"nrows": 43, "ncols": 17}
         },
         {
             "query_id": "match202",
@@ -509,7 +542,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match202"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match202",
+            "input_table_size": {"nrows": 40, "ncols": 22}
         },
         {
             "query_id": "match203",
@@ -523,7 +557,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match203"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match203",
+            "input_table_size": {"nrows": 35, "ncols": 22}
         },
         {
             "query_id": "match204",
@@ -537,7 +572,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match204"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match204",
+            "input_table_size": {"nrows": 21, "ncols": 12}
         },
         {
             "query_id": "match205",
@@ -551,7 +587,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match205"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match205",
+            "input_table_size": {"nrows": 36, "ncols": 12}
         },
         {
             "query_id": "match206",
@@ -565,7 +602,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match206"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match206",
+            "input_table_size": {"nrows": 32, "ncols": 21}
         },
         {
             "query_id": "match207",
@@ -579,7 +617,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match207"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match207",
+            "input_table_size": {"nrows": 29, "ncols": 21}
         },
         {
             "query_id": "match208",
@@ -593,7 +632,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match208"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match208",
+            "input_table_size": {"nrows": 30, "ncols": 16}
         },
         {
             "query_id": "match209",
@@ -607,7 +647,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match209"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match209",
+            "input_table_size": {"nrows": 20, "ncols": 16}
         },
         {
             "query_id": "match210",
@@ -621,7 +662,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match210"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match210",
+            "input_table_size": {"nrows": 10, "ncols": 16}
         },
         {
             "query_id": "match211",
@@ -635,7 +677,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match211"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match211",
+            "input_table_size": {"nrows": 44, "ncols": 16}
         },
         {
             "query_id": "match212",
@@ -649,7 +692,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match212"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match212",
+            "input_table_size": {"nrows": 37, "ncols": 16}
         },
         {
             "query_id": "match213",
@@ -663,7 +707,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match213"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match213",
+            "input_table_size": {"nrows": 12, "ncols": 22}
         },
         {
             "query_id": "match214",
@@ -677,7 +722,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match214"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match214",
+            "input_table_size": {"nrows": 19, "ncols": 22}
         },
         {
             "query_id": "match300",
@@ -691,7 +737,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match300"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match300",
+            "input_table_size": {"nrows": 3, "ncols": 17}
         },
         {
             "query_id": "match301",
@@ -705,7 +752,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match301"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match301",
+            "input_table_size": {"nrows": 3, "ncols": 24}
         },
         {
             "query_id": "match302",
@@ -719,7 +767,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match302"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match302",
+            "input_table_size": {"nrows": 3, "ncols": 24}
         },
         {
             "query_id": "match303",
@@ -733,7 +782,8 @@
                 "difficulty": "hard",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match303"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match303",
+            "input_table_size": {"nrows": 3, "ncols": 13}
         },
         {
             "query_id": "match304",
@@ -747,7 +797,8 @@
                 "difficulty": "hard",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match304"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match304",
+            "input_table_size": {"nrows": 3, "ncols": 31}
         },
         {
             "query_id": "match305",
@@ -761,7 +812,8 @@
                 "difficulty": "hard",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match305"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match305",
+            "input_table_size": {"nrows": 3, "ncols": 78}
         },
         {
             "query_id": "match306",
@@ -775,7 +827,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match306"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match306",
+            "input_table_size": {"nrows": 3, "ncols": 12}
         },
         {
             "query_id": "match307",
@@ -789,7 +842,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match307"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match307",
+            "input_table_size": {"nrows": 3, "ncols": 33}
         },
         {
             "query_id": "match308",
@@ -803,7 +857,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match308"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match308",
+            "input_table_size": {"nrows": 3, "ncols": 15}
         },
         {
             "query_id": "match309",
@@ -817,7 +872,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match309"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match309",
+            "input_table_size": {"nrows": 3, "ncols": 27}
         },
         {
             "query_id": "match310",
@@ -831,7 +887,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match310"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match310",
+            "input_table_size": {"nrows": 3, "ncols": 14}
         },
         {
             "query_id": "match311",
@@ -845,7 +902,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match311"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match311",
+            "input_table_size": {"nrows": 3, "ncols": 16}
         },
         {
             "query_id": "match312",
@@ -859,7 +917,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match312"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match312",
+            "input_table_size": {"nrows": 3, "ncols": 13}
         },
         {
             "query_id": "match313",
@@ -873,7 +932,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match313"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match313",
+            "input_table_size": {"nrows": 3, "ncols": 17}
         },
         {
             "query_id": "match314",
@@ -887,7 +947,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/match_eval.py:pipeline_match314"
+            "query_plan_reference": "eval/match_eval.py:pipeline_match314",
+            "input_table_size": {"nrows": 3, "ncols": 31}
         }
     ]
 }

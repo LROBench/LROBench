@@ -1,0 +1,1800 @@
+{
+    "benchmark_metadata": {
+        "description": "LLMOpBench：databases/ 下每个子目录为一个 database；表为递归收集的 *.csv。 statistics：database 个数 num_databases；tables_per_database.mean / .max 为各库表数量的平均与最大；total_tables 为全部表文件数；all_tables 为跨全部表的 mean_rows、mean_cols、max_rows、max_cols（及对应 path）。",
+        "statistics": {
+            "num_databases": 27,
+            "tables_per_database": {
+                "mean": 11.963,
+                "max": 80
+            },
+            "total_tables": 323,
+            "all_tables": {
+                "mean_rows": 28064.2167,
+                "mean_cols": 9.2291,
+                "max_rows": 1708517,
+                "max_cols": 115,
+                "max_rows_path": "databases/authors/PaperAuthor.csv",
+                "max_cols_path": "databases/european_football_2/Match.csv"
+            }
+        }
+    },
+    "databases": [
+        {
+            "name": "anime",
+            "table_count": 2,
+            "tables": [
+                {
+                    "path": "databases/anime/anime_planet.csv",
+                    "nrows": 4000,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/anime/my_anime_list.csv",
+                    "nrows": 4001,
+                    "ncols": 8
+                }
+            ]
+        },
+        {
+            "name": "authors",
+            "table_count": 5,
+            "tables": [
+                {
+                    "path": "databases/authors/Author.csv",
+                    "nrows": 247030,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/authors/Conference.csv",
+                    "nrows": 4545,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/authors/Journal.csv",
+                    "nrows": 15151,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/authors/Paper.csv",
+                    "nrows": 790015,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/authors/PaperAuthor.csv",
+                    "nrows": 1708517,
+                    "ncols": 4
+                }
+            ]
+        },
+        {
+            "name": "beer_factory",
+            "table_count": 7,
+            "tables": [
+                {
+                    "path": "databases/beer_factory/customers.csv",
+                    "nrows": 554,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/beer_factory/geolocation.csv",
+                    "nrows": 3,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/beer_factory/location.csv",
+                    "nrows": 3,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/beer_factory/rootbeer.csv",
+                    "nrows": 6430,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/beer_factory/rootbeerbrand.csv",
+                    "nrows": 24,
+                    "ncols": 22
+                },
+                {
+                    "path": "databases/beer_factory/rootbeerreview.csv",
+                    "nrows": 713,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/beer_factory/transaction.csv",
+                    "nrows": 6312,
+                    "ncols": 8
+                }
+            ]
+        },
+        {
+            "name": "books",
+            "table_count": 15,
+            "tables": [
+                {
+                    "path": "databases/books/address.csv",
+                    "nrows": 1000,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/books/address_status.csv",
+                    "nrows": 2,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/books/author.csv",
+                    "nrows": 9235,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/books/book.csv",
+                    "nrows": 11127,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/books/book_author.csv",
+                    "nrows": 17642,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/books/book_language.csv",
+                    "nrows": 27,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/books/country.csv",
+                    "nrows": 232,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/books/cust_order.csv",
+                    "nrows": 7550,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/books/customer.csv",
+                    "nrows": 2000,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/books/customer_address.csv",
+                    "nrows": 3350,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/books/order_history.csv",
+                    "nrows": 22348,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/books/order_line.csv",
+                    "nrows": 7550,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/books/order_status.csv",
+                    "nrows": 6,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/books/publisher.csv",
+                    "nrows": 2264,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/books/shipping_method.csv",
+                    "nrows": 4,
+                    "ncols": 3
+                }
+            ]
+        },
+        {
+            "name": "california_schools",
+            "table_count": 3,
+            "tables": [
+                {
+                    "path": "databases/california_schools/frpm.csv",
+                    "nrows": 9986,
+                    "ncols": 29
+                },
+                {
+                    "path": "databases/california_schools/satscores.csv",
+                    "nrows": 2269,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/california_schools/schools.csv",
+                    "nrows": 17686,
+                    "ncols": 49
+                }
+            ]
+        },
+        {
+            "name": "car_retails",
+            "table_count": 8,
+            "tables": [
+                {
+                    "path": "databases/car_retails/customers.csv",
+                    "nrows": 122,
+                    "ncols": 13
+                },
+                {
+                    "path": "databases/car_retails/employees.csv",
+                    "nrows": 23,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/car_retails/offices.csv",
+                    "nrows": 7,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/car_retails/orderdetails.csv",
+                    "nrows": 2996,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/car_retails/orders.csv",
+                    "nrows": 326,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/car_retails/payments.csv",
+                    "nrows": 273,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/car_retails/productlines.csv",
+                    "nrows": 7,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/car_retails/products.csv",
+                    "nrows": 110,
+                    "ncols": 9
+                }
+            ]
+        },
+        {
+            "name": "chicago_crime",
+            "table_count": 7,
+            "tables": [
+                {
+                    "path": "databases/chicago_crime/Community_Area.csv",
+                    "nrows": 77,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/chicago_crime/Crime.csv",
+                    "nrows": 268002,
+                    "ncols": 15
+                },
+                {
+                    "path": "databases/chicago_crime/District.csv",
+                    "nrows": 22,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/chicago_crime/FBI_Code.csv",
+                    "nrows": 26,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/chicago_crime/IUCR.csv",
+                    "nrows": 401,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/chicago_crime/Neighborhood.csv",
+                    "nrows": 246,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/chicago_crime/Ward.csv",
+                    "nrows": 50,
+                    "ncols": 13
+                }
+            ]
+        },
+        {
+            "name": "codebase_community",
+            "table_count": 8,
+            "tables": [
+                {
+                    "path": "databases/codebase_community/badges.csv",
+                    "nrows": 79851,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/codebase_community/comments.csv",
+                    "nrows": 174285,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/codebase_community/postHistory.csv",
+                    "nrows": 303155,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/codebase_community/postLinks.csv",
+                    "nrows": 11102,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/codebase_community/posts.csv",
+                    "nrows": 91966,
+                    "ncols": 21
+                },
+                {
+                    "path": "databases/codebase_community/tags.csv",
+                    "nrows": 1032,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/codebase_community/users.csv",
+                    "nrows": 40325,
+                    "ncols": 14
+                },
+                {
+                    "path": "databases/codebase_community/votes.csv",
+                    "nrows": 38930,
+                    "ncols": 6
+                }
+            ]
+        },
+        {
+            "name": "debit_card_specializing",
+            "table_count": 6,
+            "tables": [
+                {
+                    "path": "databases/debit_card_specializing/customers.csv",
+                    "nrows": 32461,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/debit_card_specializing/gasstations.csv",
+                    "nrows": 5716,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/debit_card_specializing/products.csv",
+                    "nrows": 591,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/debit_card_specializing/sqlite_sequence.csv",
+                    "nrows": 1,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/debit_card_specializing/transactions_1k.csv",
+                    "nrows": 1000,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/debit_card_specializing/yearmonth.csv",
+                    "nrows": 383282,
+                    "ncols": 3
+                }
+            ]
+        },
+        {
+            "name": "disney",
+            "table_count": 5,
+            "tables": [
+                {
+                    "path": "databases/disney/characters.csv",
+                    "nrows": 56,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/disney/director.csv",
+                    "nrows": 56,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/disney/movies_total_gross.csv",
+                    "nrows": 579,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/disney/revenue.csv",
+                    "nrows": 26,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/disney/voice-actors.csv",
+                    "nrows": 922,
+                    "ncols": 3
+                }
+            ]
+        },
+        {
+            "name": "electronics",
+            "table_count": 2,
+            "tables": [
+                {
+                    "path": "databases/electronics/amazon.csv",
+                    "nrows": 4259,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/electronics/best_buy.csv",
+                    "nrows": 5001,
+                    "ncols": 6
+                }
+            ]
+        },
+        {
+            "name": "european_football_2",
+            "table_count": 8,
+            "tables": [
+                {
+                    "path": "databases/european_football_2/Country.csv",
+                    "nrows": 11,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/european_football_2/League.csv",
+                    "nrows": 11,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/european_football_2/Match.csv",
+                    "nrows": 25979,
+                    "ncols": 115
+                },
+                {
+                    "path": "databases/european_football_2/Player.csv",
+                    "nrows": 11060,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/european_football_2/Player_Attributes.csv",
+                    "nrows": 183978,
+                    "ncols": 42
+                },
+                {
+                    "path": "databases/european_football_2/Team.csv",
+                    "nrows": 299,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/european_football_2/Team_Attributes.csv",
+                    "nrows": 1458,
+                    "ncols": 25
+                },
+                {
+                    "path": "databases/european_football_2/sqlite_sequence.csv",
+                    "nrows": 7,
+                    "ncols": 2
+                }
+            ]
+        },
+        {
+            "name": "formula_1",
+            "table_count": 14,
+            "tables": [
+                {
+                    "path": "databases/formula_1/circuits.csv",
+                    "nrows": 72,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/formula_1/constructorResults.csv",
+                    "nrows": 11082,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/formula_1/constructorStandings.csv",
+                    "nrows": 11836,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/formula_1/constructors.csv",
+                    "nrows": 208,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/formula_1/driverStandings.csv",
+                    "nrows": 31578,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/formula_1/drivers.csv",
+                    "nrows": 840,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/formula_1/lapTimes.csv",
+                    "nrows": 420369,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/formula_1/pitStops.csv",
+                    "nrows": 6070,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/formula_1/qualifying.csv",
+                    "nrows": 7397,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/formula_1/races.csv",
+                    "nrows": 976,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/formula_1/results.csv",
+                    "nrows": 23657,
+                    "ncols": 18
+                },
+                {
+                    "path": "databases/formula_1/seasons.csv",
+                    "nrows": 68,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/formula_1/sqlite_sequence.csv",
+                    "nrows": 10,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/formula_1/status.csv",
+                    "nrows": 134,
+                    "ncols": 2
+                }
+            ]
+        },
+        {
+            "name": "hockey",
+            "table_count": 22,
+            "tables": [
+                {
+                    "path": "databases/hockey/AwardsCoaches.csv",
+                    "nrows": 77,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/hockey/AwardsMisc.csv",
+                    "nrows": 124,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/hockey/AwardsPlayers.csv",
+                    "nrows": 2091,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/hockey/Coaches.csv",
+                    "nrows": 1812,
+                    "ncols": 14
+                },
+                {
+                    "path": "databases/hockey/CombinedShutouts.csv",
+                    "nrows": 54,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/hockey/Goalies.csv",
+                    "nrows": 4278,
+                    "ncols": 23
+                },
+                {
+                    "path": "databases/hockey/GoaliesSC.csv",
+                    "nrows": 31,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/hockey/GoaliesShootout.csv",
+                    "nrows": 480,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/hockey/HOF.csv",
+                    "nrows": 365,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/hockey/Master.csv",
+                    "nrows": 7761,
+                    "ncols": 31
+                },
+                {
+                    "path": "databases/hockey/Scoring.csv",
+                    "nrows": 45967,
+                    "ncols": 31
+                },
+                {
+                    "path": "databases/hockey/ScoringSC.csv",
+                    "nrows": 284,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/hockey/ScoringShootout.csv",
+                    "nrows": 2072,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/hockey/ScoringSup.csv",
+                    "nrows": 137,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/hockey/SeriesPost.csv",
+                    "nrows": 832,
+                    "ncols": 13
+                },
+                {
+                    "path": "databases/hockey/TeamSplits.csv",
+                    "nrows": 1519,
+                    "ncols": 43
+                },
+                {
+                    "path": "databases/hockey/TeamVsTeam.csv",
+                    "nrows": 25602,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/hockey/Teams.csv",
+                    "nrows": 1519,
+                    "ncols": 27
+                },
+                {
+                    "path": "databases/hockey/TeamsHalf.csv",
+                    "nrows": 41,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/hockey/TeamsPost.csv",
+                    "nrows": 927,
+                    "ncols": 17
+                },
+                {
+                    "path": "databases/hockey/TeamsSC.csv",
+                    "nrows": 30,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/hockey/abbrev.csv",
+                    "nrows": 58,
+                    "ncols": 3
+                }
+            ]
+        },
+        {
+            "name": "menu",
+            "table_count": 4,
+            "tables": [
+                {
+                    "path": "databases/menu/Dish.csv",
+                    "nrows": 426713,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/menu/Menu.csv",
+                    "nrows": 17527,
+                    "ncols": 20
+                },
+                {
+                    "path": "databases/menu/MenuItem.csv",
+                    "nrows": 1334410,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/menu/MenuPage.csv",
+                    "nrows": 66937,
+                    "ncols": 7
+                }
+            ]
+        },
+        {
+            "name": "mondial_geo",
+            "table_count": 34,
+            "tables": [
+                {
+                    "path": "databases/mondial_geo/borders.csv",
+                    "nrows": 320,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/city.csv",
+                    "nrows": 3111,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/continent.csv",
+                    "nrows": 5,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/mondial_geo/country.csv",
+                    "nrows": 238,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/desert.csv",
+                    "nrows": 63,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/mondial_geo/economy.csv",
+                    "nrows": 238,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/encompasses.csv",
+                    "nrows": 242,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/ethnicGroup.csv",
+                    "nrows": 540,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_desert.csv",
+                    "nrows": 155,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_estuary.csv",
+                    "nrows": 266,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_island.csv",
+                    "nrows": 202,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_lake.csv",
+                    "nrows": 254,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_mountain.csv",
+                    "nrows": 296,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_river.csv",
+                    "nrows": 852,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_sea.csv",
+                    "nrows": 736,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/geo_source.csv",
+                    "nrows": 220,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/isMember.csv",
+                    "nrows": 8009,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/island.csv",
+                    "nrows": 276,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/mondial_geo/islandIn.csv",
+                    "nrows": 350,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/mondial_geo/lake.csv",
+                    "nrows": 130,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/mondial_geo/language.csv",
+                    "nrows": 144,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/located.csv",
+                    "nrows": 858,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/locatedOn.csv",
+                    "nrows": 435,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/mondial_geo/mergesWith.csv",
+                    "nrows": 55,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/mondial_geo/mountain.csv",
+                    "nrows": 0,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/mountainOnIsland.csv",
+                    "nrows": 68,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/mondial_geo/organization.csv",
+                    "nrows": 154,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/politics.csv",
+                    "nrows": 239,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/mondial_geo/population.csv",
+                    "nrows": 238,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/province.csv",
+                    "nrows": 1450,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/mondial_geo/religion.csv",
+                    "nrows": 454,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/mondial_geo/river.csv",
+                    "nrows": 218,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/mondial_geo/sea.csv",
+                    "nrows": 35,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/mondial_geo/target.csv",
+                    "nrows": 205,
+                    "ncols": 2
+                }
+            ]
+        },
+        {
+            "name": "movie_3",
+            "table_count": 16,
+            "tables": [
+                {
+                    "path": "databases/movie_3/actor.csv",
+                    "nrows": 200,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/movie_3/address.csv",
+                    "nrows": 603,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/movie_3/category.csv",
+                    "nrows": 16,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/movie_3/city.csv",
+                    "nrows": 600,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/movie_3/country.csv",
+                    "nrows": 109,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/movie_3/customer.csv",
+                    "nrows": 599,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/movie_3/film.csv",
+                    "nrows": 1000,
+                    "ncols": 13
+                },
+                {
+                    "path": "databases/movie_3/film_actor.csv",
+                    "nrows": 5462,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/movie_3/film_category.csv",
+                    "nrows": 1000,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/movie_3/film_text.csv",
+                    "nrows": 1000,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/movie_3/inventory.csv",
+                    "nrows": 4581,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/movie_3/language.csv",
+                    "nrows": 6,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/movie_3/payment.csv",
+                    "nrows": 16049,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/movie_3/rental.csv",
+                    "nrows": 16044,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/movie_3/staff.csv",
+                    "nrows": 2,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/movie_3/store.csv",
+                    "nrows": 2,
+                    "ncols": 4
+                }
+            ]
+        },
+        {
+            "name": "movies",
+            "table_count": 2,
+            "tables": [
+                {
+                    "path": "databases/movies/imdb.csv",
+                    "nrows": 2961,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/movies/rotten_tomatoes.csv",
+                    "nrows": 3094,
+                    "ncols": 11
+                }
+            ]
+        },
+        {
+            "name": "music",
+            "table_count": 2,
+            "tables": [
+                {
+                    "path": "databases/music/amazon_music.csv",
+                    "nrows": 55923,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/music/itunes.csv",
+                    "nrows": 6907,
+                    "ncols": 11
+                }
+            ]
+        },
+        {
+            "name": "nextiaJD",
+            "table_count": 28,
+            "tables": [
+                {
+                    "path": "databases/nextiaJD/SCS_Staff_Salaries_data_30th_June 2010.csv",
+                    "nrows": 20,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/nextiaJD/ability_ids.csv",
+                    "nrows": 688,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/nextiaJD/animal-control-inventory-lost-and-found.csv",
+                    "nrows": 14608,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/nextiaJD/community-centres.csv",
+                    "nrows": 27,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/nextiaJD/community-gardens-and-food-trees.csv",
+                    "nrows": 172,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/nextiaJD/cultural-spaces.csv",
+                    "nrows": 1507,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/nextiaJD/currency_exchange.csv",
+                    "nrows": 268,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/nextiaJD/datasets_517172_952401_train.csv",
+                    "nrows": 3662,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/nextiaJD/datasets_579296_1047868_authors.csv",
+                    "nrows": 107,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/nextiaJD/eo4.csv",
+                    "nrows": 3324,
+                    "ncols": 28
+                },
+                {
+                    "path": "databases/nextiaJD/eo_pr.csv",
+                    "nrows": 1351,
+                    "ncols": 28
+                },
+                {
+                    "path": "databases/nextiaJD/eo_xx.csv",
+                    "nrows": 1973,
+                    "ncols": 28
+                },
+                {
+                    "path": "databases/nextiaJD/glassdoor_wwfu_val_captions.csv",
+                    "nrows": 7544,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/nextiaJD/gvrd-sewer-trunk-mains.csv",
+                    "nrows": 1615,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/nextiaJD/libraries.csv",
+                    "nrows": 22,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/nextiaJD/population-by-governorate-citizenship-and-gender.csv",
+                    "nrows": 486,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/nextiaJD/population-census-of-botswana-2011.csv",
+                    "nrows": 87,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/nextiaJD/property-tie-lines.csv",
+                    "nrows": 3311,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/nextiaJD/public-art-artists.csv",
+                    "nrows": 522,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/nextiaJD/public-art.csv",
+                    "nrows": 616,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/nextiaJD/rental-standards-current-issues.csv",
+                    "nrows": 399,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/nextiaJD/road-ahead-current-road-closures.csv",
+                    "nrows": 17,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/nextiaJD/road-ahead-projects-under-construction.csv",
+                    "nrows": 40,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/nextiaJD/road-ahead-upcoming-projects.csv",
+                    "nrows": 62,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/nextiaJD/schools.csv",
+                    "nrows": 194,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/nextiaJD/statewise-census-data-in-india-1901-2011.csv",
+                    "nrows": 5376,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/nextiaJD/street-intersections.csv",
+                    "nrows": 6101,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/nextiaJD/survey_results_schema.csv",
+                    "nrows": 154,
+                    "ncols": 2
+                }
+            ]
+        },
+        {
+            "name": "olympics",
+            "table_count": 11,
+            "tables": [
+                {
+                    "path": "databases/olympics/city.csv",
+                    "nrows": 42,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/olympics/competitor_event.csv",
+                    "nrows": 260971,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/olympics/event.csv",
+                    "nrows": 757,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/olympics/games.csv",
+                    "nrows": 51,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/olympics/games_city.csv",
+                    "nrows": 52,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/olympics/games_competitor.csv",
+                    "nrows": 180252,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/olympics/medal.csv",
+                    "nrows": 4,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/olympics/noc_region.csv",
+                    "nrows": 231,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/olympics/person.csv",
+                    "nrows": 128854,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/olympics/person_region.csv",
+                    "nrows": 130521,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/olympics/sport.csv",
+                    "nrows": 66,
+                    "ncols": 2
+                }
+            ]
+        },
+        {
+            "name": "professional_basketball",
+            "table_count": 9,
+            "tables": [
+                {
+                    "path": "databases/professional_basketball/awards_coaches.csv",
+                    "nrows": 61,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/professional_basketball/awards_players.csv",
+                    "nrows": 1719,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/professional_basketball/coaches.csv",
+                    "nrows": 1689,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/professional_basketball/draft.csv",
+                    "nrows": 8621,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/professional_basketball/player_allstar.csv",
+                    "nrows": 1608,
+                    "ncols": 23
+                },
+                {
+                    "path": "databases/professional_basketball/players.csv",
+                    "nrows": 5062,
+                    "ncols": 26
+                },
+                {
+                    "path": "databases/professional_basketball/players_teams.csv",
+                    "nrows": 23751,
+                    "ncols": 43
+                },
+                {
+                    "path": "databases/professional_basketball/series_post.csv",
+                    "nrows": 775,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/professional_basketball/teams.csv",
+                    "nrows": 1536,
+                    "ncols": 22
+                }
+            ]
+        },
+        {
+            "name": "restaurants2",
+            "table_count": 2,
+            "tables": [
+                {
+                    "path": "databases/restaurants2/yelp.csv",
+                    "nrows": 3897,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/restaurants2/zomato.csv",
+                    "nrows": 6960,
+                    "ncols": 9
+                }
+            ]
+        },
+        {
+            "name": "santos",
+            "table_count": 80,
+            "tables": [
+                {
+                    "path": "databases/santos/010119992520to252031121999.csv",
+                    "nrows": 8448,
+                    "ncols": 14
+                },
+                {
+                    "path": "databases/santos/01_Apr_2018.csv",
+                    "nrows": 78,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/1004ipopayments.csv",
+                    "nrows": 918,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/santos/201012_DCMS_NHM_NHM_Finance_Transparency.csv",
+                    "nrows": 2417,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/santos/2015_05_expenditure.csv",
+                    "nrows": 78,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/2018-may-spend-over-500.csv",
+                    "nrows": 5216,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/20182520EVCP2520use2520Q12520and2520Q2.csv",
+                    "nrows": 1979,
+                    "ncols": 11
+                },
+                {
+                    "path": "databases/santos/AllBusinessRatesexcludingvoidaccounts-July2018.csv",
+                    "nrows": 5907,
+                    "ncols": 26
+                },
+                {
+                    "path": "databases/santos/Apr17.csv",
+                    "nrows": 29,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/santos/Arts_centres.csv",
+                    "nrows": 26,
+                    "ncols": 15
+                },
+                {
+                    "path": "databases/santos/Businesses_Where_RV_less_than_15000.csv",
+                    "nrows": 9349,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/Complete2520list2520of2520business2520addresses2520within2520Calderdale2520-2520March25202016.csv",
+                    "nrows": 8965,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/Contracts-2019-2020-q1.csv",
+                    "nrows": 105,
+                    "ncols": 40
+                },
+                {
+                    "path": "databases/santos/Copy2520of2520Monthly2520Data2520Feed-June25202016.csv",
+                    "nrows": 6720,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/santos/Data2520Mill252015-07-2016.csv",
+                    "nrows": 20773,
+                    "ncols": 20
+                },
+                {
+                    "path": "databases/santos/Dec_19.csv",
+                    "nrows": 28,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/santos/Defra_25k_Apr19_rev.csv",
+                    "nrows": 858,
+                    "ncols": 15
+                },
+                {
+                    "path": "databases/santos/Defra_WMI_112016.csv",
+                    "nrows": 16,
+                    "ncols": 41
+                },
+                {
+                    "path": "databases/santos/Departmental_Spend_Over_25000_July_2014.csv",
+                    "nrows": 579,
+                    "ncols": 14
+                },
+                {
+                    "path": "databases/santos/GP20Prescribing20-20February20201420csv.csv",
+                    "nrows": 457304,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/santos/Housing2520Land2520Availability2520-2520current2520and2520completed2520sites2520between252001_01_20202520to252031_03_20.csv",
+                    "nrows": 147853,
+                    "ncols": 44
+                },
+                {
+                    "path": "databases/santos/LAS-Transparency-Report---February-2012_csv_1_0.csv",
+                    "nrows": 234,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/New2520Business2520Rates2520Accounts2520Created252001April2520-2520302520June25202016.csv",
+                    "nrows": 514,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/santos/PUSS-Oct-Dec-2015.csv",
+                    "nrows": 33,
+                    "ncols": 17
+                },
+                {
+                    "path": "databases/santos/Primary2520Pupils2520with2520Special2520Educational2520Needs25202528SEN25292520-2520Oct25202020.csv",
+                    "nrows": 87,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/PurchasingCard-April18.csv",
+                    "nrows": 257,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/Q4-BEIS-Senior-Officials-Meetings-january-march-2019.csv",
+                    "nrows": 969,
+                    "ncols": 26
+                },
+                {
+                    "path": "databases/santos/RCDTS_spending_over_25000_for_July_2019.csv",
+                    "nrows": 752,
+                    "ncols": 14
+                },
+                {
+                    "path": "databases/santos/Sept_2013_-_HMRC_workforce_management_information.csv",
+                    "nrows": 49,
+                    "ncols": 41
+                },
+                {
+                    "path": "databases/santos/Spend2520over252025C225A35002520Q225202018-19.csv",
+                    "nrows": 7868,
+                    "ncols": 25
+                },
+                {
+                    "path": "databases/santos/SpendoverC2A3500Apr17.csv",
+                    "nrows": 7655,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/santos/StockportContractRegister2019-20Q2.csv",
+                    "nrows": 358,
+                    "ncols": 22
+                },
+                {
+                    "path": "databases/santos/UKAEA_Transactions_P08_Nov_2020.csv",
+                    "nrows": 923,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/V3_1_-_Final__csv__May_2013__25k_Transprncy_rpt.csv",
+                    "nrows": 341,
+                    "ncols": 14
+                },
+                {
+                    "path": "databases/santos/Weekly2520Data252007_12_202520-252013_12_20.csv",
+                    "nrows": 1008,
+                    "ncols": 15
+                },
+                {
+                    "path": "databases/santos/allpayments2013.csv",
+                    "nrows": 164366,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/amo-ame-2007-eng.csv",
+                    "nrows": 6442,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/atbt-albw-2005-eng.csv",
+                    "nrows": 464,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/beis-ministerial-meetings-july-september-2018.csv",
+                    "nrows": 221,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/santos/biodiversity_by_county.csv",
+                    "nrows": 7454,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/santos/british-transport-police-authority__31-03-2015__dft_310315-BTPA-Organogram-ver-1-senior.csv",
+                    "nrows": 17,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/santos/cabinet-office__30-09-2015__cabinetoffice_CO-Template-FINAL-senior.csv",
+                    "nrows": 281,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/santos/cihr_co-applicant_200607.csv",
+                    "nrows": 24140,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/santos/cinemas.csv",
+                    "nrows": 25,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/santos/community_centres.csv",
+                    "nrows": 207,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/council-budget-14-15.csv",
+                    "nrows": 2607,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/santos/dance_performance_venues.csv",
+                    "nrows": 75,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/santos/department-for-transport__31-03-2012__dft_DfT-Transparency-Final-Return-31-03-12-junior.csv",
+                    "nrows": 519,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/department_for_communities_and_local_government-2011-03-31-organogram-senior.csv",
+                    "nrows": 99,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/santos/depleg-expstat-2013-2014.csv",
+                    "nrows": 34,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/dft-gpc-spend-201210.csv",
+                    "nrows": 20391,
+                    "ncols": 37
+                },
+                {
+                    "path": "databases/santos/dft-meetings-return-q3-2016.csv",
+                    "nrows": 39,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/santos/dft-monthly-spend-201005.csv",
+                    "nrows": 1991,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/dft-senior-officials-business-expenses-jul-sept2011.csv",
+                    "nrows": 890,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/santos/driver-vehicle-standards-agency__31-03-2015__dft_310315-DVSA-Organogram-ver-1-junior.csv",
+                    "nrows": 179,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/gp-practice-reference-file---january-2019.csv",
+                    "nrows": 330,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/home_office_senior_officials_travel_data_return.csv",
+                    "nrows": 59,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/santos/kpi-foi02-01.csv",
+                    "nrows": 30,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/maritime_and_coastguard_agency-2011-09-30-organogram-junior.csv",
+                    "nrows": 82,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/ministers-gifts-and-hospitality-april-to-june-2020.csv",
+                    "nrows": 22,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/santos/office-of-rail-regulation__31-03-2014__orr_310314-ORR-Organogram-ver1_-senior.csv",
+                    "nrows": 19,
+                    "ncols": 19
+                },
+                {
+                    "path": "databases/santos/payment-over-500-2014-12.csv",
+                    "nrows": 6023,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/pca-human-wildlife-coexistence-animals-involved-detailed-records.csv",
+                    "nrows": 33559,
+                    "ncols": 15
+                },
+                {
+                    "path": "databases/santos/pocatc-pdrclsl-2016-eng.csv",
+                    "nrows": 747,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/santos/ppt-mtp-2011-eng.csv",
+                    "nrows": 128,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/santos/pubs.csv",
+                    "nrows": 1381,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/purchasing-card-spend-jul2015.csv",
+                    "nrows": 262,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/recycling_options_in_king_county.csv",
+                    "nrows": 622,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/santos/register-of-ministers-interests-2020-21.csv",
+                    "nrows": 38,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/santos/rm-mr-2009-eng.csv",
+                    "nrows": 100,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/santos/rr-dr-eng.csv",
+                    "nrows": 199,
+                    "ncols": 20
+                },
+                {
+                    "path": "databases/santos/seniorsalaries50k2015.csv",
+                    "nrows": 66,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/santos/species_scientific_names.csv",
+                    "nrows": 329,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/santos/state_expenditures.csv",
+                    "nrows": 58852,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/santos/statutory-register-january-19.csv",
+                    "nrows": 86,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/santos/travel-exp-April-June-2018.csv",
+                    "nrows": 103,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/santos/travel-jan-march-2020.csv",
+                    "nrows": 40,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/santos/trinity-house__30-09-2012__dft_Trinity-House-Final-Return-junior.csv",
+                    "nrows": 129,
+                    "ncols": 10
+                },
+                {
+                    "path": "databases/santos/wardcommitteefunding2018.csv",
+                    "nrows": 315,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/santos/ydnpaspendingdata-october2018.csv",
+                    "nrows": 722,
+                    "ncols": 12
+                }
+            ]
+        },
+        {
+            "name": "shipping",
+            "table_count": 5,
+            "tables": [
+                {
+                    "path": "databases/shipping/city.csv",
+                    "nrows": 601,
+                    "ncols": 5
+                },
+                {
+                    "path": "databases/shipping/customer.csv",
+                    "nrows": 100,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/shipping/driver.csv",
+                    "nrows": 11,
+                    "ncols": 8
+                },
+                {
+                    "path": "databases/shipping/shipment.csv",
+                    "nrows": 960,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/shipping/truck.csv",
+                    "nrows": 12,
+                    "ncols": 3
+                }
+            ]
+        },
+        {
+            "name": "student_club",
+            "table_count": 8,
+            "tables": [
+                {
+                    "path": "databases/student_club/attendance.csv",
+                    "nrows": 326,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/student_club/budget.csv",
+                    "nrows": 52,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/student_club/event.csv",
+                    "nrows": 42,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/student_club/expense.csv",
+                    "nrows": 32,
+                    "ncols": 7
+                },
+                {
+                    "path": "databases/student_club/income.csv",
+                    "nrows": 36,
+                    "ncols": 6
+                },
+                {
+                    "path": "databases/student_club/major.csv",
+                    "nrows": 113,
+                    "ncols": 4
+                },
+                {
+                    "path": "databases/student_club/member.csv",
+                    "nrows": 33,
+                    "ncols": 9
+                },
+                {
+                    "path": "databases/student_club/zip_code.csv",
+                    "nrows": 41877,
+                    "ncols": 6
+                }
+            ]
+        },
+        {
+            "name": "superhero",
+            "table_count": 10,
+            "tables": [
+                {
+                    "path": "databases/superhero/alignment.csv",
+                    "nrows": 4,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/attribute.csv",
+                    "nrows": 6,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/colour.csv",
+                    "nrows": 35,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/gender.csv",
+                    "nrows": 3,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/hero_attribute.csv",
+                    "nrows": 3738,
+                    "ncols": 3
+                },
+                {
+                    "path": "databases/superhero/hero_power.csv",
+                    "nrows": 5825,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/publisher.csv",
+                    "nrows": 25,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/race.csv",
+                    "nrows": 61,
+                    "ncols": 2
+                },
+                {
+                    "path": "databases/superhero/superhero.csv",
+                    "nrows": 750,
+                    "ncols": 12
+                },
+                {
+                    "path": "databases/superhero/superpower.csv",
+                    "nrows": 167,
+                    "ncols": 2
+                }
+            ]
+        }
+    ]
+}

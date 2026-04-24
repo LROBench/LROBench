@@ -3,6 +3,7 @@
         "description": "Impute-LROs query metadata in LROBench",
         "statistics": {
             "total_queries": 80,
+            "input_table_size_aggregate": {"nrows": {"max": 75, "mean": 32.1316, "count": 38}, "ncols": {"max": 28, "mean": 7.4375, "count": 80}},
             "scoring_dimensions": {
                 "difficulty": {
                     "medium": {
@@ -65,7 +66,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute100"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute100",
+            "input_table_size": {"nrows": 37, "ncols": 10}
         },
         {
             "query_id": "impute101",
@@ -79,7 +81,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute101"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute101",
+            "input_table_size": {"nrows": 56, "ncols": 2}
         },
         {
             "query_id": "impute102",
@@ -93,7 +96,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute102"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute102",
+            "input_table_size": {"nrows": 40, "ncols": 5}
         },
         {
             "query_id": "impute103",
@@ -107,7 +111,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute103"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute103",
+            "input_table_size": {"nrows": 49, "ncols": 12}
         },
         {
             "query_id": "impute104",
@@ -121,7 +126,8 @@
                 "difficulty": "easy",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute104"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute104",
+            "input_table_size": {"nrows": 52, "ncols": 10}
         },
         {
             "query_id": "impute105",
@@ -135,7 +141,8 @@
                 "difficulty": "easy",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute105"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute105",
+            "input_table_size": {"nrows": 75, "ncols": 8}
         },
         {
             "query_id": "impute106",
@@ -149,7 +156,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute106"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute106",
+            "input_table_size": {"nrows": 57, "ncols": 12}
         },
         {
             "query_id": "impute107",
@@ -163,7 +171,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute107"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute107",
+            "input_table_size": {"nrows": 56, "ncols": 10}
         },
         {
             "query_id": "impute108",
@@ -177,7 +186,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute108"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute108",
+            "input_table_size": {"nrows": 36, "ncols": 10}
         },
         {
             "query_id": "impute109",
@@ -191,7 +201,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute109"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute109",
+            "input_table_size": {"nrows": 11, "ncols": 8}
         },
         {
             "query_id": "impute110",
@@ -205,7 +216,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute110"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute110",
+            "input_table_size": {"nrows": 9, "ncols": 11}
         },
         {
             "query_id": "impute111",
@@ -219,7 +231,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute111"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute111",
+            "input_table_size": {"nrows": 6, "ncols": 11}
         },
         {
             "query_id": "impute112",
@@ -233,7 +246,8 @@
                 "difficulty": "easy",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute112"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute112",
+            "input_table_size": {"nrows": 23, "ncols": 6}
         },
         {
             "query_id": "impute113",
@@ -247,7 +261,8 @@
                 "difficulty": "easy",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute113"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute113",
+            "input_table_size": {"nrows": 29, "ncols": 5}
         },
         {
             "query_id": "impute114",
@@ -261,7 +276,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute114"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute114",
+            "input_table_size": {"nrows": 29, "ncols": 6}
         },
         {
             "query_id": "impute115",
@@ -275,7 +291,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute115"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute115",
+            "input_table_size": {"nrows": 27, "ncols": 3}
         },
         {
             "query_id": "impute116",
@@ -289,7 +306,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute116"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute116",
+            "input_table_size": {"nrows": 26, "ncols": 7}
         },
         {
             "query_id": "impute117",
@@ -303,7 +321,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute117"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute117",
+            "input_table_size": {"nrows": 30, "ncols": 7}
         },
         {
             "query_id": "impute118",
@@ -317,7 +336,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute118"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute118",
+            "input_table_size": {"nrows": 30, "ncols": 7}
         },
         {
             "query_id": "impute119",
@@ -331,7 +351,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute119"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute119",
+            "input_table_size": {"nrows": 30, "ncols": 7}
         },
         {
             "query_id": "impute120",
@@ -345,7 +366,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute120"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute120",
+            "input_table_size": {"nrows": 34, "ncols": 8}
         },
         {
             "query_id": "impute121",
@@ -359,7 +381,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute121"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute121",
+            "input_table_size": {"nrows": 22, "ncols": 8}
         },
         {
             "query_id": "impute122",
@@ -373,7 +396,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute122"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute122",
+            "input_table_size": {"nrows": 14, "ncols": 10}
         },
         {
             "query_id": "impute123",
@@ -387,7 +411,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute123"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute123",
+            "input_table_size": {"nrows": 36, "ncols": 10}
         },
         {
             "query_id": "impute124",
@@ -401,7 +426,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute124"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute124",
+            "input_table_size": {"nrows": 25, "ncols": 14}
         },
         {
             "query_id": "impute125",
@@ -415,7 +441,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute125"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute125",
+            "input_table_size": {"nrows": 24, "ncols": 8}
         },
         {
             "query_id": "impute126",
@@ -429,7 +456,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute126"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute126",
+            "input_table_size": {"nrows": 24, "ncols": 8}
         },
         {
             "query_id": "impute127",
@@ -443,7 +471,8 @@
                 "difficulty": "hard",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute127"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute127",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute128",
@@ -457,7 +486,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute128"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute128",
+            "input_table_size": {"nrows": 23, "ncols": 8}
         },
         {
             "query_id": "impute129",
@@ -471,7 +501,8 @@
                 "difficulty": "medium",
                 "operand_type": "cell"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute129"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute129",
+            "input_table_size": {"nrows": 7, "ncols": 9}
         },
         {
             "query_id": "impute200",
@@ -485,7 +516,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute200"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute200",
+            "input_table_size": {"nrows": 40, "ncols": 5}
         },
         {
             "query_id": "impute201",
@@ -499,7 +531,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute201"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute201",
+            "input_table_size": {"nrows": 54, "ncols": 2}
         },
         {
             "query_id": "impute202",
@@ -513,7 +546,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute202"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute202",
+            "input_table_size": {"nrows": 100, "ncols": 4}
         },
         {
             "query_id": "impute203",
@@ -527,7 +561,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute203"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute203",
+            "input_table_size": {"nrows": 100, "ncols": 11}
         },
         {
             "query_id": "impute204",
@@ -541,7 +576,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute204"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute204",
+            "input_table_size": {"nrows": 50, "ncols": 13}
         },
         {
             "query_id": "impute205",
@@ -555,7 +591,8 @@
                 "difficulty": "hard",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute205"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute205",
+            "input_table_size": {"nrows": 103, "ncols": 7}
         },
         {
             "query_id": "impute206",
@@ -569,7 +606,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute206"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute206",
+            "input_table_size": {"nrows": 50, "ncols": 7}
         },
         {
             "query_id": "impute207",
@@ -583,7 +621,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute207"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute207",
+            "input_table_size": {"nrows": 56, "ncols": 9}
         },
         {
             "query_id": "impute208",
@@ -597,7 +636,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute208"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute208",
+            "input_table_size": {"nrows": 50, "ncols": 28}
         },
         {
             "query_id": "impute209",
@@ -611,7 +651,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute209"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute209",
+            "input_table_size": {"nrows": 50, "ncols": 11}
         },
         {
             "query_id": "impute210",
@@ -625,7 +666,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute210"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute210",
+            "input_table_size": {"nrows": 21, "ncols": 1}
         },
         {
             "query_id": "impute211",
@@ -639,7 +681,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute211"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute211",
+            "input_table_size": {"nrows": 26, "ncols": 7}
         },
         {
             "query_id": "impute212",
@@ -653,7 +696,8 @@
                 "difficulty": "hard",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute212"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute212",
+            "input_table_size": {"nrows": 30, "ncols": 6}
         },
         {
             "query_id": "impute213",
@@ -667,7 +711,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute213"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute213",
+            "input_table_size": {"nrows": 29, "ncols": 5}
         },
         {
             "query_id": "impute214",
@@ -681,7 +726,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute214"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute214",
+            "input_table_size": {"nrows": 11, "ncols": 9}
         },
         {
             "query_id": "impute215",
@@ -695,7 +741,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute215"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute215",
+            "input_table_size": {"nrows": 30, "ncols": 5}
         },
         {
             "query_id": "impute216",
@@ -709,7 +756,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute216"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute216",
+            "input_table_size": {"nrows": 7, "ncols": 9}
         },
         {
             "query_id": "impute217",
@@ -723,7 +771,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute217"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute217",
+            "input_table_size": {"nrows": 37, "ncols": 4}
         },
         {
             "query_id": "impute218",
@@ -737,7 +786,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute218"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute218",
+            "input_table_size": {"nrows": 42, "ncols": 12}
         },
         {
             "query_id": "impute219",
@@ -751,7 +801,8 @@
                 "difficulty": "easy",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute219"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute219",
+            "input_table_size": {"nrows": 42, "ncols": 2}
         },
         {
             "query_id": "impute220",
@@ -765,7 +816,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute220"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute220",
+            "input_table_size": {"nrows": 66, "ncols": 2}
         },
         {
             "query_id": "impute221",
@@ -779,7 +831,8 @@
                 "difficulty": "medium",
                 "operand_type": "column"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute221"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute221",
+            "input_table_size": {"nrows": 231, "ncols": 3}
         },
         {
             "query_id": "impute222",
@@ -793,7 +846,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute222"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute222",
+            "input_table_size": {"nrows": 25, "ncols": 7}
         },
         {
             "query_id": "impute223",
@@ -807,7 +861,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute223"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute223",
+            "input_table_size": {"nrows": 52, "ncols": 7}
         },
         {
             "query_id": "impute224",
@@ -821,7 +876,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute224"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute224",
+            "input_table_size": {"nrows": 42, "ncols": 7}
         },
         {
             "query_id": "impute225",
@@ -835,7 +891,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute225"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute225",
+            "input_table_size": {"nrows": 24, "ncols": 22}
         },
         {
             "query_id": "impute226",
@@ -849,7 +906,8 @@
                 "difficulty": "easy",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute226"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute226",
+            "input_table_size": {"nrows": 30, "ncols": 9}
         },
         {
             "query_id": "impute227",
@@ -863,7 +921,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute227"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute227",
+            "input_table_size": {"nrows": 63, "ncols": 4}
         },
         {
             "query_id": "impute228",
@@ -877,7 +936,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute228"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute228",
+            "input_table_size": {"nrows": 35, "ncols": 2}
         },
         {
             "query_id": "impute229",
@@ -891,7 +951,8 @@
                 "difficulty": "hard",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute229"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute229",
+            "input_table_size": {"nrows": 30, "ncols": 11}
         },
         {
             "query_id": "impute300",
@@ -905,7 +966,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute300"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute300",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute301",
@@ -919,7 +981,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute301"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute301",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute302",
@@ -933,7 +996,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute302"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute302",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute303",
@@ -947,7 +1011,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute303"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute303",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute304",
@@ -961,7 +1026,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute304"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute304",
+            "input_table_size": {"nrows": 3, "ncols": 6}
         },
         {
             "query_id": "impute305",
@@ -975,7 +1041,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute305"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute305",
+            "input_table_size": {"nrows": 3, "ncols": 6}
         },
         {
             "query_id": "impute306",
@@ -989,7 +1056,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute306"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute306",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute307",
@@ -1003,7 +1071,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute307"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute307",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute308",
@@ -1017,7 +1086,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute308"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute308",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute309",
@@ -1031,7 +1101,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute309"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute309",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute310",
@@ -1045,7 +1116,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute310"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute310",
+            "input_table_size": {"nrows": 3, "ncols": 8}
         },
         {
             "query_id": "impute311",
@@ -1059,7 +1131,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute311"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute311",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute312",
@@ -1073,7 +1146,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute312"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute312",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute313",
@@ -1087,7 +1161,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute313"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute313",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute314",
@@ -1101,7 +1176,8 @@
                 "difficulty": "medium",
                 "operand_type": "row"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute314"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute314",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute400",
@@ -1115,7 +1191,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute400"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute400",
+            "input_table_size": {"nrows": 3, "ncols": 3}
         },
         {
             "query_id": "impute401",
@@ -1129,7 +1206,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute401"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute401",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute402",
@@ -1143,7 +1221,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute402"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute402",
+            "input_table_size": {"nrows": 3, "ncols": 5}
         },
         {
             "query_id": "impute403",
@@ -1157,7 +1236,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute403"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute403",
+            "input_table_size": {"nrows": 3, "ncols": 4}
         },
         {
             "query_id": "impute404",
@@ -1171,7 +1251,8 @@
                 "difficulty": "medium",
                 "operand_type": "table"
             },
-            "query_plan_reference": "eval/impute_eval.py:pipeline_impute404"
+            "query_plan_reference": "eval/impute_eval.py:pipeline_impute404",
+            "input_table_size": {"nrows": 3, "ncols": 4}
         }
     ]
 }
