@@ -2,6 +2,8 @@
 
 **Paper: [Large Language Model-Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis](https://arxiv.org/abs/2603.02537)**
 
+**Slides (VLDB 2026 workshop): [Bridging LLMs and Database Systems: A Deep Dive into Enhanced Relational Operators](Bridging%20LLMs%20and%20Database%20Systems-%20A%20Deep%20Dive%20into%20Enhanced%20Relational%20Operators.pdf)**
+
 LROBench is a benchmark for **LLM-Enhanced Relational Operators (LROs)**: components that (i) operate over relational data, (ii) take a natural-language requirement (instruction or condition), (iii) invoke an LLM for semantic decisions during execution, and (iv) produce relational outputs.
 
 ---
