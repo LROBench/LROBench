@@ -1,6 +1,6 @@
 # LROBench
 
-**Large Language Model–Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis**
+**Paper: [Large Language Model-Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis](https://arxiv.org/abs/2603.02537)**
 
 LROBench is a benchmark for **LLM-Enhanced Relational Operators (LROs)**: components that (i) operate over relational data, (ii) take a natural-language requirement (instruction or condition), (iii) invoke an LLM for semantic decisions during execution, and (iv) produce relational outputs.
 
